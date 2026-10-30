@@ -48,6 +48,7 @@ main{padding-block:16px 40px}
 .tag{font-size:.7rem;font-weight:600;color:var(--accent);background:var(--accent-bg);padding:1px 7px;border-radius:999px}
 .effect{font-size:.88rem;line-height:1.45;margin:0}
 .camp{font-size:.8rem;color:var(--muted);line-height:1.4;margin:0}
+.src{font-size:.72rem;color:var(--muted);letter-spacing:.02em;margin:-4px 0 0}
 .vars{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .var{display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;min-width:0}
 .var img,.ph{width:64px;height:64px;border-radius:50%}
@@ -140,6 +141,7 @@ function card(t) {
     <div class="name">${esc(t.name)}</div>
     <div class="vars">${vars}</div>
     <p class="effect">${esc(t.effect)}</p>
+    <p class="src">${t.effectSource ? `In-game text, ${esc(t.effectSource)}` : "Summary. Not seen in game yet"}</p>
     ${t.trainingCamp ? `<p class="camp">Training Camp: ${esc(t.trainingCamp)}</p>` : ""}
     <p class="cols"><b>Found on:</b> ${cols}</p>
   </article>`;
