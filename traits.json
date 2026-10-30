@@ -27,7 +27,8 @@
    "category": "Offense",
    "tags": [
     "Mid-Range",
-    "Finishing"
+    "Finishing",
+    "Energy"
    ],
    "effect": "Increases Layup, Dunk and Mid-Range Accuracy for every 35 Energy gained. Up to 5 stacks.",
    "trainingCamp": "",
@@ -193,7 +194,8 @@
    "category": "Offense",
    "tags": [
     "All shots",
-    "Handling"
+    "Handling",
+    "Energy"
    ],
    "effect": "After using your Ultimate, increases offensive accuracy and reduces the chance of your Drive being stopped for 4s.",
    "trainingCamp": "",
