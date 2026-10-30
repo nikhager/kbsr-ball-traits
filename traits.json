@@ -30,7 +30,7 @@
     "Finishing",
     "Energy"
    ],
-   "effect": "Increases Layup, Dunk and Mid-Range Accuracy for every 35 Energy gained. Up to 5 stacks.",
+   "effect": "Increases Layup, Dunk, and Mid-Range Accuracy by +1% for every 35 Energy gained. Up to 5 stacks.",
    "trainingCamp": "",
    "tiers": {
     "II": {
@@ -61,7 +61,8 @@
      "name": "Perfect Kise Collection",
      "tiers": "II, III"
     }
-   ]
+   ],
+   "effectSource": "Tier III"
   },
   {
    "id": "unwavering-resolve",
@@ -70,7 +71,7 @@
    "tags": [
     "Mid-Range"
    ],
-   "effect": "Increases Mid-Range Accuracy, and again for the shot after a miss.",
+   "effect": "Increases Mid-Range Accuracy by +1.5%. Further increases Mid-Range Accuracy by +1.5% for the shot following a missed one.",
    "trainingCamp": "",
    "tiers": {
     "II": {
@@ -105,7 +106,8 @@
      "name": "Kise Collection",
      "tiers": "III"
     }
-   ]
+   ],
+   "effectSource": "Tier III"
   },
   {
    "id": "motion-offense",
@@ -114,7 +116,7 @@
    "tags": [
     "All shots"
    ],
-   "effect": "Increases Accuracy for the shot after 3 Drives.",
+   "effect": "Increases Accuracy by +3% for the shot following 3 Drives.",
    "trainingCamp": "",
    "tiers": {
     "II": {
@@ -149,7 +151,8 @@
      "name": "Kise Collection",
      "tiers": "II, III"
     }
-   ]
+   ],
+   "effectSource": "Tier III"
   },
   {
    "id": "absolute-core",
@@ -159,7 +162,7 @@
     "3PT",
     "Mid-Range"
    ],
-   "effect": "Increases Mid-Range and 3PT Accuracy when your team has a Center. Doubled with two Centers or Power Forwards.",
+   "effect": "Increases Mid-Range accuracy by +1.5% and 3-Pointer accuracy by +1.5% when the team has a Center. These bonuses are doubled when the team has two Centers or Power Forwards.",
    "trainingCamp": "",
    "tiers": {
     "II": {
@@ -186,7 +189,8 @@
      "name": "Graffiti Master",
      "tiers": "III"
     }
-   ]
+   ],
+   "effectSource": "Tier III"
   },
   {
    "id": "finishing-time",
@@ -197,7 +201,7 @@
     "Handling",
     "Energy"
    ],
-   "effect": "After using your Ultimate, increases offensive accuracy and reduces the chance of your Drive being stopped for 4s.",
+   "effect": "Increases offensive accuracy by 4% and reduces the chance of Drive being stopped by 3% for 4s after using Ultimate.",
    "trainingCamp": "",
    "tiers": {
     "II": {
@@ -224,7 +228,8 @@
      "name": "LG Aomine Peerless",
      "tiers": "III"
     }
-   ]
+   ],
+   "effectSource": "Tier III"
   },
   {
    "id": "clutch-player",
@@ -252,7 +257,8 @@
      "name": "Diviner Midorima",
      "tiers": "III"
     }
-   ]
+   ],
+   "effectSource": ""
   },
   {
    "id": "perimeter-master",
@@ -262,7 +268,7 @@
     "3PT",
     "Open shots"
    ],
-   "effect": "Increases Open 3PT Accuracy, plus more for 3s after receiving a pass. Open shots only.",
+   "effect": "Increases Open 3-Pointer Accuracy by +3%. Further increases Open 3-Pointer Accuracy by +2% for 3s after receiving a pass from a teammate.",
    "trainingCamp": "",
    "tiers": {
     "II": {
@@ -289,7 +295,8 @@
      "name": "Midorima Collection",
      "tiers": "III"
     }
-   ]
+   ],
+   "effectSource": "Tier III"
   },
   {
    "id": "cut-expert",
@@ -298,8 +305,8 @@
    "tags": [
     "Open shots"
    ],
-   "effect": "Increases off-ball movement on offense. After scoring an open shot, increases Open Mid-Range and Open 3PT Accuracy; stacks 3x.",
-   "trainingCamp": "Open accuracy boosts are doubled.",
+   "effect": "Off-ball movement increases by 0.1 when on offense. After scoring an open shot, Open Mid-Range Accuracy and Open 3-Pointer Accuracy +0.7%. Can stack up to 3 times.",
+   "trainingCamp": "After scoring an open shot, Open Mid-Range and Open 3-Pointer Accuracy boosts are doubled, stacking up to 3 times.",
    "tiers": {
     "II": {
      "value": "Off-ball +0.1; +0.5% per stack",
@@ -321,7 +328,8 @@
      "name": "Nash",
      "tiers": "III"
     }
-   ]
+   ],
+   "effectSource": "Tier III"
   },
   {
    "id": "assist-boost",
@@ -331,7 +339,7 @@
     "Open shots",
     "Passing"
    ],
-   "effect": "Increases max Catch Distance. Increases Open Accuracy when catching a pass at an open spot.",
+   "effect": "Increases max Catch Distance by +1. Increases Open Accuracy by +2.5% when receiving a pass at an open spot.",
    "trainingCamp": "",
    "tiers": {
     "II": {
@@ -350,7 +358,8 @@
      "name": "Kise Collection",
      "tiers": "III"
     }
-   ]
+   ],
+   "effectSource": "Tier III"
   },
   {
    "id": "catch-attack",
@@ -359,7 +368,7 @@
    "tags": [
     "Speed"
    ],
-   "effect": "Increases Speed for 3s after receiving a pass.",
+   "effect": "Increases Speed by +0.4 for 3s after receiving a pass from a teammate.",
    "trainingCamp": "",
    "tiers": {
     "II": {
@@ -378,7 +387,8 @@
      "name": "Wave Rider",
      "tiers": "III"
     }
-   ]
+   ],
+   "effectSource": "Tier III"
   },
   {
    "id": "sharp-drive",
@@ -387,7 +397,7 @@
    "tags": [
     "Handling"
    ],
-   "effect": "Increases Ankle Breaker Chance, plus more after each successful Ankle Breaker (3 stacks).",
+   "effect": "Increases Ankle Breaker Chance by +1.5%. Further increases Ankle Breaker Chance by +0.5% after a successful Ankle Breaker. Up to 3 stacks.",
    "trainingCamp": "",
    "tiers": {
     "II": {
@@ -418,7 +428,8 @@
      "name": "Pumpkin Carnival",
      "tiers": "II"
     }
-   ]
+   ],
+   "effectSource": "Tier III"
   },
   {
    "id": "ball-control-expert",
@@ -428,7 +439,7 @@
     "Handling",
     "All shots"
    ],
-   "effect": "Entering Enhanced Dribble reduces a stat the game text leaves out. Increases Offensive Accuracy while in Enhanced Dribble and for 2s after.",
+   "effect": "Entering Enhanced Dribble state reduces by 3%. Offensive Accuracy increase by 2% in Enhanced Dribble state. This effect lasts for 2 seconds after exiting Enhanced Dribble.",
    "trainingCamp": "Offensive Accuracy increase is doubled.",
    "tiers": {
     "II": {
@@ -447,7 +458,8 @@
      "name": "LG Aomine Peerless",
      "tiers": "II, III"
     }
-   ]
+   ],
+   "effectSource": "Tier III"
   },
   {
    "id": "pump-fake",
@@ -457,7 +469,7 @@
     "Handling",
     "Passing"
    ],
-   "effect": "Reduces the chance of being Stolen and increases Safe Pass Distance when you fake a shot but pass.",
+   "effect": "Reduces the chance of being Stolen by -5% and increases Safe Pass Distance by +1.5 when feinting offense but actually passing.",
    "trainingCamp": "",
    "tiers": {
     "II": {
@@ -476,7 +488,8 @@
      "name": "Pumpkin Carnival",
      "tiers": "II, III"
     }
-   ]
+   ],
+   "effectSource": "Tier III"
   },
   {
    "id": "quick-counter",
@@ -486,7 +499,7 @@
     "Steal",
     "Speed"
    ],
-   "effect": "Increases Steal Chance. Increases Speed for 3s after a successful Steal.",
+   "effect": "Increases Steal Chance by +1.3%. Increases Speed by +0.3 for 3s after a successful Steal.",
    "trainingCamp": "",
    "tiers": {
     "II": {
@@ -517,7 +530,8 @@
      "name": "Wave Rider",
      "tiers": "II"
     }
-   ]
+   ],
+   "effectSource": "Tier II"
   },
   {
    "id": "roadblock",
@@ -526,7 +540,7 @@
    "tags": [
     "Steal"
    ],
-   "effect": "Increases Charge Chance. Increases Steal Chance for 3s after charging an opponent.",
+   "effect": "Increases Charge Chance against opponents by +1.5%. Increases Steal Chance by +1.5% for 3s after Charging an opponent.",
    "trainingCamp": "",
    "tiers": {
     "II": {
@@ -553,7 +567,8 @@
      "name": "Pumpkin Carnival",
      "tiers": "II"
     }
-   ]
+   ],
+   "effectSource": "Tier II"
   },
   {
    "id": "offense-defense-switch",
@@ -586,7 +601,8 @@
      "name": "LG Kise Peerless",
      "tiers": "II"
     }
-   ]
+   ],
+   "effectSource": ""
   },
   {
    "id": "paint-powerhouse",
@@ -596,7 +612,7 @@
     "Block",
     "Finishing"
    ],
-   "effect": "A dunk raises your next Block Range until you block. A block raises your next Dunk Accuracy and Knockback until you dunk.",
+   "effect": "A successful dunk increases the next Block Range by 0.3, lasting until the next successful block. A successful block increases the next Dunk Accuracy by 5% and Knockback Rate by 3%, lasting until the next successful dunk.",
    "trainingCamp": "Block Range and Dunk Accuracy boosts are doubled.",
    "tiers": {
     "II": {
@@ -627,7 +643,8 @@
      "name": "Jason Silver",
      "tiers": "II, III"
     }
-   ]
+   ],
+   "effectSource": "Tier III"
   },
   {
    "id": "defensive-stopper",
@@ -636,7 +653,7 @@
    "tags": [
     "Block"
    ],
-   "effect": "Increases Block Range after each successful Block. Up to 5 stacks.",
+   "effect": "Increases Block Range by +0.05 after a successful Block. Up to 5 stacks.",
    "trainingCamp": "",
    "tiers": {
     "II": {
@@ -667,7 +684,8 @@
      "name": "ZONE Murasakibara",
      "tiers": "II"
     }
-   ]
+   ],
+   "effectSource": "Tier II"
   },
   {
    "id": "perimeter-lockdown",
@@ -676,7 +694,7 @@
    "tags": [
     "Block"
    ],
-   "effect": "Increases Block Range, plus more when matched against an SG or PG.",
+   "effect": "Increases Block Range by +0.15. Further increases Block Range by +0.15 when matched against SG or PG.",
    "trainingCamp": "",
    "tiers": {
     "II": {
@@ -703,7 +721,8 @@
      "name": "ZONE Murasakibara",
      "tiers": "II"
     }
-   ]
+   ],
+   "effectSource": "Tier II"
   },
   {
    "id": "swift-zone-defense",
@@ -712,7 +731,7 @@
    "tags": [
     "Block"
    ],
-   "effect": "Increases off-ball movement on defense. Increases Block when the ball-handler isn't your matchup.",
+   "effect": "Increases Off-Ball Movement by +0.1 while on defense. Increases Block by +0.15 when the ball-handler is not your assigned matchup.",
    "trainingCamp": "",
    "tiers": {
     "II": {
@@ -731,7 +750,8 @@
      "name": "LG Kise",
      "tiers": "II"
     }
-   ]
+   ],
+   "effectSource": "Tier II"
   },
   {
    "id": "close-guarding",
@@ -740,7 +760,7 @@
    "tags": [
     "Contest"
    ],
-   "effect": "Increases Contest Rate while accelerating.",
+   "effect": "Increases Contest Rate by +2.5% while accelerating.",
    "trainingCamp": "",
    "tiers": {
     "II": {
@@ -771,7 +791,8 @@
      "name": "SP Akashi Collection",
      "tiers": "II"
     }
-   ]
+   ],
+   "effectSource": "Tier II"
   },
   {
    "id": "stack-intimidation",
@@ -799,7 +820,8 @@
      "name": "LG Kise Peerless",
      "tiers": "II"
     }
-   ]
+   ],
+   "effectSource": ""
   },
   {
    "id": "two-arm-block",
@@ -808,7 +830,7 @@
    "tags": [
     "Contest"
    ],
-   "effect": "Increases Jump Contest Rate (shot contest, not block), plus more after 3s in the opponent's defensive zone.",
+   "effect": "Increases Jump Contest Rate by +2%. Further increases Jump Contest Rate by +1.5% after staying in the opponent's defensive zone for 3s.",
    "trainingCamp": "",
    "tiers": {
     "II": {
@@ -827,7 +849,8 @@
      "name": "Perfect Kise Collection",
      "tiers": "III"
     }
-   ]
+   ],
+   "effectSource": "Tier III"
   },
   {
    "id": "rising-strong",
@@ -836,7 +859,7 @@
    "tags": [
     "Rebound"
    ],
-   "effect": "Increases Rebound Contest Value, and the same again on the rebound after a failed one.",
+   "effect": "Increases Rebound Contest Value by +2. Further increases Rebound Contest Value by +2 for the Rebound attempt following a failed one.",
    "trainingCamp": "",
    "tiers": {
     "II": {
@@ -867,7 +890,8 @@
      "name": "ZONE Murasakibara",
      "tiers": "II, III"
     }
-   ]
+   ],
+   "effectSource": "Tier III"
   },
   {
    "id": "contest-dominator",
@@ -876,8 +900,8 @@
    "tags": [
     "Rebound"
    ],
-   "effect": "After pushing or knocking away an opponent, increases Rebound Contest Value. Stacks 2x; lasts until the next rebound attempt.",
-   "trainingCamp": "Rebound Contest Value increase is doubled.",
+   "effect": "After successfully pushing away or knocking away an opponent, Rebound Contest Value is increased by 2. This effect can stack up to 2 times and lasts until the next rebound attempt.",
+   "trainingCamp": "The Rebound Contest Value increase is doubled.",
    "tiers": {
     "II": {
      "value": "+1.5 per stack (2x)",
@@ -895,7 +919,8 @@
      "name": "LG Murasakibara",
      "tiers": "II, III"
     }
-   ]
+   ],
+   "effectSource": "Tier III"
   },
   {
    "id": "post-beast",
@@ -905,8 +930,8 @@
     "Rebound",
     "Finishing"
    ],
-   "effect": "After a box-out push, increases Rebound Contest Value. Entering post position increases Close Shot, Mid-Range, Layup and Dunk Accuracy for 3.5s.",
-   "trainingCamp": "Rebound boost doubled after a box-out push; post accuracy boost doubled.",
+   "effect": "After boxing out and pushing an opponent, Rebound Contest Value increases by 2 when contesting rebounds. Entering post position increases Close Shot, Mid-Range, Layup, and Dunk Accuracy by 2% for 3.5s.",
+   "trainingCamp": "Rebound Contest Value boost is doubled after a box-out push. Entering post position doubles offensive accuracy boost for 3.5s.",
    "tiers": {
     "II": {
      "value": "+1.5 Rebound Contest; +1.5% post accuracy",
@@ -928,7 +953,8 @@
      "name": "Jason Silver",
      "tiers": "III"
     }
-   ]
+   ],
+   "effectSource": "Tier III"
   },
   {
    "id": "interior-inspire",
@@ -961,7 +987,8 @@
      "name": "ZONE Murasakibara",
      "tiers": "II"
     }
-   ]
+   ],
+   "effectSource": ""
   },
   {
    "id": "first-victor",
@@ -970,7 +997,7 @@
    "tags": [
     "Energy"
    ],
-   "effect": "Grants extra energy per score, plus a bonus if you score first in the match.",
+   "effect": "Grants 1 extra energy per score. Grants additional 3 energy if you score first in the match.",
    "trainingCamp": "",
    "tiers": {
     "II": {
@@ -989,7 +1016,8 @@
      "name": "Kise Collection",
      "tiers": "II"
     }
-   ]
+   ],
+   "effectSource": "Tier II"
   }
  ]
 }
