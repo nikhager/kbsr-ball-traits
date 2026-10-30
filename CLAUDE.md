@@ -37,7 +37,7 @@ Static fan reference for ball traits in Kuroko's Basketball: Street Rivals (glob
 5. Commit and push only when the owner asks.
 
 ## Analytics
-- GoatCounter (account `nhager`, dashboard nhager.goatcounter.com) counts page views via one script tag just before `</body>` in `index.html`. Keep it when editing the page. The claude.ai artifact copy of the page leaves it out (outside scripts are blocked there).
+- GoatCounter (account `nhager`, dashboard nhager.goatcounter.com) counts page views and filter events via one script tag just before `</body>` in `index.html`. The script is self-hosted as `count.js` (GoatCounter v2.7.0, ISC license) so tracker blockers that target gc.zgo.at don't stop it; counts still go to nhager.goatcounter.com. Keep it when editing the page. The claude.ai artifact copy of the page leaves it out (outside scripts are blocked there).
 
 ## Constraints
 - Public repo: never commit secrets, personal emails, Google Sheet/Doc IDs, or full screenshots (they show the player ID). Icon crops only.
