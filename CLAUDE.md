@@ -14,7 +14,8 @@ Static fan reference for ball traits in Kuroko's Basketball: Street Rivals (glob
   "name": "Rising Strong",
   "category": "Rebounding",           // Offense, Handling, Defense, Hybrid, Rebounding, Energy
   "tags": ["Rebound"],                // filter chips, see list below
-  "effect": "Plain-language effect, no tier numbers.",
+  "effect": "Exact in-game tooltip text, using tier III numbers where seen",
+  "effectSource": "Tier III",         // tier the text came from, or "" if it's a summary of an unseen trait
   "trainingCamp": "",                 // Training Camp bonus text, or ""
   "tiers": {
     "II":  { "value": "+1.5 (+1.5 after a miss)", "icon": "icons/rising-strong-ii.png", "seenOn": "LG Kagami, ZONE Mura" },
@@ -26,6 +27,7 @@ Static fan reference for ball traits in Kuroko's Basketball: Street Rivals (glob
 - Use `""` for an unknown value and `null` for a missing icon. The page shows "Not seen yet" or "Numbers not logged".
 - Filter tags: 3PT, Mid-Range, Finishing, All shots, Open shots, Handling, Passing, Steal, Block, Contest, Rebound, Speed, Energy. Energy covers every energy-related trait (energy-scaling, Ultimate-triggered, energy gain). Steal covers every steal-triggered trait.
 - Collection names must match an entry in `collections`.
+- Effect text is copied verbatim from the game. The game has translation errors: put any editorial fill-in or correction in [square brackets] so it's clearly not the game's text, e.g. "reduces [Charge Rate] by 3%".
 
 ## Logging new traits from screenshots
 1. Read the trait name, tier and numbers from the tooltip.
