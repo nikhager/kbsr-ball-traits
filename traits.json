@@ -1,0 +1,993 @@
+{
+ "updated": "2026-10-30",
+ "collections": [
+  "Seirin Spirit",
+  "LG Kise",
+  "LG Kise Peerless",
+  "Pumpkin Carnival",
+  "LG Kagami",
+  "Perfect Kise Collection",
+  "SP Akashi Collection",
+  "Kise Collection",
+  "LG Aomine Peerless",
+  "LG Murasakibara",
+  "Autumn Moon",
+  "Graffiti Master",
+  "Jason Silver",
+  "ZONE Murasakibara",
+  "Diviner Midorima",
+  "Midorima Collection",
+  "Nash",
+  "Wave Rider"
+ ],
+ "traits": [
+  {
+   "id": "forward-awakening",
+   "name": "Forward Awakening",
+   "category": "Offense",
+   "tags": [
+    "Mid-Range",
+    "Finishing"
+   ],
+   "effect": "Increases Layup, Dunk and Mid-Range Accuracy for every 35 Energy gained. Up to 5 stacks.",
+   "trainingCamp": "",
+   "tiers": {
+    "II": {
+     "value": "+0.8% per 35 Energy (5x)",
+     "icon": "icons/forward-awakening-ii.png",
+     "seenOn": "Seirin Spirit 268"
+    },
+    "III": {
+     "value": "+1% per 35 Energy (5x)",
+     "icon": "icons/forward-awakening-iii.png",
+     "seenOn": "Seirin Spirit 303"
+    }
+   },
+   "collections": [
+    {
+     "name": "Seirin Spirit",
+     "tiers": "II, III"
+    },
+    {
+     "name": "LG Kise Peerless",
+     "tiers": "II"
+    },
+    {
+     "name": "Pumpkin Carnival",
+     "tiers": "II"
+    },
+    {
+     "name": "Perfect Kise Collection",
+     "tiers": "II, III"
+    }
+   ]
+  },
+  {
+   "id": "unwavering-resolve",
+   "name": "Unwavering Resolve",
+   "category": "Offense",
+   "tags": [
+    "Mid-Range"
+   ],
+   "effect": "Increases Mid-Range Accuracy, and again for the shot after a miss.",
+   "trainingCamp": "",
+   "tiers": {
+    "II": {
+     "value": "+1.2% (+1.2% after a miss)",
+     "icon": "icons/unwavering-resolve-ii.png",
+     "seenOn": "Seirin Spirit 248"
+    },
+    "III": {
+     "value": "+1.5% (+1.5% after a miss)",
+     "icon": "icons/unwavering-resolve-iii.png",
+     "seenOn": "Seirin Spirit 299"
+    }
+   },
+   "collections": [
+    {
+     "name": "Seirin Spirit",
+     "tiers": "II, III"
+    },
+    {
+     "name": "LG Kise",
+     "tiers": "II"
+    },
+    {
+     "name": "LG Kise Peerless",
+     "tiers": "II"
+    },
+    {
+     "name": "Pumpkin Carnival",
+     "tiers": "II"
+    },
+    {
+     "name": "Kise Collection",
+     "tiers": "III"
+    }
+   ]
+  },
+  {
+   "id": "motion-offense",
+   "name": "Motion Offense",
+   "category": "Offense",
+   "tags": [
+    "All shots"
+   ],
+   "effect": "Increases Accuracy for the shot after 3 Drives.",
+   "trainingCamp": "",
+   "tiers": {
+    "II": {
+     "value": "+2.5%",
+     "icon": "icons/motion-offense-ii.png",
+     "seenOn": "Kise Collection 360"
+    },
+    "III": {
+     "value": "+3%",
+     "icon": "icons/motion-offense-iii.png",
+     "seenOn": "Kise Collection 284"
+    }
+   },
+   "collections": [
+    {
+     "name": "Seirin Spirit",
+     "tiers": "II"
+    },
+    {
+     "name": "LG Kise",
+     "tiers": "II"
+    },
+    {
+     "name": "LG Kise Peerless",
+     "tiers": "III"
+    },
+    {
+     "name": "Pumpkin Carnival",
+     "tiers": "II"
+    },
+    {
+     "name": "Kise Collection",
+     "tiers": "II, III"
+    }
+   ]
+  },
+  {
+   "id": "absolute-core",
+   "name": "Absolute Core",
+   "category": "Offense",
+   "tags": [
+    "3PT",
+    "Mid-Range"
+   ],
+   "effect": "Increases Mid-Range and 3PT Accuracy when your team has a Center. Doubled with two Centers or Power Forwards.",
+   "trainingCamp": "",
+   "tiers": {
+    "II": {
+     "value": "+1% (+2% with two C/PF)",
+     "icon": "icons/absolute-core-ii.png",
+     "seenOn": "SP Akashi 393"
+    },
+    "III": {
+     "value": "+1.5% (+3% with two C/PF)",
+     "icon": "icons/absolute-core-iii.png",
+     "seenOn": "SP Akashi 281"
+    }
+   },
+   "collections": [
+    {
+     "name": "LG Kise",
+     "tiers": "II"
+    },
+    {
+     "name": "SP Akashi Collection",
+     "tiers": "II, III"
+    },
+    {
+     "name": "Graffiti Master",
+     "tiers": "III"
+    }
+   ]
+  },
+  {
+   "id": "finishing-time",
+   "name": "Finishing Time",
+   "category": "Offense",
+   "tags": [
+    "All shots",
+    "Handling"
+   ],
+   "effect": "After using your Ultimate, increases offensive accuracy and reduces the chance of your Drive being stopped for 4s.",
+   "trainingCamp": "",
+   "tiers": {
+    "II": {
+     "value": "+3% accuracy; −3% Drive-stop",
+     "icon": "icons/finishing-time-ii.png",
+     "seenOn": "LG Kise"
+    },
+    "III": {
+     "value": "+4% accuracy; −3% Drive-stop",
+     "icon": "icons/finishing-time-iii.png",
+     "seenOn": "LG Kise Peerless"
+    }
+   },
+   "collections": [
+    {
+     "name": "LG Kise",
+     "tiers": "II, III"
+    },
+    {
+     "name": "LG Kise Peerless",
+     "tiers": "III"
+    },
+    {
+     "name": "LG Aomine Peerless",
+     "tiers": "III"
+    }
+   ]
+  },
+  {
+   "id": "clutch-player",
+   "name": "Clutch Player",
+   "category": "Offense",
+   "tags": [
+    "3PT"
+   ],
+   "effect": "Increases 3PT Accuracy, plus more in the final minute.",
+   "trainingCamp": "",
+   "tiers": {
+    "II": {
+     "value": "",
+     "icon": null,
+     "seenOn": ""
+    },
+    "III": {
+     "value": "",
+     "icon": null,
+     "seenOn": ""
+    }
+   },
+   "collections": [
+    {
+     "name": "Diviner Midorima",
+     "tiers": "III"
+    }
+   ]
+  },
+  {
+   "id": "perimeter-master",
+   "name": "Perimeter Master",
+   "category": "Offense",
+   "tags": [
+    "3PT",
+    "Open shots"
+   ],
+   "effect": "Increases Open 3PT Accuracy, plus more for 3s after receiving a pass. Open shots only.",
+   "trainingCamp": "",
+   "tiers": {
+    "II": {
+     "value": "+2.5% (+1.5% after a pass)",
+     "icon": "icons/perimeter-master-ii.png",
+     "seenOn": "Diviner Midorima 255"
+    },
+    "III": {
+     "value": "+3% (+2% after a pass)",
+     "icon": "icons/perimeter-master-iii.png",
+     "seenOn": "Midorima Collection 281"
+    }
+   },
+   "collections": [
+    {
+     "name": "Pumpkin Carnival",
+     "tiers": "III"
+    },
+    {
+     "name": "Diviner Midorima",
+     "tiers": "II"
+    },
+    {
+     "name": "Midorima Collection",
+     "tiers": "III"
+    }
+   ]
+  },
+  {
+   "id": "cut-expert",
+   "name": "Cut Expert",
+   "category": "Offense",
+   "tags": [
+    "Open shots"
+   ],
+   "effect": "Increases off-ball movement on offense. After scoring an open shot, increases Open Mid-Range and Open 3PT Accuracy; stacks 3x.",
+   "trainingCamp": "Open accuracy boosts are doubled.",
+   "tiers": {
+    "II": {
+     "value": "Off-ball +0.1; +0.5% per stack",
+     "icon": "icons/cut-expert-ii.png",
+     "seenOn": "LG Kise 258"
+    },
+    "III": {
+     "value": "Off-ball +0.1; +0.7% per stack",
+     "icon": "icons/cut-expert-iii.png",
+     "seenOn": "Nash 387"
+    }
+   },
+   "collections": [
+    {
+     "name": "LG Kise",
+     "tiers": "II, III"
+    },
+    {
+     "name": "Nash",
+     "tiers": "III"
+    }
+   ]
+  },
+  {
+   "id": "assist-boost",
+   "name": "Assist Boost",
+   "category": "Offense",
+   "tags": [
+    "Open shots",
+    "Passing"
+   ],
+   "effect": "Increases max Catch Distance. Increases Open Accuracy when catching a pass at an open spot.",
+   "trainingCamp": "",
+   "tiers": {
+    "II": {
+     "value": "",
+     "icon": null,
+     "seenOn": ""
+    },
+    "III": {
+     "value": "+1 Catch Distance; +2.5% open accuracy",
+     "icon": "icons/assist-boost-iii.png",
+     "seenOn": "Kise Collection 292"
+    }
+   },
+   "collections": [
+    {
+     "name": "Kise Collection",
+     "tiers": "III"
+    }
+   ]
+  },
+  {
+   "id": "catch-attack",
+   "name": "Catch & Attack",
+   "category": "Offense",
+   "tags": [
+    "Speed"
+   ],
+   "effect": "Increases Speed for 3s after receiving a pass.",
+   "trainingCamp": "",
+   "tiers": {
+    "II": {
+     "value": "",
+     "icon": null,
+     "seenOn": ""
+    },
+    "III": {
+     "value": "+0.4 Speed for 3s",
+     "icon": "icons/catch-attack-iii.png",
+     "seenOn": "Wave Rider No.0321"
+    }
+   },
+   "collections": [
+    {
+     "name": "Wave Rider",
+     "tiers": "III"
+    }
+   ]
+  },
+  {
+   "id": "sharp-drive",
+   "name": "Sharp Drive",
+   "category": "Handling",
+   "tags": [
+    "Handling"
+   ],
+   "effect": "Increases Ankle Breaker Chance, plus more after each successful Ankle Breaker (3 stacks).",
+   "trainingCamp": "",
+   "tiers": {
+    "II": {
+     "value": "+1.2%; +0.3% per stack",
+     "icon": "icons/sharp-drive-ii.png",
+     "seenOn": "Seirin Spirit 363, Pumpkin Carnival 399"
+    },
+    "III": {
+     "value": "+1.5%; +0.5% per stack",
+     "icon": "icons/sharp-drive-iii.png",
+     "seenOn": "Seirin Spirit 384"
+    }
+   },
+   "collections": [
+    {
+     "name": "Seirin Spirit",
+     "tiers": "II, III"
+    },
+    {
+     "name": "LG Kise",
+     "tiers": "II"
+    },
+    {
+     "name": "LG Kise Peerless",
+     "tiers": "II"
+    },
+    {
+     "name": "Pumpkin Carnival",
+     "tiers": "II"
+    }
+   ]
+  },
+  {
+   "id": "ball-control-expert",
+   "name": "Ball Control Expert",
+   "category": "Handling",
+   "tags": [
+    "Handling",
+    "All shots"
+   ],
+   "effect": "Entering Enhanced Dribble reduces a stat the game text leaves out. Increases Offensive Accuracy while in Enhanced Dribble and for 2s after.",
+   "trainingCamp": "Offensive Accuracy increase is doubled.",
+   "tiers": {
+    "II": {
+     "value": "−3% [stat unclear]; +1.5% accuracy",
+     "icon": "icons/ball-control-expert-ii.png",
+     "seenOn": "LG Aomine Peerless 262"
+    },
+    "III": {
+     "value": "−3% [stat unclear]; +2% accuracy",
+     "icon": "icons/ball-control-expert-iii.png",
+     "seenOn": "LG Aomine Peerless 278"
+    }
+   },
+   "collections": [
+    {
+     "name": "LG Aomine Peerless",
+     "tiers": "II, III"
+    }
+   ]
+  },
+  {
+   "id": "pump-fake",
+   "name": "Pump Fake",
+   "category": "Handling",
+   "tags": [
+    "Handling",
+    "Passing"
+   ],
+   "effect": "Reduces the chance of being Stolen and increases Safe Pass Distance when you fake a shot but pass.",
+   "trainingCamp": "",
+   "tiers": {
+    "II": {
+     "value": "−3% Stolen; +1.5 Safe Pass",
+     "icon": "icons/pump-fake-ii.png",
+     "seenOn": "Pumpkin Carnival 278"
+    },
+    "III": {
+     "value": "−5% Stolen; +1.5 Safe Pass",
+     "icon": "icons/pump-fake-iii.png",
+     "seenOn": "Pumpkin Carnival 399"
+    }
+   },
+   "collections": [
+    {
+     "name": "Pumpkin Carnival",
+     "tiers": "II, III"
+    }
+   ]
+  },
+  {
+   "id": "quick-counter",
+   "name": "Quick Counter",
+   "category": "Defense",
+   "tags": [
+    "Steal",
+    "Speed"
+   ],
+   "effect": "Increases Steal Chance. Increases Speed for 3s after a successful Steal.",
+   "trainingCamp": "",
+   "tiers": {
+    "II": {
+     "value": "+1.3% Steal; +0.3 Speed for 3s",
+     "icon": "icons/quick-counter-ii.png",
+     "seenOn": "Nash, Seirin Spirit"
+    },
+    "III": {
+     "value": "",
+     "icon": "icons/quick-counter-iii.png",
+     "seenOn": "Seirin Spirit 274"
+    }
+   },
+   "collections": [
+    {
+     "name": "Seirin Spirit",
+     "tiers": "II, III"
+    },
+    {
+     "name": "Pumpkin Carnival",
+     "tiers": "II"
+    },
+    {
+     "name": "Nash",
+     "tiers": "II, III"
+    },
+    {
+     "name": "Wave Rider",
+     "tiers": "II"
+    }
+   ]
+  },
+  {
+   "id": "roadblock",
+   "name": "Roadblock",
+   "category": "Defense",
+   "tags": [
+    "Steal"
+   ],
+   "effect": "Increases Charge Chance. Increases Steal Chance for 3s after charging an opponent.",
+   "trainingCamp": "",
+   "tiers": {
+    "II": {
+     "value": "+1.5% Charge; +1.5% Steal for 3s",
+     "icon": "icons/roadblock-ii.png",
+     "seenOn": "Seirin Spirit 264, 384"
+    },
+    "III": {
+     "value": "",
+     "icon": null,
+     "seenOn": ""
+    }
+   },
+   "collections": [
+    {
+     "name": "Seirin Spirit",
+     "tiers": "II, III"
+    },
+    {
+     "name": "LG Kise Peerless",
+     "tiers": "II"
+    },
+    {
+     "name": "Pumpkin Carnival",
+     "tiers": "II"
+    }
+   ]
+  },
+  {
+   "id": "offense-defense-switch",
+   "name": "Offense-Defense Switch",
+   "category": "Hybrid",
+   "tags": [
+    "Steal",
+    "All shots"
+   ],
+   "effect": "Increases Layup, Close Shot, Mid-Range and 3PT Accuracy for a while after a successful Steal.",
+   "trainingCamp": "",
+   "tiers": {
+    "II": {
+     "value": "",
+     "icon": null,
+     "seenOn": ""
+    },
+    "III": {
+     "value": "",
+     "icon": null,
+     "seenOn": ""
+    }
+   },
+   "collections": [
+    {
+     "name": "LG Kise",
+     "tiers": "II"
+    },
+    {
+     "name": "LG Kise Peerless",
+     "tiers": "II"
+    }
+   ]
+  },
+  {
+   "id": "paint-powerhouse",
+   "name": "Paint Powerhouse",
+   "category": "Hybrid",
+   "tags": [
+    "Block",
+    "Finishing"
+   ],
+   "effect": "A dunk raises your next Block Range until you block. A block raises your next Dunk Accuracy and Knockback until you dunk.",
+   "trainingCamp": "Block Range and Dunk Accuracy boosts are doubled.",
+   "tiers": {
+    "II": {
+     "value": "+0.2 Block Range; +4% Dunk, +3% Knockback",
+     "icon": "icons/paint-powerhouse-ii.png",
+     "seenOn": "Jason Silver 467, LG Mura 283"
+    },
+    "III": {
+     "value": "+0.3 Block Range; +5% Dunk, +3% Knockback",
+     "icon": "icons/paint-powerhouse-iii.png",
+     "seenOn": "Jason Silver 278"
+    }
+   },
+   "collections": [
+    {
+     "name": "LG Kise",
+     "tiers": "II"
+    },
+    {
+     "name": "LG Kagami",
+     "tiers": "III"
+    },
+    {
+     "name": "LG Murasakibara",
+     "tiers": "II"
+    },
+    {
+     "name": "Jason Silver",
+     "tiers": "II, III"
+    }
+   ]
+  },
+  {
+   "id": "defensive-stopper",
+   "name": "Defensive Stopper",
+   "category": "Defense",
+   "tags": [
+    "Block"
+   ],
+   "effect": "Increases Block Range after each successful Block. Up to 5 stacks.",
+   "trainingCamp": "",
+   "tiers": {
+    "II": {
+     "value": "+0.05 per stack (5x)",
+     "icon": "icons/defensive-stopper-ii.png",
+     "seenOn": "ZONE Mura 353"
+    },
+    "III": {
+     "value": "",
+     "icon": null,
+     "seenOn": ""
+    }
+   },
+   "collections": [
+    {
+     "name": "Seirin Spirit",
+     "tiers": "II"
+    },
+    {
+     "name": "LG Kise Peerless",
+     "tiers": "II"
+    },
+    {
+     "name": "Pumpkin Carnival",
+     "tiers": "II"
+    },
+    {
+     "name": "ZONE Murasakibara",
+     "tiers": "II"
+    }
+   ]
+  },
+  {
+   "id": "perimeter-lockdown",
+   "name": "Perimeter Lockdown",
+   "category": "Defense",
+   "tags": [
+    "Block"
+   ],
+   "effect": "Increases Block Range, plus more when matched against an SG or PG.",
+   "trainingCamp": "",
+   "tiers": {
+    "II": {
+     "value": "+0.15; +0.15 more vs SG/PG",
+     "icon": "icons/perimeter-lockdown-ii.png",
+     "seenOn": "Jason Silver 362"
+    },
+    "III": {
+     "value": "",
+     "icon": null,
+     "seenOn": ""
+    }
+   },
+   "collections": [
+    {
+     "name": "LG Kise",
+     "tiers": "II"
+    },
+    {
+     "name": "Jason Silver",
+     "tiers": "II"
+    },
+    {
+     "name": "ZONE Murasakibara",
+     "tiers": "II"
+    }
+   ]
+  },
+  {
+   "id": "swift-zone-defense",
+   "name": "Swift Zone Defense",
+   "category": "Defense",
+   "tags": [
+    "Block"
+   ],
+   "effect": "Increases off-ball movement on defense. Increases Block when the ball-handler isn't your matchup.",
+   "trainingCamp": "",
+   "tiers": {
+    "II": {
+     "value": "Off-ball +0.1; Block +0.15",
+     "icon": "icons/swift-zone-defense-ii.png",
+     "seenOn": "LG Kise 361"
+    },
+    "III": {
+     "value": "",
+     "icon": null,
+     "seenOn": ""
+    }
+   },
+   "collections": [
+    {
+     "name": "LG Kise",
+     "tiers": "II"
+    }
+   ]
+  },
+  {
+   "id": "close-guarding",
+   "name": "Close Guarding",
+   "category": "Defense",
+   "tags": [
+    "Contest"
+   ],
+   "effect": "Increases Contest Rate while accelerating.",
+   "trainingCamp": "",
+   "tiers": {
+    "II": {
+     "value": "+2.5% while accelerating",
+     "icon": "icons/close-guarding-ii.png",
+     "seenOn": "Seirin Spirit, SP Akashi 393"
+    },
+    "III": {
+     "value": "",
+     "icon": null,
+     "seenOn": ""
+    }
+   },
+   "collections": [
+    {
+     "name": "Seirin Spirit",
+     "tiers": "II"
+    },
+    {
+     "name": "LG Kise Peerless",
+     "tiers": "II"
+    },
+    {
+     "name": "Pumpkin Carnival",
+     "tiers": "II"
+    },
+    {
+     "name": "SP Akashi Collection",
+     "tiers": "II"
+    }
+   ]
+  },
+  {
+   "id": "stack-intimidation",
+   "name": "Stack Intimidation",
+   "category": "Defense",
+   "tags": [
+    "Contest"
+   ],
+   "effect": "Increases base Shot Contest. Each contest that forces a miss stacks Contest Rate (3x) until the opponent scores.",
+   "trainingCamp": "Base Contest Rate increase is doubled; stacking is doubled when the opponent misses.",
+   "tiers": {
+    "II": {
+     "value": "",
+     "icon": null,
+     "seenOn": ""
+    },
+    "III": {
+     "value": "",
+     "icon": null,
+     "seenOn": ""
+    }
+   },
+   "collections": [
+    {
+     "name": "LG Kise Peerless",
+     "tiers": "II"
+    }
+   ]
+  },
+  {
+   "id": "two-arm-block",
+   "name": "Two-Arm Block",
+   "category": "Defense",
+   "tags": [
+    "Contest"
+   ],
+   "effect": "Increases Jump Contest Rate (shot contest, not block), plus more after 3s in the opponent's defensive zone.",
+   "trainingCamp": "",
+   "tiers": {
+    "II": {
+     "value": "",
+     "icon": null,
+     "seenOn": ""
+    },
+    "III": {
+     "value": "+2%; +1.5% more after 3s",
+     "icon": "icons/two-arm-block-iii.png",
+     "seenOn": "Perfect Kise Collection No.1014"
+    }
+   },
+   "collections": [
+    {
+     "name": "Perfect Kise Collection",
+     "tiers": "III"
+    }
+   ]
+  },
+  {
+   "id": "rising-strong",
+   "name": "Rising Strong",
+   "category": "Rebounding",
+   "tags": [
+    "Rebound"
+   ],
+   "effect": "Increases Rebound Contest Value, and the same again on the rebound after a failed one.",
+   "trainingCamp": "",
+   "tiers": {
+    "II": {
+     "value": "+1.5 (+1.5 after a miss)",
+     "icon": "icons/rising-strong-ii.png",
+     "seenOn": "LG Kagami, ZONE Mura, LG Mura"
+    },
+    "III": {
+     "value": "+2 (+2 after a miss)",
+     "icon": "icons/rising-strong-iii.png",
+     "seenOn": "Autumn Moon"
+    }
+   },
+   "collections": [
+    {
+     "name": "LG Kagami",
+     "tiers": "II"
+    },
+    {
+     "name": "LG Murasakibara",
+     "tiers": "II"
+    },
+    {
+     "name": "Autumn Moon",
+     "tiers": "III"
+    },
+    {
+     "name": "ZONE Murasakibara",
+     "tiers": "II, III"
+    }
+   ]
+  },
+  {
+   "id": "contest-dominator",
+   "name": "Contest Dominator",
+   "category": "Rebounding",
+   "tags": [
+    "Rebound"
+   ],
+   "effect": "After pushing or knocking away an opponent, increases Rebound Contest Value. Stacks 2x; lasts until the next rebound attempt.",
+   "trainingCamp": "Rebound Contest Value increase is doubled.",
+   "tiers": {
+    "II": {
+     "value": "+1.5 per stack (2x)",
+     "icon": "icons/contest-dominator-ii.png",
+     "seenOn": "LG Mura 358"
+    },
+    "III": {
+     "value": "+2 per stack (2x)",
+     "icon": "icons/contest-dominator-iii.png",
+     "seenOn": "LG Mura 408"
+    }
+   },
+   "collections": [
+    {
+     "name": "LG Murasakibara",
+     "tiers": "II, III"
+    }
+   ]
+  },
+  {
+   "id": "post-beast",
+   "name": "Post Beast",
+   "category": "Rebounding",
+   "tags": [
+    "Rebound",
+    "Finishing"
+   ],
+   "effect": "After a box-out push, increases Rebound Contest Value. Entering post position increases Close Shot, Mid-Range, Layup and Dunk Accuracy for 3.5s.",
+   "trainingCamp": "Rebound boost doubled after a box-out push; post accuracy boost doubled.",
+   "tiers": {
+    "II": {
+     "value": "+1.5 Rebound Contest; +1.5% post accuracy",
+     "icon": "icons/post-beast-ii.png",
+     "seenOn": "LG Mura 408, LG Mura 262"
+    },
+    "III": {
+     "value": "+2 Rebound Contest; +2% post accuracy",
+     "icon": "icons/post-beast-iii.png",
+     "seenOn": "LG Mura 288, Jason Silver 467"
+    }
+   },
+   "collections": [
+    {
+     "name": "LG Murasakibara",
+     "tiers": "II, III"
+    },
+    {
+     "name": "Jason Silver",
+     "tiers": "III"
+    }
+   ]
+  },
+  {
+   "id": "interior-inspire",
+   "name": "Interior Inspire",
+   "category": "Hybrid",
+   "tags": [
+    "Rebound",
+    "Finishing"
+   ],
+   "effect": "Each dunk or layup increases your next rebound's Contest Value. Each rebound increases your next dunk or layup's accuracy.",
+   "trainingCamp": "",
+   "tiers": {
+    "II": {
+     "value": "",
+     "icon": null,
+     "seenOn": ""
+    },
+    "III": {
+     "value": "",
+     "icon": null,
+     "seenOn": ""
+    }
+   },
+   "collections": [
+    {
+     "name": "Jason Silver",
+     "tiers": "II"
+    },
+    {
+     "name": "ZONE Murasakibara",
+     "tiers": "II"
+    }
+   ]
+  },
+  {
+   "id": "first-victor",
+   "name": "First Victor",
+   "category": "Energy",
+   "tags": [
+    "Energy"
+   ],
+   "effect": "Grants extra energy per score, plus a bonus if you score first in the match.",
+   "trainingCamp": "",
+   "tiers": {
+    "II": {
+     "value": "+1 energy per score; +3 if first",
+     "icon": "icons/first-victor-ii.png",
+     "seenOn": "Kise Collection 360"
+    },
+    "III": {
+     "value": "",
+     "icon": null,
+     "seenOn": ""
+    }
+   },
+   "collections": [
+    {
+     "name": "Kise Collection",
+     "tiers": "II"
+    }
+   ]
+  }
+ ]
+}
