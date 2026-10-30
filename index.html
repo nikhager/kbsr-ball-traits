@@ -97,6 +97,13 @@ const TAGS = ["3PT","Mid-Range","Finishing","All shots","Open shots","Handling",
 const state = { tag: "", col: "", q: "" };
 let DATA = null;
 const $ = id => document.getElementById(id);
+const slugify = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+// Counts filter use as GoatCounter events on the public page; does nothing where the counter isn't loaded.
+function track(name, tries = 0) {
+  const gc = window.goatcounter;
+  if (gc && typeof gc.count === 'function') gc.count({ path: name, title: name, event: true });
+  else if (tries < 10) setTimeout(() => track(name, tries + 1), 500);
+}
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
 function readHash() {
@@ -114,13 +121,18 @@ function buildControls() {
       state.tag = b.dataset.tag;
       const slug = state.tag.toLowerCase().replace(/[^a-z0-9]+/g,'-');
       history.replaceState(null, "", state.tag ? "#" + slug : location.pathname + location.search);
+      track("filter-" + (state.tag ? slugify(state.tag) : "all"));
       render();
     });
     tagEl.appendChild(b);
   });
   const sel = $("col");
   DATA.collections.forEach(c => { const o = document.createElement("option"); o.value = c; o.textContent = c; sel.appendChild(o); });
-  sel.addEventListener("change", () => { state.col = sel.value; render(); });
+  sel.addEventListener("change", () => {
+    state.col = sel.value;
+    track("collection-" + (state.col ? slugify(state.col) : "all"));
+    render();
+  });
   $("q").addEventListener("input", e => { state.q = e.target.value.trim().toLowerCase(); render(); });
   window.addEventListener("hashchange", () => { readHash(); render(); });
 }
@@ -166,6 +178,7 @@ fetch("traits.json").then(r => { if (!r.ok) throw new Error(r.status); return r.
   DATA = d;
   $("updated").textContent = `Last updated ${d.updated}.`;
   readHash(); buildControls(); render();
+  if (state.tag) track("link-filter-" + slugify(state.tag));
 }).catch(() => { $("count").textContent = "Couldn't load the trait list. Refresh the page to try again."; });
 </script>
 
