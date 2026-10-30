@@ -1,0 +1,12 @@
+# OS and editor files
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# Local secrets and scratch files (never commit)
+.env
+.env.*
+*.local
+scratch/
