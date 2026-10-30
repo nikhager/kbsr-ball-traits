@@ -36,6 +36,9 @@ Static fan reference for ball traits in Kuroko's Basketball: Street Rivals (glob
 4. Update `traits.json`, add the icon PNG, and keep the owner's "KNBSR Ball Build Planner" Google Sheet (Traits tab) in sync.
 5. Commit and push only when the owner asks.
 
+## Analytics
+- GoatCounter (account `nhager`, dashboard nhager.goatcounter.com) counts page views via one script tag just before `</body>` in `index.html`. Keep it when editing the page. The claude.ai artifact copy of the page leaves it out (outside scripts are blocked there).
+
 ## Constraints
 - Public repo: never commit secrets, personal emails, Google Sheet/Doc IDs, or full screenshots (they show the player ID). Icon crops only.
 - Icons are the game publisher's artwork. Don't add a license that claims them.
