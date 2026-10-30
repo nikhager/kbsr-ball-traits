@@ -439,16 +439,16 @@
     "Handling",
     "All shots"
    ],
-   "effect": "Entering Enhanced Dribble state reduces by 3%. Offensive Accuracy increase by 2% in Enhanced Dribble state. This effect lasts for 2 seconds after exiting Enhanced Dribble.",
+   "effect": "Entering Enhanced Dribble state reduces [Charge Rate] by 3%. Offensive Accuracy increase by 2% in Enhanced Dribble state. This effect lasts for 2 seconds after exiting Enhanced Dribble.",
    "trainingCamp": "Offensive Accuracy increase is doubled.",
    "tiers": {
     "II": {
-     "value": "−3% [stat unclear]; +1.5% accuracy",
+     "value": "−3% [Charge Rate]; +1.5% accuracy",
      "icon": "icons/ball-control-expert-ii.png",
      "seenOn": "LG Aomine Peerless 262"
     },
     "III": {
-     "value": "−3% [stat unclear]; +2% accuracy",
+     "value": "−3% [Charge Rate]; +2% accuracy",
      "icon": "icons/ball-control-expert-iii.png",
      "seenOn": "LG Aomine Peerless 278"
     }
