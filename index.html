@@ -4,7 +4,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>KBSR Ball Traits – Kuroko's Basketball: Street Rivals</title>
-<meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Every ball trait in Kuroko's Basketball: Street Rivals: effects, tier values, and which collections carry them.">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap">
 <style>
@@ -139,9 +138,9 @@ function card(t) {
   return `<article class="card${anyIcon ? "" : " missing"}" id="${esc(t.id)}">
     <div class="top"><span class="cat">${esc(t.category)}</span><div class="tags">${t.tags.map(x => `<span class="tag">${esc(x)}</span>`).join("")}</div></div>
     <div class="name">${esc(t.name)}</div>
+    <div class="vars">${vars}</div>
     <p class="effect">${esc(t.effect)}</p>
     ${t.trainingCamp ? `<p class="camp">Training Camp: ${esc(t.trainingCamp)}</p>` : ""}
-    <div class="vars">${vars}</div>
     <p class="cols"><b>Found on:</b> ${cols}</p>
   </article>`;
 }
