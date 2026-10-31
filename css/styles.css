@@ -33,6 +33,9 @@ input{flex:1 1 180px} select{flex:1 1 180px}
 main{padding-block:16px 40px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:12px}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.body{display:flex;flex-direction:column;gap:8px}
+/* Cards in the same grid row share row heights, so icons and the "Found on" divider stay level across a row even when tags, names or effects wrap */
+@supports (grid-template-rows:subgrid){.card{display:grid;grid-template-rows:subgrid;grid-row:span 5;row-gap:8px;align-content:start}}
 .card.missing{background:transparent;border-style:dashed}
 .top{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
 .cat{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
