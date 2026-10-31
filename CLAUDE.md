@@ -6,6 +6,7 @@ Static fan reference for ball traits in Kuroko's Basketball: Street Rivals (glob
 - `index.html`: page markup only. Links `css/styles.css` and loads `js/app.js`.
 - `css/styles.css`: all styles, including the light/dark theme tokens.
 - `js/app.js`: fetches `data/traits.json` and renders the filterable cards.
+- Card layout: each card has five sections (tag row, name, tier icons, a `.body` block with effect/source/Training Camp, and the "Found on" line). `css/styles.css` uses CSS subgrid (`grid-row:span 5`) so those sections line up across a grid row. If you add or remove a top-level card section in `card()`, update the span to match.
 - `js/vendor/count.js`: third-party GoatCounter script. Don't edit it.
 - `data/traits.json`: all data. `collections` is the ordered list for the collection dropdown; `traits` is the list of cards.
 - `images/icons/<trait-id>-ii.png`, `images/icons/<trait-id>-iii.png`: tier icons, 124px square crops of the in-game trait badge.
@@ -40,7 +41,7 @@ Static fan reference for ball traits in Kuroko's Basketball: Street Rivals (glob
 5. Commit and push only when the owner asks.
 
 ## Analytics
-- GoatCounter (account `nhager`, dashboard nhager.goatcounter.com) counts page views and filter events via one script tag just before `</body>` in `index.html`. The script is self-hosted as `js/vendor/count.js` (GoatCounter v2.7.0, ISC license) so tracker blockers that target gc.zgo.at don't stop it; counts still go to nhager.goatcounter.com. Keep it when editing the page. The claude.ai artifact copy of the page leaves it out (outside scripts are blocked there).
+- GoatCounter (account `nhager`, dashboard nhager.goatcounter.com) counts page views and filter events via one script tag just before `</body>` in `index.html`. The script is self-hosted as `js/vendor/count.js` (GoatCounter v2.7.0, ISC license) so tracker blockers that target gc.zgo.at don't stop it; counts still go to nhager.goatcounter.com. Keep it when editing the page. The claude.ai artifact copy of the page mirrors this repo's folder layout (`css/`, `js/app.js`, `data/`, `images/icons/`) but leaves the GoatCounter tag out (outside scripts are blocked there).
 
 ## Constraints
 - Public repo: never commit secrets, personal emails, Google Sheet/Doc IDs, or full screenshots (they show the player ID). Icon crops only.
