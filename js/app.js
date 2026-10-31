@@ -61,9 +61,11 @@ function card(t) {
     <div class="top"><span class="cat">${esc(t.category)}</span><div class="tags">${cardTags(t.tags).map(x => `<span class="tag">${esc(x)}</span>`).join("")}</div></div>
     <div class="name">${esc(t.name)}</div>
     <div class="vars">${vars}</div>
+    <div class="body">
     <p class="effect">${esc(t.effect)}</p>
     <p class="src">${t.effectSource ? `In-game text, ${esc(t.effectSource)}` : "Summary. Not seen in game yet"}</p>
     ${t.trainingCamp ? `<p class="camp">Training Camp: ${esc(t.trainingCamp)}</p>` : ""}
+    </div>
     <p class="cols"><b>Found on:</b> ${cols}</p>
   </article>`;
 }
