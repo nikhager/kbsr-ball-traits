@@ -8,10 +8,12 @@ Every ball trait in **Kuroko's Basketball: Street Rivals** (global server): effe
 The game has no public wiki, and trait details only show up in in-game tooltips. Ball boxes rotate through the shop and rewards each month, so a collection's traits can only be logged while its boxes are available. This page gathers what's been seen in one searchable place, so players can plan builds and recognize traits in the auction without waiting for the next rotation.
 
 ## Features
-- Filter by objective: 3PT, Mid-Range, Finishing, Steal, Block, Contest, Rebound, Energy and more
+- Filter by objective: each shot type (3PT, Mid-Range, Close-Range, Layup, Dunk), Steal, Block, Contest, Rebound, Energy and more
 - Filter by ball collection, with match counts on each filter
 - Search trait names and effects
 - Icons for each tier, so you can recognize traits in the auction at a glance
+- Cards line up row by row, so icons and values are easy to compare side by side
+- Light and dark themes that follow your device setting
 
 ## Status
 Most traits are logged. Collection lists and some tier values are still partial and fill in as boxes cycle back into the shop. Missing values show on the page as "Not seen yet" or "Numbers not logged" rather than guesses.
