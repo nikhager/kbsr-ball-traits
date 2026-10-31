@@ -45,7 +45,7 @@ main{padding-block:16px 40px}
 .effect{font-size:.88rem;line-height:1.45;margin:0}
 .camp{font-size:.8rem;color:var(--muted);line-height:1.4;margin:0}
 .src{font-size:.72rem;color:var(--muted);letter-spacing:.02em;margin:-4px 0 0}
-.vars{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.vars{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding-top:6px}
 .var{display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;min-width:0}
 .var img,.ph{width:64px;height:64px;border-radius:50%}
 .ph{border:2px dashed var(--line);box-sizing:border-box}
