@@ -16,4 +16,7 @@ Every ball trait in **Kuroko's Basketball: Street Rivals** (global server): effe
 
 Collection lists are partial and grow as balls are logged. Values come from in-game tooltips on the global server.
 
+## Privacy
+The page counts anonymous visits and filter use with [GoatCounter](https://www.goatcounter.com): no cookies, no personal data, no cross-site tracking.
+
 Fan-made reference, not affiliated with the game's publishers.
