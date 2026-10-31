@@ -17,10 +17,16 @@ The game has no public wiki, and trait details only show up in in-game tooltips.
 Most traits are logged. Collection lists and some tier values are still partial and fill in as boxes cycle back into the shop. Missing values show on the page as "Not seen yet" or "Numbers not logged" rather than guesses.
 
 ## How it works
-A single static page with no build step and no dependencies. `index.html` fetches `traits.json` and renders the filterable cards with plain JavaScript, served by GitHub Pages from `main`.
+A static site with no build step and no dependencies, served by GitHub Pages from `main`. The page fetches the trait data and renders the filterable cards with plain JavaScript.
 
-- `traits.json`: all trait data (effects, tier values, collections)
-- `icons/`: trait icons, one per tier (`<trait>-ii.png`, `<trait>-iii.png`)
+```
+index.html          page markup
+css/styles.css      styles, including light and dark themes
+js/app.js           filtering and rendering
+js/vendor/          third-party scripts (GoatCounter)
+data/traits.json    all trait data: effects, tier values, collections
+images/icons/       trait icons, one per tier (<trait>-ii.png, <trait>-iii.png)
+```
 
 Effect text is copied from in-game tooltips on the global server. Where the game's translation is unclear, any clarification is in [square brackets] so it's distinguishable from the game's own wording.
 
