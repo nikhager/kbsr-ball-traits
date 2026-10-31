@@ -93,7 +93,10 @@ footer{color:var(--muted);font-size:.8rem;line-height:1.5;padding-block:0 32px}
 </div></footer>
 
 <script>
-const TAGS = ["3PT","Mid-Range","Finishing","All shots","Open shots","Handling","Passing","Steal","Block","Contest","Rebound","Speed","Energy"];
+const SHOTS = ["3PT","Mid-Range","Close-Range","Layup","Dunk"];
+const TAGS = [...SHOTS,"Steal","Block","Contest","Rebound","Handling","Passing","Speed","Energy"];
+// On cards, a trait that boosts every shot type shows one "All shots" chip instead of five.
+const cardTags = tags => SHOTS.every(s => tags.includes(s)) ? ["All shots", ...tags.filter(t => !SHOTS.includes(t))] : tags;
 const state = { tag: "", col: "", q: "" };
 let DATA = null;
 const $ = id => document.getElementById(id);
@@ -149,7 +152,7 @@ function card(t) {
     ? t.collections.map(c => { const s = `${esc(c.name)} (${esc(c.tiers)})`; return c.name === state.col ? `<mark>${s}</mark>` : s; }).join(" · ")
     : "None logged yet";
   return `<article class="card${anyIcon ? "" : " missing"}" id="${esc(t.id)}">
-    <div class="top"><span class="cat">${esc(t.category)}</span><div class="tags">${t.tags.map(x => `<span class="tag">${esc(x)}</span>`).join("")}</div></div>
+    <div class="top"><span class="cat">${esc(t.category)}</span><div class="tags">${cardTags(t.tags).map(x => `<span class="tag">${esc(x)}</span>`).join("")}</div></div>
     <div class="name">${esc(t.name)}</div>
     <div class="vars">${vars}</div>
     <p class="effect">${esc(t.effect)}</p>

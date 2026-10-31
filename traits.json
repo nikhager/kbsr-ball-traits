@@ -27,7 +27,8 @@
    "category": "Offense",
    "tags": [
     "Mid-Range",
-    "Finishing",
+    "Layup",
+    "Dunk",
     "Energy"
    ],
    "effect": "Increases Layup, Dunk, and Mid-Range Accuracy by +1% for every 35 Energy gained. Up to 5 stacks.",
@@ -114,7 +115,11 @@
    "name": "Motion Offense",
    "category": "Offense",
    "tags": [
-    "All shots"
+    "3PT",
+    "Mid-Range",
+    "Close-Range",
+    "Layup",
+    "Dunk"
    ],
    "effect": "Increases Accuracy by +3% for the shot following 3 Drives.",
    "trainingCamp": "",
@@ -197,7 +202,11 @@
    "name": "Finishing Time",
    "category": "Offense",
    "tags": [
-    "All shots",
+    "3PT",
+    "Mid-Range",
+    "Close-Range",
+    "Layup",
+    "Dunk",
     "Handling",
     "Energy"
    ],
@@ -265,8 +274,7 @@
    "name": "Perimeter Master",
    "category": "Offense",
    "tags": [
-    "3PT",
-    "Open shots"
+    "3PT"
    ],
    "effect": "Increases Open 3-Pointer Accuracy by +3%. Further increases Open 3-Pointer Accuracy by +2% for 3s after receiving a pass from a teammate.",
    "trainingCamp": "",
@@ -303,7 +311,8 @@
    "name": "Cut Expert",
    "category": "Offense",
    "tags": [
-    "Open shots"
+    "3PT",
+    "Mid-Range"
    ],
    "effect": "Off-ball movement increases by 0.1 when on offense. After scoring an open shot, Open Mid-Range Accuracy and Open 3-Pointer Accuracy +0.7%. Can stack up to 3 times.",
    "trainingCamp": "After scoring an open shot, Open Mid-Range and Open 3-Pointer Accuracy boosts are doubled, stacking up to 3 times.",
@@ -336,7 +345,8 @@
    "name": "Assist Boost",
    "category": "Offense",
    "tags": [
-    "Open shots",
+    "3PT",
+    "Mid-Range",
     "Passing"
    ],
    "effect": "Increases max Catch Distance by +1. Increases Open Accuracy by +2.5% when receiving a pass at an open spot.",
@@ -436,8 +446,12 @@
    "name": "Ball Control Expert",
    "category": "Handling",
    "tags": [
-    "Handling",
-    "All shots"
+    "3PT",
+    "Mid-Range",
+    "Close-Range",
+    "Layup",
+    "Dunk",
+    "Handling"
    ],
    "effect": "Entering Enhanced Dribble state reduces [Charge Rate] by 3%. Offensive Accuracy increase by 2% in Enhanced Dribble state. This effect lasts for 2 seconds after exiting Enhanced Dribble.",
    "trainingCamp": "Offensive Accuracy increase is doubled.",
@@ -575,8 +589,11 @@
    "name": "Offense-Defense Switch",
    "category": "Hybrid",
    "tags": [
-    "Steal",
-    "All shots"
+    "3PT",
+    "Mid-Range",
+    "Close-Range",
+    "Layup",
+    "Steal"
    ],
    "effect": "Increases Layup, Close Shot, Mid-Range and 3PT Accuracy for a while after a successful Steal.",
    "trainingCamp": "",
@@ -609,8 +626,8 @@
    "name": "Paint Powerhouse",
    "category": "Hybrid",
    "tags": [
-    "Block",
-    "Finishing"
+    "Dunk",
+    "Block"
    ],
    "effect": "A successful dunk increases the next Block Range by 0.3, lasting until the next successful block. A successful block increases the next Dunk Accuracy by 5% and Knockback Rate by 3%, lasting until the next successful dunk.",
    "trainingCamp": "Block Range and Dunk Accuracy boosts are doubled.",
@@ -927,8 +944,11 @@
    "name": "Post Beast",
    "category": "Rebounding",
    "tags": [
-    "Rebound",
-    "Finishing"
+    "Mid-Range",
+    "Close-Range",
+    "Layup",
+    "Dunk",
+    "Rebound"
    ],
    "effect": "After boxing out and pushing an opponent, Rebound Contest Value increases by 2 when contesting rebounds. Entering post position increases Close Shot, Mid-Range, Layup, and Dunk Accuracy by 2% for 3.5s.",
    "trainingCamp": "Rebound Contest Value boost is doubled after a box-out push. Entering post position doubles offensive accuracy boost for 3.5s.",
@@ -961,8 +981,9 @@
    "name": "Interior Inspire",
    "category": "Hybrid",
    "tags": [
-    "Rebound",
-    "Finishing"
+    "Layup",
+    "Dunk",
+    "Rebound"
    ],
    "effect": "Each dunk or layup increases your next rebound's Contest Value. Each rebound increases your next dunk or layup's accuracy.",
    "trainingCamp": "",

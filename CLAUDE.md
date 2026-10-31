@@ -25,7 +25,7 @@ Static fan reference for ball traits in Kuroko's Basketball: Street Rivals (glob
 }
 ```
 - Use `""` for an unknown value and `null` for a missing icon. The page shows "Not seen yet" or "Numbers not logged".
-- Filter tags: 3PT, Mid-Range, Finishing, All shots, Open shots, Handling, Passing, Steal, Block, Contest, Rebound, Speed, Energy. Energy covers every energy-related trait (energy-scaling, Ultimate-triggered, energy gain). Steal covers every steal-triggered trait.
+- Filter tags: 3PT, Mid-Range, Close-Range, Layup, Dunk, Steal, Block, Contest, Rebound, Handling, Passing, Speed, Energy. Tag every shot type a trait boosts (e.g. "offensive accuracy" = all five shot tags; open-shot traits get the shot types they name). No generic "all shots" or "open shots" tags; the page shows an "All shots" chip on cards that have all five, for display only. Energy covers every energy-related trait (energy-scaling, Ultimate-triggered, energy gain). Steal covers every steal-triggered trait.
 - Collection names must match an entry in `collections`.
 - Effect text is copied verbatim from the game. The game has translation errors: put any editorial fill-in or correction in [square brackets] so it's clearly not the game's text, e.g. "reduces [Charge Rate] by 3%".
 
