@@ -11,6 +11,37 @@ Decision record for the site's browser-tab icon and iPhone home-screen icon (Nov
 
 Editable sources are in `sources/`. Re-render the PNGs from them if the design changes. All of it is original artwork, not game assets.
 
+## Variants
+
+Every option tried, as its own SVG in `variants/<name>.svg`. `catalog.png` shows them all with their names. To swap icons, refer to a variant by name (e.g. "use tile-speed-ring").
+
+Naming: `tab-` = browser-tab icon (transparent), `tile-` = full-square home-screen tile. Then background, then ball style (`-ring` = gold-ring ball).
+
+| Name | Description | Round |
+|---|---|---|
+| `tab-plain-ball` | Ball with dark outline, no ring | 1 |
+| `tab-gold-ring` | **Shipped tab icon.** Ball in a gold ring | 1 |
+| `tile-white-ring` | Gold-ring ball on white (first home-screen icon) | 2 |
+| `tile-gold` | Gold gradient tile, ball with white outline | 2 |
+| `tile-ball-fill` | Zoomed-in ball fills the tile | 2 |
+| `tile-navy-ring` | Gold-ring ball on dark navy | 2 |
+| `tile-hair-blue-ring` | Kuroko hair pale blue | 3 |
+| `tile-speed-ring` | Loading-screen cyan into dark starfield | 3 |
+| `tile-gray-ring` | Light gray gradient | 3 |
+| `tile-deep-blue-ring` | Richer blue | 3 |
+| `tile-loading-gray-ring` | Exact loading-screen gray | 4 |
+| `tile-loading-streaks-ring` | Loading-screen gray with light streaks | 4 |
+| `tile-loading-streaks-flat` | Streaks, flatter red-orange ball, no ring | 4 |
+| `tile-inventory-ring` | Inventory card blue with bands and shadow | 5 |
+| `tile-gold-frame` | Gold circular frame from the shop detail panel | 5 |
+| `tile-shop-card` | Cream shop listing card with orange arc | 5 |
+| `tile-shop-small` | Basketball Shop sky blue, small ball, shadow | 5 |
+| `tile-shop-medium` | Shop tile, bigger ball, no ring | 6 |
+| `tile-shop-large` | Shop tile, ball nearly edge to edge | 6 |
+| `tile-shop-ring-medium-v1` | Shop tile, gold-ring ball, with upper-left line | 7 |
+| `tile-shop-ring-large` | Shop tile, bigger gold-ring ball | 7 |
+| `tile-shop-ring-medium` | **Shipped home-screen icon.** v1 without the upper-left line | 8 |
+
 ## How we got there
 
 | Round | File | What was tried | Outcome |
