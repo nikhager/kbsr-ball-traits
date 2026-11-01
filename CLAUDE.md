@@ -1,17 +1,18 @@
 # KBSR Ball Traits: notes for Claude
 
-Static fan reference for ball traits in Kuroko's Basketball: Street Rivals (global server), served by Cloudflare Pages (project `kbsr-ball-traits`, auto-deploys on every push to `main`) at https://kbsrlab.com (also www.kbsrlab.com and kbsr-ball-traits.pages.dev). The repo is private. Domain and DNS are on Cloudflare. No build step and no dependencies.
+Static fan reference for ball traits in Kuroko's Basketball: Street Rivals (global server), served by Cloudflare Pages (project `kbsr-ball-traits`, auto-deploys on every push to `main`) at https://kbsrlab.com (also www.kbsrlab.com and kbsr-ball-traits.pages.dev). Cloudflare publishes only the `site/` folder (build output directory `site`, no build command), so repo docs like this file stay off the web. The repo is private. Domain and DNS are on Cloudflare. No build step and no dependencies.
 
 ## Files
-- `index.html`: page markup only. Links `css/styles.css` and loads `js/app.js`.
-- `css/styles.css`: all styles, including the light/dark theme tokens.
-- `js/app.js`: fetches `data/traits.json` and renders the filterable cards.
+Everything the page loads lives in `site/`; paths inside the page and in `traits.json` are relative to `site/`. Repo-only material (this file, `README.md`, `docs/`) stays at the root and is never published.
+- `site/index.html`: page markup only. Links `css/styles.css` and loads `js/app.js`.
+- `site/css/styles.css`: all styles, including the light/dark theme tokens.
+- `site/js/app.js`: fetches `data/traits.json` and renders the filterable cards.
 - Card layout: each card has five sections (tag row, name, tier icons, a `.body` block with effect/source/Training Camp, and the "Found on" line). `css/styles.css` uses CSS subgrid (`grid-row:span 5`) so those sections line up across a grid row. If you add or remove a top-level card section in `card()`, update the span to match.
-- `js/vendor/count.js`: third-party GoatCounter script. Don't edit it.
-- `data/traits.json`: all data. `collections` is the ordered list for the collection dropdown; `traits` is the list of cards.
-- `images/favicon.svg` (+ `favicon-32.png`) and `images/apple-touch-icon.png`: original artwork (orange ball in a gold ring; the home-screen version sits on a sky-blue tile), not game assets. Sources and the decision record are in `docs/design/app-icon/`.
-- `docs/design/`: design references and decision records, one folder per topic (`README.md` + `sources/` + numbered `explorations/`). Not loaded by the page. Never put personal screenshots in it (public repo).
-- `images/icons/<trait-id>-ii.webp`, `images/icons/<trait-id>-iii.webp`: tier icons, 96px square crops of the in-game trait badge, centered on the badge circle and saved as WebP at quality 90.
+- `site/js/vendor/count.js`: third-party GoatCounter script. Don't edit it.
+- `site/data/traits.json`: all data. `collections` is the ordered list for the collection dropdown; `traits` is the list of cards.
+- `site/images/favicon.svg` (+ `favicon-32.png`) and `images/apple-touch-icon.png`: original artwork (orange ball in a gold ring; the home-screen version sits on a sky-blue tile), not game assets. Sources and the decision record are in `docs/design/app-icon/`.
+- `docs/design/`: design references and decision records, one folder per topic (`README.md` + `sources/` + numbered `explorations/`). Not loaded by the page. Never put personal screenshots in it.
+- `site/images/icons/<trait-id>-ii.webp`, `images/icons/<trait-id>-iii.webp`: tier icons, 96px square crops of the in-game trait badge, centered on the badge circle and saved as WebP at quality 90.
 
 ## Trait entry shape
 ```json
@@ -37,13 +38,13 @@ Static fan reference for ball traits in Kuroko's Basketball: Street Rivals (glob
 
 ## Logging new traits from screenshots
 1. Read the trait name, tier and numbers from the tooltip.
-2. On a ball with two traits, the icon that was tapped shows dimmer. That tells you which icon goes with the open tooltip. Crop the saved icon from an undimmed screenshot when one exists (the owner tries to upload one per ball), and replace a dimmed icon in `images/icons/` whenever an undimmed copy turns up.
+2. On a ball with two traits, the icon that was tapped shows dimmer. That tells you which icon goes with the open tooltip. Crop the saved icon from an undimmed screenshot when one exists (the owner tries to upload one per ball), and replace a dimmed icon in `site/images/icons/` whenever an undimmed copy turns up.
 3. A trait keeps the same symbol at every tier; only the ring color changes (purple II, gold III). Paint Powerhouse has a backboard rectangle behind the arm; Absolute Core doesn't.
-4. Update `data/traits.json`, add the icon WebP to `images/icons/`, and keep the owner's "KNBSR Ball Build Planner" Google Sheet (Traits tab) in sync.
+4. Update `site/data/traits.json`, add the icon WebP to `site/images/icons/`, and keep the owner's "KNBSR Ball Build Planner" Google Sheet (Traits tab) in sync.
 5. Commit and push only when the owner asks.
 
 ## Analytics
-- GoatCounter (site code `kbsrlab`, dashboard kbsrlab.goatcounter.com) counts page views and filter events via one script tag just before `</body>` in `index.html`. The script is self-hosted as `js/vendor/count.js` (GoatCounter v2.7.0, ISC license) so tracker blockers that target gc.zgo.at don't stop it; counts still go to kbsrlab.goatcounter.com. Keep it when editing the page. The claude.ai artifact copy of the page mirrors this repo's folder layout (`css/`, `js/app.js`, `data/`, `images/icons/`) but leaves the GoatCounter tag out (outside scripts are blocked there).
+- GoatCounter (site code `kbsrlab`, dashboard kbsrlab.goatcounter.com) counts page views and filter events via one script tag just before `</body>` in `site/index.html`. The script is self-hosted as `site/js/vendor/count.js` (GoatCounter v2.7.0, ISC license) so tracker blockers that target gc.zgo.at don't stop it; counts still go to kbsrlab.goatcounter.com. Keep it when editing the page. The claude.ai artifact copy of the page mirrors this repo's folder layout (`css/`, `js/app.js`, `data/`, `images/icons/`) but leaves the GoatCounter tag out (outside scripts are blocked there).
 
 ## Constraints
 - Treat the repo as if it were public (it was public before Nov 2026): never commit secrets, personal emails, Google Sheet/Doc IDs, or full screenshots (they show the player ID). Icon crops only.
