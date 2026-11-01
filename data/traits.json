@@ -326,7 +326,7 @@
     "II": {
      "value": "Off-ball +0.1; +0.5% per stack",
      "icon": "images/icons/cut-expert-ii.png",
-     "seenOn": "LG Kise 258"
+     "seenOn": "LG Kise 258, Midorima Collection 280"
     },
     "III": {
      "value": "Off-ball +0.1; +0.7% per stack",
@@ -342,6 +342,10 @@
     {
      "name": "Nash",
      "tiers": "III"
+    },
+    {
+     "name": "Midorima Collection",
+     "tiers": "II"
     }
    ],
    "effectSource": "Tier III"
