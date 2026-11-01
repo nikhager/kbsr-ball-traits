@@ -35,7 +35,7 @@ Static fan reference for ball traits in Kuroko's Basketball: Street Rivals (glob
 
 ## Logging new traits from screenshots
 1. Read the trait name, tier and numbers from the tooltip.
-2. On a ball with two traits, the icon that was tapped shows dimmer. That tells you which icon goes with the open tooltip.
+2. On a ball with two traits, the icon that was tapped shows dimmer. That tells you which icon goes with the open tooltip. Crop the saved icon from an undimmed screenshot when one exists (the owner tries to upload one per ball), and replace a dimmed icon in `images/icons/` whenever an undimmed copy turns up.
 3. A trait keeps the same symbol at every tier; only the ring color changes (purple II, gold III). Paint Powerhouse has a backboard rectangle behind the arm; Absolute Core doesn't.
 4. Update `data/traits.json`, add the icon PNG to `images/icons/`, and keep the owner's "KNBSR Ball Build Planner" Google Sheet (Traits tab) in sync.
 5. Commit and push only when the owner asks.
