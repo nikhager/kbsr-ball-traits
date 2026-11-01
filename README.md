@@ -27,7 +27,7 @@ css/styles.css      styles, including light and dark themes
 js/app.js           filtering and rendering
 js/vendor/          third-party scripts (GoatCounter)
 data/traits.json    all trait data: effects, tier values, collections
-images/icons/       trait icons, one per tier (<trait>-ii.png, <trait>-iii.png)
+images/icons/       trait icons, one per tier (<trait>-ii.webp, <trait>-iii.webp)
 ```
 
 Effect text is copied from in-game tooltips on the global server. Where the game's translation is unclear, any clarification is in [square brackets] so it's distinguishable from the game's own wording.

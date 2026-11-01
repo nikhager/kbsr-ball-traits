@@ -38,12 +38,12 @@
    "tiers": {
     "II": {
      "value": "+0.8% per 35 Energy (5x)",
-     "icon": "images/icons/forward-awakening-ii.png",
+     "icon": "images/icons/forward-awakening-ii.webp",
      "seenOn": "Seirin Spirit 268"
     },
     "III": {
      "value": "+1% per 35 Energy (5x)",
-     "icon": "images/icons/forward-awakening-iii.png",
+     "icon": "images/icons/forward-awakening-iii.webp",
      "seenOn": "Seirin Spirit 303, LG Aomine 283"
     }
    },
@@ -83,12 +83,12 @@
    "tiers": {
     "II": {
      "value": "+1.2% (+1.2% after a miss)",
-     "icon": "images/icons/unwavering-resolve-ii.png",
+     "icon": "images/icons/unwavering-resolve-ii.webp",
      "seenOn": "Seirin Spirit 248"
     },
     "III": {
      "value": "+1.5% (+1.5% after a miss)",
-     "icon": "images/icons/unwavering-resolve-iii.png",
+     "icon": "images/icons/unwavering-resolve-iii.webp",
      "seenOn": "Seirin Spirit 299"
     }
    },
@@ -132,12 +132,12 @@
    "tiers": {
     "II": {
      "value": "+2.5%",
-     "icon": "images/icons/motion-offense-ii.png",
+     "icon": "images/icons/motion-offense-ii.webp",
      "seenOn": "Kise Collection 360"
     },
     "III": {
      "value": "+3%",
-     "icon": "images/icons/motion-offense-iii.png",
+     "icon": "images/icons/motion-offense-iii.webp",
      "seenOn": "Kise Collection 284"
     }
    },
@@ -178,12 +178,12 @@
    "tiers": {
     "II": {
      "value": "+1% (+2% with two C/PF)",
-     "icon": "images/icons/absolute-core-ii.png",
+     "icon": "images/icons/absolute-core-ii.webp",
      "seenOn": "SP Akashi 393"
     },
     "III": {
      "value": "+1.5% (+3% with two C/PF)",
-     "icon": "images/icons/absolute-core-iii.png",
+     "icon": "images/icons/absolute-core-iii.webp",
      "seenOn": "SP Akashi 281"
     }
    },
@@ -221,12 +221,12 @@
    "tiers": {
     "II": {
      "value": "+3% accuracy; −3% Drive-stop",
-     "icon": "images/icons/finishing-time-ii.png",
+     "icon": "images/icons/finishing-time-ii.webp",
      "seenOn": "LG Kise"
     },
     "III": {
      "value": "+4% accuracy; −3% Drive-stop",
-     "icon": "images/icons/finishing-time-iii.png",
+     "icon": "images/icons/finishing-time-iii.webp",
      "seenOn": "LG Kise Peerless"
     }
    },
@@ -287,12 +287,12 @@
    "tiers": {
     "II": {
      "value": "+2.5% (+1.5% after a pass)",
-     "icon": "images/icons/perimeter-master-ii.png",
+     "icon": "images/icons/perimeter-master-ii.webp",
      "seenOn": "Diviner Midorima 255"
     },
     "III": {
      "value": "+3% (+2% after a pass)",
-     "icon": "images/icons/perimeter-master-iii.png",
+     "icon": "images/icons/perimeter-master-iii.webp",
      "seenOn": "Midorima Collection 281"
     }
    },
@@ -325,12 +325,12 @@
    "tiers": {
     "II": {
      "value": "Off-ball +0.1; +0.5% per stack",
-     "icon": "images/icons/cut-expert-ii.png",
+     "icon": "images/icons/cut-expert-ii.webp",
      "seenOn": "LG Kise 258, Midorima Collection 280"
     },
     "III": {
      "value": "Off-ball +0.1; +0.7% per stack",
-     "icon": "images/icons/cut-expert-iii.png",
+     "icon": "images/icons/cut-expert-iii.webp",
      "seenOn": "Nash 387"
     }
    },
@@ -369,7 +369,7 @@
     },
     "III": {
      "value": "+1 Catch Distance; +2.5% open accuracy",
-     "icon": "images/icons/assist-boost-iii.png",
+     "icon": "images/icons/assist-boost-iii.webp",
      "seenOn": "Kise Collection 292"
     }
    },
@@ -398,7 +398,7 @@
     },
     "III": {
      "value": "+0.4 Speed for 3s",
-     "icon": "images/icons/catch-attack-iii.png",
+     "icon": "images/icons/catch-attack-iii.webp",
      "seenOn": "Wave Rider No.0321"
     }
    },
@@ -422,12 +422,12 @@
    "tiers": {
     "II": {
      "value": "+1.2%; +0.3% per stack",
-     "icon": "images/icons/sharp-drive-ii.png",
+     "icon": "images/icons/sharp-drive-ii.webp",
      "seenOn": "Seirin Spirit 363, Pumpkin Carnival 399"
     },
     "III": {
      "value": "+1.5%; +0.5% per stack",
-     "icon": "images/icons/sharp-drive-iii.png",
+     "icon": "images/icons/sharp-drive-iii.webp",
      "seenOn": "Seirin Spirit 384"
     }
    },
@@ -468,12 +468,12 @@
    "tiers": {
     "II": {
      "value": "−3% [Charge Rate]; +1.5% accuracy",
-     "icon": "images/icons/ball-control-expert-ii.png",
+     "icon": "images/icons/ball-control-expert-ii.webp",
      "seenOn": "LG Aomine Peerless 262"
     },
     "III": {
      "value": "−3% [Charge Rate]; +2% accuracy",
-     "icon": "images/icons/ball-control-expert-iii.png",
+     "icon": "images/icons/ball-control-expert-iii.webp",
      "seenOn": "LG Aomine Peerless 278"
     }
    },
@@ -502,12 +502,12 @@
    "tiers": {
     "II": {
      "value": "−3% Stolen; +1.5 Safe Pass",
-     "icon": "images/icons/pump-fake-ii.png",
+     "icon": "images/icons/pump-fake-ii.webp",
      "seenOn": "Pumpkin Carnival 278"
     },
     "III": {
      "value": "−5% Stolen; +1.5 Safe Pass",
-     "icon": "images/icons/pump-fake-iii.png",
+     "icon": "images/icons/pump-fake-iii.webp",
      "seenOn": "Pumpkin Carnival 399"
     }
    },
@@ -532,12 +532,12 @@
    "tiers": {
     "II": {
      "value": "+1.3% Steal; +0.3 Speed for 3s",
-     "icon": "images/icons/quick-counter-ii.png",
+     "icon": "images/icons/quick-counter-ii.webp",
      "seenOn": "Nash, Seirin Spirit"
     },
     "III": {
      "value": "+1.5% Steal; +0.5 Speed for 3s",
-     "icon": "images/icons/quick-counter-iii.png",
+     "icon": "images/icons/quick-counter-iii.webp",
      "seenOn": "Seirin Spirit 274"
     }
    },
@@ -573,7 +573,7 @@
    "tiers": {
     "II": {
      "value": "+1.5% Charge; +1.5% Steal for 3s",
-     "icon": "images/icons/roadblock-ii.png",
+     "icon": "images/icons/roadblock-ii.webp",
      "seenOn": "Seirin Spirit 264, 384"
     },
     "III": {
@@ -648,12 +648,12 @@
    "tiers": {
     "II": {
      "value": "+0.2 Block Range; +4% Dunk, +3% Knockback",
-     "icon": "images/icons/paint-powerhouse-ii.png",
+     "icon": "images/icons/paint-powerhouse-ii.webp",
      "seenOn": "Jason Silver 467, LG Mura 283"
     },
     "III": {
      "value": "+0.3 Block Range; +5% Dunk, +3% Knockback",
-     "icon": "images/icons/paint-powerhouse-iii.png",
+     "icon": "images/icons/paint-powerhouse-iii.webp",
      "seenOn": "Jason Silver 278"
     }
    },
@@ -689,7 +689,7 @@
    "tiers": {
     "II": {
      "value": "+0.05 per stack (5x)",
-     "icon": "images/icons/defensive-stopper-ii.png",
+     "icon": "images/icons/defensive-stopper-ii.webp",
      "seenOn": "ZONE Mura 353"
     },
     "III": {
@@ -730,7 +730,7 @@
    "tiers": {
     "II": {
      "value": "+0.15; +0.15 more vs SG/PG",
-     "icon": "images/icons/perimeter-lockdown-ii.png",
+     "icon": "images/icons/perimeter-lockdown-ii.webp",
      "seenOn": "Jason Silver 362"
     },
     "III": {
@@ -771,7 +771,7 @@
    "tiers": {
     "II": {
      "value": "Off-ball +0.1; Block +0.15",
-     "icon": "images/icons/swift-zone-defense-ii.png",
+     "icon": "images/icons/swift-zone-defense-ii.webp",
      "seenOn": "LG Kise 361"
     },
     "III": {
@@ -800,12 +800,12 @@
    "tiers": {
     "II": {
      "value": "+2.5% while accelerating",
-     "icon": "images/icons/close-guarding-ii.png",
+     "icon": "images/icons/close-guarding-ii.webp",
      "seenOn": "Seirin Spirit, SP Akashi 393"
     },
     "III": {
      "value": "+3% while accelerating",
-     "icon": "images/icons/close-guarding-iii.png",
+     "icon": "images/icons/close-guarding-iii.webp",
      "seenOn": "Seirin Spirit 298"
     }
    },
@@ -875,7 +875,7 @@
     },
     "III": {
      "value": "+2%; +1.5% more after 3s",
-     "icon": "images/icons/two-arm-block-iii.png",
+     "icon": "images/icons/two-arm-block-iii.webp",
      "seenOn": "Perfect Kise Collection No.1014"
     }
    },
@@ -899,12 +899,12 @@
    "tiers": {
     "II": {
      "value": "+1.5 (+1.5 after a miss)",
-     "icon": "images/icons/rising-strong-ii.png",
+     "icon": "images/icons/rising-strong-ii.webp",
      "seenOn": "LG Kagami, ZONE Mura, LG Mura"
     },
     "III": {
      "value": "+2 (+2 after a miss)",
-     "icon": "images/icons/rising-strong-iii.png",
+     "icon": "images/icons/rising-strong-iii.webp",
      "seenOn": "Autumn Moon"
     }
    },
@@ -941,7 +941,7 @@
    "tiers": {
     "II": {
      "value": "+0.2 range in winning box-out",
-     "icon": "images/icons/position-advantage-ii.png",
+     "icon": "images/icons/position-advantage-ii.webp",
      "seenOn": "Purple Paint 262, Autumn Moon 251"
     },
     "III": {
@@ -973,12 +973,12 @@
    "tiers": {
     "II": {
      "value": "+1.5 per stack (2x)",
-     "icon": "images/icons/contest-dominator-ii.png",
+     "icon": "images/icons/contest-dominator-ii.webp",
      "seenOn": "LG Mura 358"
     },
     "III": {
      "value": "+2 per stack (2x)",
-     "icon": "images/icons/contest-dominator-iii.png",
+     "icon": "images/icons/contest-dominator-iii.webp",
      "seenOn": "LG Mura 408"
     }
    },
@@ -1006,12 +1006,12 @@
    "tiers": {
     "II": {
      "value": "+1.5 Rebound Contest; +1.5% post accuracy",
-     "icon": "images/icons/post-beast-ii.png",
+     "icon": "images/icons/post-beast-ii.webp",
      "seenOn": "LG Mura 408, LG Mura 262, Jason Silver 386"
     },
     "III": {
      "value": "+2 Rebound Contest; +2% post accuracy",
-     "icon": "images/icons/post-beast-iii.png",
+     "icon": "images/icons/post-beast-iii.webp",
      "seenOn": "LG Mura 288, Jason Silver 467"
     }
    },
@@ -1074,7 +1074,7 @@
    "tiers": {
     "II": {
      "value": "+1 energy per score; +3 if first",
-     "icon": "images/icons/first-victor-ii.png",
+     "icon": "images/icons/first-victor-ii.webp",
      "seenOn": "Kise Collection 360"
     },
     "III": {

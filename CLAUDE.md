@@ -11,7 +11,7 @@ Static fan reference for ball traits in Kuroko's Basketball: Street Rivals (glob
 - `data/traits.json`: all data. `collections` is the ordered list for the collection dropdown; `traits` is the list of cards.
 - `images/favicon.svg` (plus `favicon-32.png` and `apple-touch-icon.png` rendered from it): an original orange ball in a gold ring, not game artwork. `docs/design/favicon-options.png` shows the options it was chosen from (Nov 2026).
 - `docs/design/`: design references and decision records, not loaded by the page.
-- `images/icons/<trait-id>-ii.png`, `images/icons/<trait-id>-iii.png`: tier icons, 124px square crops of the in-game trait badge.
+- `images/icons/<trait-id>-ii.webp`, `images/icons/<trait-id>-iii.webp`: tier icons, 96px square crops of the in-game trait badge, centered on the badge circle and saved as WebP at quality 90.
 
 ## Trait entry shape
 ```json
@@ -24,8 +24,8 @@ Static fan reference for ball traits in Kuroko's Basketball: Street Rivals (glob
   "effectSource": "Tier III",         // tier the text came from, or "" if it's a summary of an unseen trait
   "trainingCamp": "",                 // Training Camp bonus text, or ""
   "tiers": {
-    "II":  { "value": "+1.5 (+1.5 after a miss)", "icon": "images/icons/rising-strong-ii.png", "seenOn": "LG Kagami, ZONE Mura" },
-    "III": { "value": "+2 (+2 after a miss)",     "icon": "images/icons/rising-strong-iii.png", "seenOn": "Autumn Moon" }
+    "II":  { "value": "+1.5 (+1.5 after a miss)", "icon": "images/icons/rising-strong-ii.webp", "seenOn": "LG Kagami, ZONE Mura" },
+    "III": { "value": "+2 (+2 after a miss)",     "icon": "images/icons/rising-strong-iii.webp", "seenOn": "Autumn Moon" }
   },
   "collections": [{ "name": "Autumn Moon", "tiers": "III" }]
 }
@@ -39,7 +39,7 @@ Static fan reference for ball traits in Kuroko's Basketball: Street Rivals (glob
 1. Read the trait name, tier and numbers from the tooltip.
 2. On a ball with two traits, the icon that was tapped shows dimmer. That tells you which icon goes with the open tooltip. Crop the saved icon from an undimmed screenshot when one exists (the owner tries to upload one per ball), and replace a dimmed icon in `images/icons/` whenever an undimmed copy turns up.
 3. A trait keeps the same symbol at every tier; only the ring color changes (purple II, gold III). Paint Powerhouse has a backboard rectangle behind the arm; Absolute Core doesn't.
-4. Update `data/traits.json`, add the icon PNG to `images/icons/`, and keep the owner's "KNBSR Ball Build Planner" Google Sheet (Traits tab) in sync.
+4. Update `data/traits.json`, add the icon WebP to `images/icons/`, and keep the owner's "KNBSR Ball Build Planner" Google Sheet (Traits tab) in sync.
 5. Commit and push only when the owner asks.
 
 ## Analytics
