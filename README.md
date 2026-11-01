@@ -2,7 +2,7 @@
 
 Every ball trait in **Kuroko's Basketball: Street Rivals** (global server): effects, tier II/III values, trait icons, and which ball collections carry each trait.
 
-**Live page:** https://nikhager.github.io/kbsr-ball-traits/
+**Live page:** https://kbsrlab.com
 
 ## Why this exists
 The game has no public wiki, and trait details only show up in in-game tooltips. Ball boxes rotate through the shop and rewards each month, so a collection's traits can only be logged while its boxes are available. This page gathers what's been seen in one searchable place, so players can plan builds and recognize traits in the auction without waiting for the next rotation.
@@ -19,7 +19,7 @@ The game has no public wiki, and trait details only show up in in-game tooltips.
 Most traits are logged. Collection lists and some tier values are still partial and fill in as boxes cycle back into the shop. Missing values show on the page as "Not seen yet" or "Numbers not logged" rather than guesses.
 
 ## How it works
-A static site with no build step and no dependencies, served by GitHub Pages from `main`. The page fetches the trait data and renders the filterable cards with plain JavaScript.
+A static site with no build step and no dependencies, served by Cloudflare Pages from `main` (every push to `main` redeploys). The page fetches the trait data and renders the filterable cards with plain JavaScript.
 
 ```
 index.html          page markup
@@ -33,7 +33,7 @@ images/icons/       trait icons, one per tier (<trait>-ii.webp, <trait>-iii.webp
 Effect text is copied from in-game tooltips on the global server. Where the game's translation is unclear, any clarification is in [square brackets] so it's distinguishable from the game's own wording.
 
 ## Corrections
-Spotted a wrong value or a trait on a ball that isn't listed? [Open an issue](https://github.com/nikhager/kbsr-ball-traits/issues) with the trait name, tier and ball.
+Corrections (wrong value, unlisted trait on a ball) come in through the community; log them with the trait name, tier and ball.
 
 ## Privacy
 The page counts anonymous visits and filter use with [GoatCounter](https://www.goatcounter.com): no cookies, no personal data, no cross-site tracking.
