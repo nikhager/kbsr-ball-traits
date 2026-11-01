@@ -527,7 +527,7 @@
     "Steal",
     "Speed"
    ],
-   "effect": "Increases Steal Chance by +1.3%. Increases Speed by +0.3 for 3s after a successful Steal.",
+   "effect": "Increases Steal Chance by +1.5%. Increases Speed by +0.5 for 3s after a successful Steal.",
    "trainingCamp": "",
    "tiers": {
     "II": {
@@ -536,7 +536,7 @@
      "seenOn": "Nash, Seirin Spirit"
     },
     "III": {
-     "value": "",
+     "value": "+1.5% Steal; +0.5 Speed for 3s",
      "icon": "images/icons/quick-counter-iii.png",
      "seenOn": "Seirin Spirit 274"
     }
@@ -559,7 +559,7 @@
      "tiers": "II"
     }
    ],
-   "effectSource": "Tier II"
+   "effectSource": "Tier III"
   },
   {
    "id": "roadblock",
@@ -795,7 +795,7 @@
    "tags": [
     "Contest"
    ],
-   "effect": "Increases Contest Rate by +2.5% while accelerating.",
+   "effect": "Increases Contest Rate by +3% while accelerating.",
    "trainingCamp": "",
    "tiers": {
     "II": {
@@ -804,15 +804,15 @@
      "seenOn": "Seirin Spirit, SP Akashi 393"
     },
     "III": {
-     "value": "",
-     "icon": null,
-     "seenOn": ""
+     "value": "+3% while accelerating",
+     "icon": "images/icons/close-guarding-iii.png",
+     "seenOn": "Seirin Spirit 298"
     }
    },
    "collections": [
     {
      "name": "Seirin Spirit",
-     "tiers": "II"
+     "tiers": "II, III"
     },
     {
      "name": "LG Kise Peerless",
@@ -827,7 +827,7 @@
      "tiers": "II"
     }
    ],
-   "effectSource": "Tier II"
+   "effectSource": "Tier III"
   },
   {
    "id": "stack-intimidation",
