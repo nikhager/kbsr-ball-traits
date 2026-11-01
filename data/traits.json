@@ -44,7 +44,7 @@
     "III": {
      "value": "+1% per 35 Energy (5x)",
      "icon": "images/icons/forward-awakening-iii.png",
-     "seenOn": "Seirin Spirit 303"
+     "seenOn": "Seirin Spirit 303, LG Aomine 283"
     }
    },
    "collections": [
@@ -66,7 +66,7 @@
     },
     {
      "name": "LG Aomine",
-     "tiers": "II"
+     "tiers": "II, III"
     }
    ],
    "effectSource": "Tier III"
