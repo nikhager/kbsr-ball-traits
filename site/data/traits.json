@@ -415,7 +415,8 @@
    "name": "Sharp Drive",
    "category": "Handling",
    "tags": [
-    "Handling"
+    "Handling",
+    "Pass"
    ],
    "effect": "Increases Ankle Breaker Chance by +1.5%. Further increases Ankle Breaker Chance by +0.5% after a successful Ankle Breaker. Up to 3 stacks.",
    "trainingCamp": "",
