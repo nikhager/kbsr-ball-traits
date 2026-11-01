@@ -357,7 +357,7 @@
    "tags": [
     "3PT",
     "Mid-Range",
-    "Passing"
+    "Pass"
    ],
    "effect": "Increases max Catch Distance by +1. Increases Open Accuracy by +2.5% when receiving a pass at an open spot.",
    "trainingCamp": "",
@@ -495,7 +495,7 @@
    "category": "Handling",
    "tags": [
     "Handling",
-    "Passing"
+    "Pass"
    ],
    "effect": "Reduces the chance of being Stolen by -5% and increases Safe Pass Distance by +1.5 when feinting offense but actually passing.",
    "trainingCamp": "",
