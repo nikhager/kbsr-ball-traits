@@ -24,6 +24,7 @@ A static site with no build step and no dependencies, served by Cloudflare Pages
 ```
 site/                 everything the page loads (the only folder Cloudflare publishes)
   index.html          page markup
+  _headers            security headers Cloudflare sends with every page
   css/styles.css      styles, including light and dark themes
   js/app.js           filtering and rendering
   js/vendor/          third-party scripts (GoatCounter)
@@ -35,7 +36,7 @@ docs/design/          design references and decision records (not published)
 Effect text is copied from in-game tooltips on the global server. Where the game's translation is unclear, any clarification is in [square brackets] so it's distinguishable from the game's own wording.
 
 ## Corrections
-Corrections (wrong value, unlisted trait on a ball) come in through the community; log them with the trait name, tier and ball.
+Corrections and screenshots come in through the two Google Forms linked in the page footer ("Report a correction" and "Send screenshots"). Log each one with the trait name, tier and ball.
 
 ## Privacy
 The page counts anonymous visits and filter use with [GoatCounter](https://www.goatcounter.com): no cookies, no personal data, no cross-site tracking.

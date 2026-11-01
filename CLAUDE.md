@@ -9,6 +9,8 @@ Everything the page loads lives in `site/`; paths inside the page and in `traits
 - `site/js/app.js`: fetches `data/traits.json` and renders the filterable cards.
 - Card layout: each card has five sections (tag row, name, tier icons, a `.body` block with effect/source/Training Camp, and the "Found on" line). `css/styles.css` uses CSS subgrid (`grid-row:span 5`) so those sections line up across a grid row. If you add or remove a top-level card section in `card()`, update the span to match.
 - `site/js/vendor/count.js`: third-party GoatCounter script. Don't edit it.
+- `site/_headers`: Cloudflare Pages response headers (CSP, nosniff, no framing). Any new outside script, font, image or API the page loads must be added to the matching CSP directive, or the browser blocks it. Test on a preview branch (`<branch>.kbsr-ball-traits.pages.dev`) before merging to `main`.
+- Footer "Report a correction" and "Send screenshots" buttons link to two Google Forms owned by the site owner. Corrections needs no sign-in; screenshots uses a file upload, so Google requires sign-in, and uploads land in the owner's Drive.
 - `site/data/traits.json`: all data. `collections` is the ordered list for the collection dropdown; `traits` is the list of cards.
 - `site/images/favicon.svg` (+ `favicon-32.png`) and `images/apple-touch-icon.png`: original artwork (orange ball in a gold ring; the home-screen version sits on a sky-blue tile), not game assets. Sources and the decision record are in `docs/design/app-icon/`.
 - `docs/design/`: design references and decision records, one folder per topic (`README.md` + `sources/` + numbered `explorations/`). Not loaded by the page. Never put personal screenshots in it.
@@ -44,6 +46,7 @@ Everything the page loads lives in `site/`; paths inside the page and in `traits
 5. Commit and push only when the owner asks.
 
 ## Analytics
+- Cloudflare Web Analytics is also on (its beacon is allowed in the CSP).
 - GoatCounter (site code `kbsrlab`, dashboard kbsrlab.goatcounter.com) counts page views and filter events via one script tag just before `</body>` in `site/index.html`. The script is self-hosted as `site/js/vendor/count.js` (GoatCounter v2.7.0, ISC license) so tracker blockers that target gc.zgo.at don't stop it; counts still go to kbsrlab.goatcounter.com. Keep it when editing the page. The claude.ai artifact copy of the page mirrors this repo's folder layout (`css/`, `js/app.js`, `data/`, `images/icons/`) but leaves the GoatCounter tag out (outside scripts are blocked there).
 
 ## Constraints
