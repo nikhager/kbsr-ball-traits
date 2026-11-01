@@ -1,6 +1,6 @@
 # KBSR Ball Traits: notes for Claude
 
-Static fan reference for ball traits in Kuroko's Basketball: Street Rivals (global server), served by GitHub Pages from `main` at https://nikhager.github.io/kbsr-ball-traits/. No build step and no dependencies.
+Static fan reference for ball traits in Kuroko's Basketball: Street Rivals (global server), served by Cloudflare Pages (project `kbsr-ball-traits`, auto-deploys on every push to `main`) at https://kbsrlab.com (also www.kbsrlab.com and kbsr-ball-traits.pages.dev). The repo is private. Domain and DNS are on Cloudflare. No build step and no dependencies.
 
 ## Files
 - `index.html`: page markup only. Links `css/styles.css` and loads `js/app.js`.
@@ -43,8 +43,8 @@ Static fan reference for ball traits in Kuroko's Basketball: Street Rivals (glob
 5. Commit and push only when the owner asks.
 
 ## Analytics
-- GoatCounter (account `nhager`, dashboard nhager.goatcounter.com) counts page views and filter events via one script tag just before `</body>` in `index.html`. The script is self-hosted as `js/vendor/count.js` (GoatCounter v2.7.0, ISC license) so tracker blockers that target gc.zgo.at don't stop it; counts still go to nhager.goatcounter.com. Keep it when editing the page. The claude.ai artifact copy of the page mirrors this repo's folder layout (`css/`, `js/app.js`, `data/`, `images/icons/`) but leaves the GoatCounter tag out (outside scripts are blocked there).
+- GoatCounter (site code `kbsrlab`, dashboard kbsrlab.goatcounter.com) counts page views and filter events via one script tag just before `</body>` in `index.html`. The script is self-hosted as `js/vendor/count.js` (GoatCounter v2.7.0, ISC license) so tracker blockers that target gc.zgo.at don't stop it; counts still go to kbsrlab.goatcounter.com. Keep it when editing the page. The claude.ai artifact copy of the page mirrors this repo's folder layout (`css/`, `js/app.js`, `data/`, `images/icons/`) but leaves the GoatCounter tag out (outside scripts are blocked there).
 
 ## Constraints
-- Public repo: never commit secrets, personal emails, Google Sheet/Doc IDs, or full screenshots (they show the player ID). Icon crops only.
+- Treat the repo as if it were public (it was public before Nov 2026): never commit secrets, personal emails, Google Sheet/Doc IDs, or full screenshots (they show the player ID). Icon crops only.
 - Icons are the game publisher's artwork. Don't add a license that claims them.
