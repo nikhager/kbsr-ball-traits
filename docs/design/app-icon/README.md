@@ -6,8 +6,8 @@ Decision record for the site's browser-tab icon and iPhone home-screen icon (Nov
 
 | Use | File | Design |
 |---|---|---|
-| Browser tab | `images/favicon.svg` (+ `images/favicon-32.png` fallback) | Orange ball in a gold ring, transparent background |
-| iPhone home screen | `images/apple-touch-icon.png` (180×180) | Same ring ball, medium size, on a sky-blue tile styled after the in-game Basketball Shop |
+| Browser tab | `site/images/favicon.svg` (+ `site/images/favicon-32.png` fallback) | Orange ball in a gold ring, transparent background |
+| iPhone home screen | `site/images/apple-touch-icon.png` (180×180) | Same ring ball, medium size, on a sky-blue tile styled after the in-game Basketball Shop |
 
 Editable sources are in `sources/`. Re-render the PNGs from them if the design changes. All of it is original artwork, not game assets.
 
