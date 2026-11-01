@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30",
+ "updated": "2026-10-31",
  "collections": [
   "Seirin Spirit",
   "LG Kise",
@@ -18,7 +18,9 @@
   "Diviner Midorima",
   "Midorima Collection",
   "Nash",
-  "Wave Rider"
+  "Wave Rider",
+  "LG Aomine",
+  "Purple Paint"
  ],
  "traits": [
   {
@@ -737,6 +739,10 @@
     {
      "name": "ZONE Murasakibara",
      "tiers": "II"
+    },
+    {
+     "name": "LG Aomine",
+     "tiers": "II"
     }
    ],
    "effectSource": "Tier II"
@@ -909,6 +915,39 @@
     }
    ],
    "effectSource": "Tier III"
+  },
+  {
+   "id": "position-advantage",
+   "name": "Position Advantage",
+   "category": "Rebounding",
+   "tags": [
+    "Rebound"
+   ],
+   "effect": "Increases Rebound Range by +0.2 while in an advantageous box-out.",
+   "effectSource": "Tier II",
+   "trainingCamp": "",
+   "tiers": {
+    "II": {
+     "value": "+0.2 range in winning box-out",
+     "icon": "images/icons/position-advantage-ii.png",
+     "seenOn": "Purple Paint 262, Autumn Moon 251"
+    },
+    "III": {
+     "value": "",
+     "icon": null,
+     "seenOn": ""
+    }
+   },
+   "collections": [
+    {
+     "name": "Purple Paint",
+     "tiers": "II"
+    },
+    {
+     "name": "Autumn Moon",
+     "tiers": "II"
+    }
+   ]
   },
   {
    "id": "contest-dominator",
