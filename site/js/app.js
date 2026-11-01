@@ -1,5 +1,5 @@
 const SHOTS = ["3PT","Mid-Range","Close-Range","Layup","Dunk"];
-const TAGS = [...SHOTS,"Steal","Block","Contest","Rebound","Handling","Passing","Speed","Energy"];
+const TAGS = [...SHOTS,"Steal","Block","Contest","Rebound","Handling","Pass","Speed","Energy"];
 // On cards, a trait that boosts every shot type shows one "All shots" chip instead of five.
 const cardTags = tags => SHOTS.every(s => tags.includes(s)) ? ["All shots", ...tags.filter(t => !SHOTS.includes(t))] : tags;
 const state = { tag: "", col: "", q: "" };
