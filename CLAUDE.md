@@ -9,6 +9,7 @@ Static fan reference for ball traits in Kuroko's Basketball: Street Rivals (glob
 - Card layout: each card has five sections (tag row, name, tier icons, a `.body` block with effect/source/Training Camp, and the "Found on" line). `css/styles.css` uses CSS subgrid (`grid-row:span 5`) so those sections line up across a grid row. If you add or remove a top-level card section in `card()`, update the span to match.
 - `js/vendor/count.js`: third-party GoatCounter script. Don't edit it.
 - `data/traits.json`: all data. `collections` is the ordered list for the collection dropdown; `traits` is the list of cards.
+- `images/favicon.svg` (plus `favicon-32.png` and `apple-touch-icon.png` rendered from it): an original orange ball in a gold ring, not game artwork.
 - `images/icons/<trait-id>-ii.png`, `images/icons/<trait-id>-iii.png`: tier icons, 124px square crops of the in-game trait badge.
 
 ## Trait entry shape
