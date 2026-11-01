@@ -63,6 +63,10 @@
     {
      "name": "Perfect Kise Collection",
      "tiers": "II, III"
+    },
+    {
+     "name": "LG Aomine",
+     "tiers": "II"
     }
    ],
    "effectSource": "Tier III"
@@ -473,6 +477,10 @@
     {
      "name": "LG Aomine Peerless",
      "tiers": "II, III"
+    },
+    {
+     "name": "LG Aomine",
+     "tiers": "II"
     }
    ],
    "effectSource": "Tier III"
@@ -995,7 +1003,7 @@
     "II": {
      "value": "+1.5 Rebound Contest; +1.5% post accuracy",
      "icon": "images/icons/post-beast-ii.png",
-     "seenOn": "LG Mura 408, LG Mura 262"
+     "seenOn": "LG Mura 408, LG Mura 262, Jason Silver 386"
     },
     "III": {
      "value": "+2 Rebound Contest; +2% post accuracy",
@@ -1010,7 +1018,7 @@
     },
     {
      "name": "Jason Silver",
-     "tiers": "III"
+     "tiers": "II, III"
     }
    ],
    "effectSource": "Tier III"
