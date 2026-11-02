@@ -43,6 +43,6 @@ Corrections and screenshots come in through the two Google Forms linked in the p
 The page counts anonymous visits and filter use with [GoatCounter](https://www.goatcounter.com) and Cloudflare Web Analytics: no cookies, no personal data, no cross-site tracking.
 
 ## License
-The code, the site's original artwork and the trait data's structure are under the [MIT License](LICENSE). The trait icons and quoted in-game text belong to the game's publishers and aren't covered.
+The [MIT License](LICENSE) covers the code in this repository (HTML, CSS, JavaScript), the site's original artwork (the favicon and home-screen icon), and the structure and editorial content of the trait data. It does not cover material from Kuroko's Basketball: Street Rivals: the trait icons in `site/images/icons/` and the in-game tooltip text quoted in `site/data/traits.json` belong to the game's publishers. The GoatCounter script in `site/js/vendor/` keeps its own ISC license.
 
 Fan-made reference, not affiliated with the game's publishers. Trait icons are the publisher's artwork.

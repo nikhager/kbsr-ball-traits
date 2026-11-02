@@ -60,4 +60,4 @@ Everything the page loads lives in `site/`; paths inside the page and in `traits
 
 ## Constraints
 - The repo is public, and so is its full history: never commit secrets, personal emails, Google Sheet/Doc IDs, or full screenshots (they show the player ID). Icon crops only.
-- `LICENSE` (MIT) covers the code, original artwork and data structure only. Icons and quoted in-game text are the game publisher's; keep them excluded if the license changes.
+- `LICENSE` is the plain MIT text, kept unmodified so GitHub detects it. Its scope (code, original artwork and data structure only; icons and quoted in-game text are the game publisher's and excluded) lives in the README's License section. Keep the exclusion there if the license changes.
