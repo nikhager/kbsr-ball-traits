@@ -2,6 +2,7 @@
  "updated": "2026-11-01",
  "collections": [
   "Autumn Moon",
+  "Campus Rookie",
   "Diviner Midorima",
   "Graffiti Master",
   "Jason Silver",
@@ -67,6 +68,10 @@
     {
      "name": "LG Aomine",
      "tiers": "II, III"
+    },
+    {
+     "name": "Campus Rookie",
+     "tiers": "II"
     }
    ],
    "effectSource": "Tier III"
@@ -162,6 +167,10 @@
     {
      "name": "Kise Collection",
      "tiers": "II, III"
+    },
+    {
+     "name": "Campus Rookie",
+     "tiers": "III"
     }
    ],
    "effectSource": "Tier III"
@@ -199,7 +208,7 @@
     },
     {
      "name": "Graffiti Master",
-     "tiers": "III"
+     "tiers": "II, III"
     }
    ],
    "effectSource": "Tier III"
@@ -254,7 +263,7 @@
    "tags": [
     "3PT"
    ],
-   "effect": "Increases 3PT Accuracy, plus more in the final minute.",
+   "effect": "Increases 3-Pointer Accuracy by +1.5%. Further increases 3-Pointer Accuracy by +1.5% in the final minute.",
    "trainingCamp": "",
    "tiers": {
     "II": {
@@ -263,9 +272,9 @@
      "seenOn": ""
     },
     "III": {
-     "value": "",
-     "icon": null,
-     "seenOn": ""
+     "value": "+1.5% (+1.5% more in the final minute)",
+     "icon": "images/icons/clutch-player-iii.webp",
+     "seenOn": "Diviner Midorima 282"
     }
    },
    "collections": [
@@ -274,7 +283,7 @@
      "tiers": "III"
     }
    ],
-   "effectSource": ""
+   "effectSource": "Tier III"
   },
   {
    "id": "perimeter-master",
@@ -401,12 +410,16 @@
     "III": {
      "value": "+0.4 Speed for 3s",
      "icon": "images/icons/catch-attack-iii.webp",
-     "seenOn": "Wave Rider No.0321"
+     "seenOn": "Wave Rider No.0321, ZONE Mura 316"
     }
    },
    "collections": [
     {
      "name": "Wave Rider",
+     "tiers": "III"
+    },
+    {
+     "name": "ZONE Murasakibara",
      "tiers": "III"
     }
    ],
@@ -757,6 +770,10 @@
     {
      "name": "LG Aomine",
      "tiers": "II"
+    },
+    {
+     "name": "Graffiti Master",
+     "tiers": "II"
     }
    ],
    "effectSource": "Tier II"
@@ -903,12 +920,12 @@
     "II": {
      "value": "+1.5 (+1.5 after a miss)",
      "icon": "images/icons/rising-strong-ii.webp",
-     "seenOn": "LG Kagami, ZONE Mura, LG Mura"
+     "seenOn": "LG Kagami, ZONE Mura, LG Mura, Purple Paint 427"
     },
     "III": {
      "value": "+2 (+2 after a miss)",
      "icon": "images/icons/rising-strong-iii.webp",
-     "seenOn": "Autumn Moon"
+     "seenOn": "Autumn Moon, ZONE Mura"
     }
    },
    "collections": [
@@ -927,6 +944,10 @@
     {
      "name": "ZONE Murasakibara",
      "tiers": "II, III"
+    },
+    {
+     "name": "Purple Paint",
+     "tiers": "II"
     }
    ],
    "effectSource": "Tier III"
@@ -1039,13 +1060,13 @@
     "Dunk",
     "Rebound"
    ],
-   "effect": "Each dunk or layup increases your next rebound's Contest Value. Each rebound increases your next dunk or layup's accuracy.",
+   "effect": "Each dunk or layup increases the Competition Value of the next Rebound by +2. Each rebound increases the accuracy of the next dunk or layup by 2%.",
    "trainingCamp": "",
    "tiers": {
     "II": {
-     "value": "",
-     "icon": null,
-     "seenOn": ""
+     "value": "+2 rebound Competition Value / +2% dunk & layup accuracy",
+     "icon": "images/icons/interior-inspire-ii.webp",
+     "seenOn": "ZONE Mura, Jason Silver 379"
     },
     "III": {
      "value": "",
@@ -1063,7 +1084,7 @@
      "tiers": "II"
     }
    ],
-   "effectSource": ""
+   "effectSource": "Tier II"
   },
   {
    "id": "first-victor",
