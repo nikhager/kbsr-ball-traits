@@ -53,6 +53,7 @@ Everything the page loads lives in `site/`; paths inside the page and in `traits
 ## Workflow
 - Make changes on a branch and open a pull request into `main`. `main` is protected on GitHub: a pull request is required (no approvals needed), the rule applies to admins too, and force-pushes and branch deletion are blocked, so direct pushes to `main` are rejected. Cloudflare builds a preview of every branch at `<branch>.kbsr-ball-traits.pages.dev` and links it on the PR.
 - PRs are squash-merged on GitHub, and merged branches are deleted automatically.
+- Every PR: check `updated` at the top of `site/data/traits.json` (shown as "Last updated" in the footer) and set it to the date the PR is pushed/merged (owner's time zone, America/Los_Angeles).
 
 ## Analytics
 - Cloudflare Web Analytics is also on (its beacon is allowed in the CSP).
