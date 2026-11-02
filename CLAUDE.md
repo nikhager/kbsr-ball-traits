@@ -3,7 +3,7 @@
 Static fan reference for ball traits in Kuroko's Basketball: Street Rivals (global server), served by Cloudflare Pages (project `kbsr-ball-traits`, auto-deploys on every merge to `main`) at https://kbsrlab.com (also www.kbsrlab.com and kbsr-ball-traits.pages.dev). Cloudflare publishes only the `site/` folder (build output directory `site`, no build command), so repo docs like this file stay off the web. The repo is public on GitHub (nikhager/kbsr-ball-traits). Domain and DNS are on Cloudflare. No build step and no dependencies.
 
 ## Files
-Everything the page loads lives in `site/`; paths inside the page and in `traits.json` are relative to `site/`. Repo-only material (this file, `README.md`, `docs/`) stays at the root and is never published.
+Everything the page loads lives in `site/`; paths inside the page and in `traits.json` are relative to `site/`. Repo-only material (this file, `README.md`, `LICENSE`, `docs/`) stays at the root and is never published.
 - `site/index.html`: page markup only. Links `css/styles.css` and loads `js/app.js`.
 - `site/css/styles.css`: all styles, including the light/dark theme tokens.
 - `site/js/app.js`: fetches `data/traits.json` and renders the filterable cards.
@@ -60,4 +60,4 @@ Everything the page loads lives in `site/`; paths inside the page and in `traits
 
 ## Constraints
 - The repo is public, and so is its full history: never commit secrets, personal emails, Google Sheet/Doc IDs, or full screenshots (they show the player ID). Icon crops only.
-- Icons are the game publisher's artwork. Don't add a license that claims them.
+- `LICENSE` (MIT) covers the code, original artwork and data structure only. Icons and quoted in-game text are the game publisher's; keep them excluded if the license changes.
