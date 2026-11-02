@@ -125,7 +125,8 @@
     "Mid-Range",
     "Close-Range",
     "Layup",
-    "Dunk"
+    "Dunk",
+    "Drive"
    ],
    "effect": "Increases Accuracy by +3% for the shot following 3 Drives.",
    "trainingCamp": "",
@@ -213,7 +214,7 @@
     "Close-Range",
     "Layup",
     "Dunk",
-    "Handling",
+    "Drive",
     "Energy"
    ],
    "effect": "Increases offensive accuracy by 4% and reduces the chance of Drive being stopped by 3% for 4s after using Ultimate.",
@@ -318,7 +319,8 @@
    "category": "Offense",
    "tags": [
     "3PT",
-    "Mid-Range"
+    "Mid-Range",
+    "Speed"
    ],
    "effect": "Off-ball movement increases by 0.1 when on offense. After scoring an open shot, Open Mid-Range Accuracy and Open 3-Pointer Accuracy +0.7%. Can stack up to 3 times.",
    "trainingCamp": "After scoring an open shot, Open Mid-Range and Open 3-Pointer Accuracy boosts are doubled, stacking up to 3 times.",
@@ -357,7 +359,7 @@
    "tags": [
     "3PT",
     "Mid-Range",
-    "Pass"
+    "Control"
    ],
    "effect": "Increases max Catch Distance by +1. Increases Open Accuracy by +2.5% when receiving a pass at an open spot.",
    "trainingCamp": "",
@@ -415,8 +417,7 @@
    "name": "Sharp Drive",
    "category": "Handling",
    "tags": [
-    "Handling",
-    "Pass"
+    "Ankle Break"
    ],
    "effect": "Increases Ankle Breaker Chance by +1.5%. Further increases Ankle Breaker Chance by +0.5% after a successful Ankle Breaker. Up to 3 stacks.",
    "trainingCamp": "",
@@ -462,7 +463,7 @@
     "Close-Range",
     "Layup",
     "Dunk",
-    "Handling"
+    "Control"
    ],
    "effect": "Entering Enhanced Dribble state reduces [Charge Rate] by 3%. Offensive Accuracy increase by 2% in Enhanced Dribble state. This effect lasts for 2 seconds after exiting Enhanced Dribble.",
    "trainingCamp": "Offensive Accuracy increase is doubled.",
@@ -495,8 +496,7 @@
    "name": "Pump Fake",
    "category": "Handling",
    "tags": [
-    "Handling",
-    "Pass"
+    "Control"
    ],
    "effect": "Reduces the chance of being Stolen by -5% and increases Safe Pass Distance by +1.5 when feinting offense but actually passing.",
    "trainingCamp": "",
@@ -765,7 +765,8 @@
    "name": "Swift Zone Defense",
    "category": "Defense",
    "tags": [
-    "Block"
+    "Block",
+    "Speed"
    ],
    "effect": "Increases Off-Ball Movement by +0.1 while on defense. Increases Block by +0.15 when the ball-handler is not your assigned matchup.",
    "trainingCamp": "",
