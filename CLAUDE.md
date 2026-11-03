@@ -14,6 +14,7 @@ Everything the page loads lives in `site/`; paths inside the page and in `traits
 - Footer "Report a correction" and "Send screenshots" buttons link to two Google Forms owned by the site owner, plus contact@kbsrlab.com (Cloudflare Email Routing forwards it to the owner). Corrections needs no sign-in; screenshots uses a file upload, so Google requires sign-in, and uploads land in the owner's Drive.
 - `site/data/traits.json`: all data. `collections` is the list for the collection dropdown, in the order shown; keep it alphabetical (case-insensitive) when adding a collection. `traits` is the list of cards.
 - `site/images/favicon.svg` (+ `favicon-32.png`) and `images/apple-touch-icon.png`: original artwork (orange ball in a gold ring; the home-screen version sits on a sky-blue tile), not game assets. Sources and the decision record are in `docs/design/app-icon/`.
+- `scripts/validate_traits.py`: checks `traits.json` against the rules in this file (valid JSON, date, alphabetical and unique collections, no "Basketball" suffix, known categories/tags/tiers, icon paths exist and follow the naming, every referenced collection exists). Standard-library Python, no dependencies; run `python3 scripts/validate_traits.py` from the repo root. `.github/workflows/validate.yml` runs it on every PR that touches the data or icons and on pushes to `main`; a failing run blocks nothing on its own but shows a red ✗ on the PR. Repo-only, not published.
 - `docs/design/`: design references and decision records, one folder per topic (`README.md` + `sources/` + numbered `explorations/`). Not loaded by the page. Never put personal screenshots in it.
 - `site/images/icons/<trait-id>-ii.webp`, `images/icons/<trait-id>-iii.webp`: tier icons, 96px square crops of the in-game trait badge, centered on the badge circle and saved as WebP at quality 90.
 
@@ -53,6 +54,7 @@ Everything the page loads lives in `site/`; paths inside the page and in `traits
 ## Workflow
 - Make changes on a branch and open a pull request into `main`. `main` is protected on GitHub: a pull request is required (no approvals needed), the rule applies to admins too, and force-pushes and branch deletion are blocked, so direct pushes to `main` are rejected. Cloudflare builds a preview of every branch at `<branch>.kbsr-ball-traits.pages.dev` and links it on the PR.
 - PRs are squash-merged on GitHub, and merged branches are deleted automatically.
+- Every PR: run `python3 scripts/validate_traits.py` before pushing, and don't merge while the "Validate data" check is red.
 - Every PR: check `updated` at the top of `site/data/traits.json` (shown as "Last updated" in the footer) and set it to the date the PR is pushed/merged (owner's time zone, America/Los_Angeles).
 
 ## Analytics
