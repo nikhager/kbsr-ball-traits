@@ -5,16 +5,16 @@
   "Campus Rookie",
   "Diviner Midorima",
   "Graffiti Master",
-  "Jason Silver",
+  "Jason Silver Basketball",
   "Kise Collection Basketball",
-  "LAST GAME Aomine",
+  "LAST GAME Aomine Basketball",
+  "LAST GAME Aomine Peerless",
+  "LAST GAME Kise Basketball",
+  "LAST GAME Kise Peerless",
   "LAST GAME Murasakibara",
-  "LG Aomine Peerless",
   "LG Kagami",
-  "LG Kise",
-  "LG Kise Peerless",
   "Midorima Collection",
-  "Nash",
+  "Nash Basketball",
   "Perfect Kise Collection",
   "Pumpkin Carnival",
   "Purple Paint",
@@ -55,7 +55,7 @@
      "tiers": "II, III"
     },
     {
-     "name": "LG Kise Peerless",
+     "name": "LAST GAME Kise Peerless",
      "tiers": "II"
     },
     {
@@ -67,7 +67,7 @@
      "tiers": "II, III"
     },
     {
-     "name": "LAST GAME Aomine",
+     "name": "LAST GAME Aomine Basketball",
      "tiers": "II, III"
     },
     {
@@ -104,11 +104,11 @@
      "tiers": "II, III"
     },
     {
-     "name": "LG Kise",
+     "name": "LAST GAME Kise Basketball",
      "tiers": "II"
     },
     {
-     "name": "LG Kise Peerless",
+     "name": "LAST GAME Kise Peerless",
      "tiers": "II"
     },
     {
@@ -154,11 +154,11 @@
      "tiers": "II"
     },
     {
-     "name": "LG Kise",
+     "name": "LAST GAME Kise Basketball",
      "tiers": "II"
     },
     {
-     "name": "LG Kise Peerless",
+     "name": "LAST GAME Kise Peerless",
      "tiers": "III"
     },
     {
@@ -204,7 +204,7 @@
    },
    "collections": [
     {
-     "name": "LG Kise",
+     "name": "LAST GAME Kise Basketball",
      "tiers": "II"
     },
     {
@@ -247,15 +247,15 @@
    },
    "collections": [
     {
-     "name": "LG Kise",
+     "name": "LAST GAME Kise Basketball",
      "tiers": "II, III"
     },
     {
-     "name": "LG Kise Peerless",
+     "name": "LAST GAME Kise Peerless",
      "tiers": "III"
     },
     {
-     "name": "LG Aomine Peerless",
+     "name": "LAST GAME Aomine Peerless",
      "tiers": "III"
     }
    ],
@@ -352,11 +352,11 @@
    },
    "collections": [
     {
-     "name": "LG Kise",
+     "name": "LAST GAME Kise Basketball",
      "tiers": "II, III"
     },
     {
-     "name": "Nash",
+     "name": "Nash Basketball",
      "tiers": "III"
     },
     {
@@ -458,11 +458,11 @@
      "tiers": "II, III"
     },
     {
-     "name": "LG Kise",
+     "name": "LAST GAME Kise Basketball",
      "tiers": "II"
     },
     {
-     "name": "LG Kise Peerless",
+     "name": "LAST GAME Kise Peerless",
      "tiers": "II"
     },
     {
@@ -500,11 +500,11 @@
    },
    "collections": [
     {
-     "name": "LG Aomine Peerless",
+     "name": "LAST GAME Aomine Peerless",
      "tiers": "II, III"
     },
     {
-     "name": "LAST GAME Aomine",
+     "name": "LAST GAME Aomine Basketball",
      "tiers": "II"
     }
    ],
@@ -571,7 +571,7 @@
      "tiers": "II"
     },
     {
-     "name": "Nash",
+     "name": "Nash Basketball",
      "tiers": "II, III"
     },
     {
@@ -608,7 +608,7 @@
      "tiers": "II, III"
     },
     {
-     "name": "LG Kise Peerless",
+     "name": "LAST GAME Kise Peerless",
      "tiers": "II"
     },
     {
@@ -645,11 +645,11 @@
    },
    "collections": [
     {
-     "name": "LG Kise",
+     "name": "LAST GAME Kise Basketball",
      "tiers": "II"
     },
     {
-     "name": "LG Kise Peerless",
+     "name": "LAST GAME Kise Peerless",
      "tiers": "II"
     }
    ],
@@ -679,7 +679,7 @@
    },
    "collections": [
     {
-     "name": "LG Kise",
+     "name": "LAST GAME Kise Basketball",
      "tiers": "II"
     },
     {
@@ -691,7 +691,7 @@
      "tiers": "II"
     },
     {
-     "name": "Jason Silver",
+     "name": "Jason Silver Basketball",
      "tiers": "II, III"
     }
    ],
@@ -724,7 +724,7 @@
      "tiers": "II, III"
     },
     {
-     "name": "LG Kise Peerless",
+     "name": "LAST GAME Kise Peerless",
      "tiers": "II"
     },
     {
@@ -761,11 +761,11 @@
    },
    "collections": [
     {
-     "name": "LG Kise",
+     "name": "LAST GAME Kise Basketball",
      "tiers": "II"
     },
     {
-     "name": "Jason Silver",
+     "name": "Jason Silver Basketball",
      "tiers": "II"
     },
     {
@@ -773,7 +773,7 @@
      "tiers": "II"
     },
     {
-     "name": "LAST GAME Aomine",
+     "name": "LAST GAME Aomine Basketball",
      "tiers": "II"
     },
     {
@@ -807,7 +807,7 @@
    },
    "collections": [
     {
-     "name": "LG Kise",
+     "name": "LAST GAME Kise Basketball",
      "tiers": "II"
     }
    ],
@@ -840,7 +840,7 @@
      "tiers": "II, III"
     },
     {
-     "name": "LG Kise Peerless",
+     "name": "LAST GAME Kise Peerless",
      "tiers": "II"
     },
     {
@@ -877,7 +877,7 @@
    },
    "collections": [
     {
-     "name": "LG Kise Peerless",
+     "name": "LAST GAME Kise Peerless",
      "tiers": "II"
     }
    ],
@@ -964,8 +964,8 @@
    "tags": [
     "Rebound"
    ],
-   "effect": "Increases Rebound Range by +0.2 while in an advantageous box-out.",
-   "effectSource": "Tier II",
+   "effect": "Increases Rebound Range by +0.3 while in an advantageous box-out.",
+   "effectSource": "Tier III",
    "trainingCamp": "",
    "tiers": {
     "II": {
@@ -974,9 +974,9 @@
      "seenOn": "Purple Paint 262, Autumn Moon 251"
     },
     "III": {
-     "value": "",
-     "icon": null,
-     "seenOn": ""
+     "value": "+0.3 range in winning box-out",
+     "icon": "images/icons/position-advantage-iii.webp",
+     "seenOn": "Autumn Moon 299"
     }
    },
    "collections": [
@@ -986,7 +986,7 @@
     },
     {
      "name": "Autumn Moon",
-     "tiers": "II"
+     "tiers": "II, III"
     }
    ]
   },
@@ -1050,7 +1050,7 @@
      "tiers": "II, III"
     },
     {
-     "name": "Jason Silver",
+     "name": "Jason Silver Basketball",
      "tiers": "II, III"
     }
    ],
@@ -1081,7 +1081,7 @@
    },
    "collections": [
     {
-     "name": "Jason Silver",
+     "name": "Jason Silver Basketball",
      "tiers": "II"
     },
     {
