@@ -21,6 +21,7 @@
   "Seirin Spirit",
   "SP Akashi Collection",
   "Wave Rider",
+  "ZONE Aomine Collection",
   "ZONE Murasakibara"
  ],
  "traits": [
@@ -139,12 +140,12 @@
     "II": {
      "value": "+2.5%",
      "icon": "images/icons/motion-offense-ii.webp",
-     "seenOn": "Kise Collection 360"
+     "seenOn": "Kise Collection 360, Seirin Spirit 395"
     },
     "III": {
      "value": "+3%",
      "icon": "images/icons/motion-offense-iii.webp",
-     "seenOn": "Kise Collection 284"
+     "seenOn": "Kise Collection 284, ZONE Aomine 394"
     }
    },
    "collections": [
@@ -170,6 +171,10 @@
     },
     {
      "name": "Campus Rookie",
+     "tiers": "III"
+    },
+    {
+     "name": "ZONE Aomine Collection",
      "tiers": "III"
     }
    ],
@@ -699,7 +704,7 @@
    "tags": [
     "Block"
    ],
-   "effect": "Increases Block Range by +0.05 after a successful Block. Up to 5 stacks.",
+   "effect": "Increases Block Range by +0.07 after a successful Block. Up to 5 stacks.",
    "trainingCamp": "",
    "tiers": {
     "II": {
@@ -708,15 +713,15 @@
      "seenOn": "ZONE Mura 353"
     },
     "III": {
-     "value": "",
-     "icon": null,
-     "seenOn": ""
+     "value": "+0.07 per stack (5x)",
+     "icon": "images/icons/defensive-stopper-iii.webp",
+     "seenOn": "Seirin Spirit 395"
     }
    },
    "collections": [
     {
      "name": "Seirin Spirit",
-     "tiers": "II"
+     "tiers": "II, III"
     },
     {
      "name": "LG Kise Peerless",
@@ -731,7 +736,7 @@
      "tiers": "II"
     }
    ],
-   "effectSource": "Tier II"
+   "effectSource": "Tier III"
   },
   {
    "id": "perimeter-lockdown",
@@ -1066,7 +1071,7 @@
     "II": {
      "value": "+2 rebound Competition Value / +2% dunk & layup accuracy",
      "icon": "images/icons/interior-inspire-ii.webp",
-     "seenOn": "ZONE Mura, Jason Silver 379"
+     "seenOn": "ZONE Mura, Jason Silver 379, ZONE Aomine 394"
     },
     "III": {
      "value": "",
@@ -1081,6 +1086,10 @@
     },
     {
      "name": "ZONE Murasakibara",
+     "tiers": "II"
+    },
+    {
+     "name": "ZONE Aomine Collection",
      "tiers": "II"
     }
    ],
