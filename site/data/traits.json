@@ -12,11 +12,11 @@
   "LAST GAME Kise Basketball",
   "LAST GAME Kise Peerless",
   "LAST GAME Murasakibara",
-  "LG Kagami",
+  "LG Kagami Basketball",
   "Midorima Collection",
   "Nash Basketball",
-  "Perfect Kise Collection",
-  "Pumpkin Carnival",
+  "Perfect Kise Collection Basketball",
+  "Pumpkin Carnival (Basketball)",
   "Purple Paint",
   "Seirin Spirit",
   "SP Akashi Collection",
@@ -59,11 +59,11 @@
      "tiers": "II"
     },
     {
-     "name": "Pumpkin Carnival",
+     "name": "Pumpkin Carnival (Basketball)",
      "tiers": "II"
     },
     {
-     "name": "Perfect Kise Collection",
+     "name": "Perfect Kise Collection Basketball",
      "tiers": "II, III"
     },
     {
@@ -112,7 +112,7 @@
      "tiers": "II"
     },
     {
-     "name": "Pumpkin Carnival",
+     "name": "Pumpkin Carnival (Basketball)",
      "tiers": "II"
     },
     {
@@ -162,7 +162,7 @@
      "tiers": "III"
     },
     {
-     "name": "Pumpkin Carnival",
+     "name": "Pumpkin Carnival (Basketball)",
      "tiers": "II"
     },
     {
@@ -313,7 +313,7 @@
    },
    "collections": [
     {
-     "name": "Pumpkin Carnival",
+     "name": "Pumpkin Carnival (Basketball)",
      "tiers": "III"
     },
     {
@@ -466,7 +466,7 @@
      "tiers": "II"
     },
     {
-     "name": "Pumpkin Carnival",
+     "name": "Pumpkin Carnival (Basketball)",
      "tiers": "II"
     }
    ],
@@ -533,7 +533,7 @@
    },
    "collections": [
     {
-     "name": "Pumpkin Carnival",
+     "name": "Pumpkin Carnival (Basketball)",
      "tiers": "II, III"
     }
    ],
@@ -567,7 +567,7 @@
      "tiers": "II, III"
     },
     {
-     "name": "Pumpkin Carnival",
+     "name": "Pumpkin Carnival (Basketball)",
      "tiers": "II"
     },
     {
@@ -612,7 +612,7 @@
      "tiers": "II"
     },
     {
-     "name": "Pumpkin Carnival",
+     "name": "Pumpkin Carnival (Basketball)",
      "tiers": "II"
     }
    ],
@@ -683,7 +683,7 @@
      "tiers": "II"
     },
     {
-     "name": "LG Kagami",
+     "name": "LG Kagami Basketball",
      "tiers": "III"
     },
     {
@@ -728,7 +728,7 @@
      "tiers": "II"
     },
     {
-     "name": "Pumpkin Carnival",
+     "name": "Pumpkin Carnival (Basketball)",
      "tiers": "II"
     },
     {
@@ -844,7 +844,7 @@
      "tiers": "II"
     },
     {
-     "name": "Pumpkin Carnival",
+     "name": "Pumpkin Carnival (Basketball)",
      "tiers": "II"
     },
     {
@@ -906,7 +906,7 @@
    },
    "collections": [
     {
-     "name": "Perfect Kise Collection",
+     "name": "Perfect Kise Collection Basketball",
      "tiers": "III"
     }
    ],
@@ -935,7 +935,7 @@
    },
    "collections": [
     {
-     "name": "LG Kagami",
+     "name": "LG Kagami Basketball",
      "tiers": "II"
     },
     {
