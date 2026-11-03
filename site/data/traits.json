@@ -3,7 +3,7 @@
  "collections": [
   "Autumn Moon",
   "Campus Rookie",
-  "Diviner Midorima",
+  "Diviner Midorima Collection",
   "Graffiti Master",
   "Jason Silver",
   "Kise Collection",
@@ -257,6 +257,10 @@
     {
      "name": "LAST GAME Aomine Peerless",
      "tiers": "III"
+    },
+    {
+     "name": "Perfect Kise Collection",
+     "tiers": "II"
     }
    ],
    "effectSource": "Tier III"
@@ -273,8 +277,8 @@
    "tiers": {
     "II": {
      "value": "",
-     "icon": null,
-     "seenOn": ""
+     "icon": "images/icons/clutch-player-ii.webp",
+     "seenOn": "Diviner Midorima Collection 266"
     },
     "III": {
      "value": "+1.5% (+1.5% more in the final minute)",
@@ -284,8 +288,8 @@
    },
    "collections": [
     {
-     "name": "Diviner Midorima",
-     "tiers": "III"
+     "name": "Diviner Midorima Collection",
+     "tiers": "II, III"
     }
    ],
    "effectSource": "Tier III"
@@ -317,7 +321,7 @@
      "tiers": "III"
     },
     {
-     "name": "Diviner Midorima",
+     "name": "Diviner Midorima Collection",
      "tiers": "II"
     },
     {
@@ -588,7 +592,7 @@
    "tags": [
     "Steal"
    ],
-   "effect": "Increases Charge Chance against opponents by +1.5%. Increases Steal Chance by +1.5% for 3s after Charging an opponent.",
+   "effect": "Increases Charge Chance against opponents by +2%. Increases Steal Chance by +2% for 3s after Charging an opponent.",
    "trainingCamp": "",
    "tiers": {
     "II": {
@@ -597,9 +601,9 @@
      "seenOn": "Seirin Spirit 264, 384"
     },
     "III": {
-     "value": "",
-     "icon": null,
-     "seenOn": ""
+     "value": "+2% Charge; +2% Steal for 3s",
+     "icon": "images/icons/roadblock-iii.webp",
+     "seenOn": "Seirin Spirit 420"
     }
    },
    "collections": [
@@ -616,7 +620,7 @@
      "tiers": "II"
     }
    ],
-   "effectSource": "Tier II"
+   "effectSource": "Tier III"
   },
   {
    "id": "offense-defense-switch",
