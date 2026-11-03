@@ -6,13 +6,13 @@
   "Diviner Midorima",
   "Graffiti Master",
   "Jason Silver",
-  "Kise Collection",
-  "LG Aomine",
+  "Kise Collection Basketball",
+  "LAST GAME Aomine",
+  "LAST GAME Murasakibara",
   "LG Aomine Peerless",
   "LG Kagami",
   "LG Kise",
   "LG Kise Peerless",
-  "LG Murasakibara",
   "Midorima Collection",
   "Nash",
   "Perfect Kise Collection",
@@ -22,7 +22,7 @@
   "SP Akashi Collection",
   "Wave Rider",
   "ZONE Aomine Collection",
-  "ZONE Murasakibara"
+  "ZONE Atsushi Murasakibara"
  ],
  "traits": [
   {
@@ -67,7 +67,7 @@
      "tiers": "II, III"
     },
     {
-     "name": "LG Aomine",
+     "name": "LAST GAME Aomine",
      "tiers": "II, III"
     },
     {
@@ -116,7 +116,7 @@
      "tiers": "II"
     },
     {
-     "name": "Kise Collection",
+     "name": "Kise Collection Basketball",
      "tiers": "III"
     }
    ],
@@ -166,7 +166,7 @@
      "tiers": "II"
     },
     {
-     "name": "Kise Collection",
+     "name": "Kise Collection Basketball",
      "tiers": "II, III"
     },
     {
@@ -391,7 +391,7 @@
    },
    "collections": [
     {
-     "name": "Kise Collection",
+     "name": "Kise Collection Basketball",
      "tiers": "III"
     }
    ],
@@ -424,7 +424,7 @@
      "tiers": "III"
     },
     {
-     "name": "ZONE Murasakibara",
+     "name": "ZONE Atsushi Murasakibara",
      "tiers": "III"
     }
    ],
@@ -504,7 +504,7 @@
      "tiers": "II, III"
     },
     {
-     "name": "LG Aomine",
+     "name": "LAST GAME Aomine",
      "tiers": "II"
     }
    ],
@@ -687,7 +687,7 @@
      "tiers": "III"
     },
     {
-     "name": "LG Murasakibara",
+     "name": "LAST GAME Murasakibara",
      "tiers": "II"
     },
     {
@@ -732,7 +732,7 @@
      "tiers": "II"
     },
     {
-     "name": "ZONE Murasakibara",
+     "name": "ZONE Atsushi Murasakibara",
      "tiers": "II"
     }
    ],
@@ -769,11 +769,11 @@
      "tiers": "II"
     },
     {
-     "name": "ZONE Murasakibara",
+     "name": "ZONE Atsushi Murasakibara",
      "tiers": "II"
     },
     {
-     "name": "LG Aomine",
+     "name": "LAST GAME Aomine",
      "tiers": "II"
     },
     {
@@ -939,7 +939,7 @@
      "tiers": "II"
     },
     {
-     "name": "LG Murasakibara",
+     "name": "LAST GAME Murasakibara",
      "tiers": "II"
     },
     {
@@ -947,7 +947,7 @@
      "tiers": "III"
     },
     {
-     "name": "ZONE Murasakibara",
+     "name": "ZONE Atsushi Murasakibara",
      "tiers": "II, III"
     },
     {
@@ -1013,7 +1013,7 @@
    },
    "collections": [
     {
-     "name": "LG Murasakibara",
+     "name": "LAST GAME Murasakibara",
      "tiers": "II, III"
     }
    ],
@@ -1046,7 +1046,7 @@
    },
    "collections": [
     {
-     "name": "LG Murasakibara",
+     "name": "LAST GAME Murasakibara",
      "tiers": "II, III"
     },
     {
@@ -1085,7 +1085,7 @@
      "tiers": "II"
     },
     {
-     "name": "ZONE Murasakibara",
+     "name": "ZONE Atsushi Murasakibara",
      "tiers": "II"
     },
     {
@@ -1118,7 +1118,7 @@
    },
    "collections": [
     {
-     "name": "Kise Collection",
+     "name": "Kise Collection Basketball",
      "tiers": "II"
     }
    ],
