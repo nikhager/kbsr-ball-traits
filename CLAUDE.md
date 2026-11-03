@@ -43,7 +43,7 @@ Everything the page loads lives in `site/`; paths inside the page and in `traits
 1. Read the trait name, tier and numbers from the tooltip.
 2. On a ball with two traits, the icon that was tapped shows dimmer. That tells you which icon goes with the open tooltip. Crop the saved icon from an undimmed screenshot when one exists (the owner tries to upload one per ball), and replace a dimmed icon in `site/images/icons/` whenever an undimmed copy turns up.
 3. A trait keeps the same symbol at every tier; only the ring color changes (purple II, gold III). Paint Powerhouse has a backboard rectangle behind the arm; Absolute Core doesn't.
-4. Update `site/data/traits.json`, add the icon WebP to `site/images/icons/`, and keep the owner's "KBSR Ball Build Planner" Google Sheet (Traits tab) in sync.
+4. Update `site/data/traits.json`, add the icon WebP to `site/images/icons/`, and keep the owner's "KBSR Ball Build Planner" Google Sheet (Traits tab) in sync. `traits.json` is the source of truth for which collections carry which traits: after each update, rebuild the Traits tab's collection grid (one column per entry in `collections`, same alphabetical order, official names) from `traits.json` instead of editing cells one at a time, then read it back to confirm it matches. When writing text that starts with `+`, `=` or `-` to the sheet, prefix it with `'` so Sheets doesn't parse it as a formula.
 5. Commit and push only when the owner asks.
 
 ## Contributions
