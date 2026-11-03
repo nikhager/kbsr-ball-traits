@@ -5,18 +5,18 @@
   "Campus Rookie",
   "Diviner Midorima",
   "Graffiti Master",
-  "Jason Silver Basketball",
-  "Kise Collection Basketball",
-  "LAST GAME Aomine Basketball",
+  "Jason Silver",
+  "Kise Collection",
+  "LAST GAME Aomine",
   "LAST GAME Aomine Peerless",
-  "LAST GAME Kise Basketball",
+  "LAST GAME Kise",
   "LAST GAME Kise Peerless",
   "LAST GAME Murasakibara",
-  "LG Kagami Basketball",
+  "LG Kagami",
   "Midorima Collection",
-  "Nash Basketball",
-  "Perfect Kise Collection Basketball",
-  "Pumpkin Carnival (Basketball)",
+  "Nash",
+  "Perfect Kise Collection",
+  "Pumpkin Carnival",
   "Purple Paint",
   "Seirin Spirit",
   "SP Akashi Collection",
@@ -59,15 +59,15 @@
      "tiers": "II"
     },
     {
-     "name": "Pumpkin Carnival (Basketball)",
+     "name": "Pumpkin Carnival",
      "tiers": "II"
     },
     {
-     "name": "Perfect Kise Collection Basketball",
+     "name": "Perfect Kise Collection",
      "tiers": "II, III"
     },
     {
-     "name": "LAST GAME Aomine Basketball",
+     "name": "LAST GAME Aomine",
      "tiers": "II, III"
     },
     {
@@ -104,7 +104,7 @@
      "tiers": "II, III"
     },
     {
-     "name": "LAST GAME Kise Basketball",
+     "name": "LAST GAME Kise",
      "tiers": "II"
     },
     {
@@ -112,11 +112,11 @@
      "tiers": "II"
     },
     {
-     "name": "Pumpkin Carnival (Basketball)",
+     "name": "Pumpkin Carnival",
      "tiers": "II"
     },
     {
-     "name": "Kise Collection Basketball",
+     "name": "Kise Collection",
      "tiers": "III"
     }
    ],
@@ -154,7 +154,7 @@
      "tiers": "II"
     },
     {
-     "name": "LAST GAME Kise Basketball",
+     "name": "LAST GAME Kise",
      "tiers": "II"
     },
     {
@@ -162,11 +162,11 @@
      "tiers": "III"
     },
     {
-     "name": "Pumpkin Carnival (Basketball)",
+     "name": "Pumpkin Carnival",
      "tiers": "II"
     },
     {
-     "name": "Kise Collection Basketball",
+     "name": "Kise Collection",
      "tiers": "II, III"
     },
     {
@@ -204,7 +204,7 @@
    },
    "collections": [
     {
-     "name": "LAST GAME Kise Basketball",
+     "name": "LAST GAME Kise",
      "tiers": "II"
     },
     {
@@ -247,7 +247,7 @@
    },
    "collections": [
     {
-     "name": "LAST GAME Kise Basketball",
+     "name": "LAST GAME Kise",
      "tiers": "II, III"
     },
     {
@@ -313,7 +313,7 @@
    },
    "collections": [
     {
-     "name": "Pumpkin Carnival (Basketball)",
+     "name": "Pumpkin Carnival",
      "tiers": "III"
     },
     {
@@ -352,11 +352,11 @@
    },
    "collections": [
     {
-     "name": "LAST GAME Kise Basketball",
+     "name": "LAST GAME Kise",
      "tiers": "II, III"
     },
     {
-     "name": "Nash Basketball",
+     "name": "Nash",
      "tiers": "III"
     },
     {
@@ -391,7 +391,7 @@
    },
    "collections": [
     {
-     "name": "Kise Collection Basketball",
+     "name": "Kise Collection",
      "tiers": "III"
     }
    ],
@@ -458,7 +458,7 @@
      "tiers": "II, III"
     },
     {
-     "name": "LAST GAME Kise Basketball",
+     "name": "LAST GAME Kise",
      "tiers": "II"
     },
     {
@@ -466,7 +466,7 @@
      "tiers": "II"
     },
     {
-     "name": "Pumpkin Carnival (Basketball)",
+     "name": "Pumpkin Carnival",
      "tiers": "II"
     }
    ],
@@ -504,7 +504,7 @@
      "tiers": "II, III"
     },
     {
-     "name": "LAST GAME Aomine Basketball",
+     "name": "LAST GAME Aomine",
      "tiers": "II"
     }
    ],
@@ -533,7 +533,7 @@
    },
    "collections": [
     {
-     "name": "Pumpkin Carnival (Basketball)",
+     "name": "Pumpkin Carnival",
      "tiers": "II, III"
     }
    ],
@@ -567,11 +567,11 @@
      "tiers": "II, III"
     },
     {
-     "name": "Pumpkin Carnival (Basketball)",
+     "name": "Pumpkin Carnival",
      "tiers": "II"
     },
     {
-     "name": "Nash Basketball",
+     "name": "Nash",
      "tiers": "II, III"
     },
     {
@@ -612,7 +612,7 @@
      "tiers": "II"
     },
     {
-     "name": "Pumpkin Carnival (Basketball)",
+     "name": "Pumpkin Carnival",
      "tiers": "II"
     }
    ],
@@ -645,7 +645,7 @@
    },
    "collections": [
     {
-     "name": "LAST GAME Kise Basketball",
+     "name": "LAST GAME Kise",
      "tiers": "II"
     },
     {
@@ -679,11 +679,11 @@
    },
    "collections": [
     {
-     "name": "LAST GAME Kise Basketball",
+     "name": "LAST GAME Kise",
      "tiers": "II"
     },
     {
-     "name": "LG Kagami Basketball",
+     "name": "LG Kagami",
      "tiers": "III"
     },
     {
@@ -691,7 +691,7 @@
      "tiers": "II"
     },
     {
-     "name": "Jason Silver Basketball",
+     "name": "Jason Silver",
      "tiers": "II, III"
     }
    ],
@@ -728,7 +728,7 @@
      "tiers": "II"
     },
     {
-     "name": "Pumpkin Carnival (Basketball)",
+     "name": "Pumpkin Carnival",
      "tiers": "II"
     },
     {
@@ -761,11 +761,11 @@
    },
    "collections": [
     {
-     "name": "LAST GAME Kise Basketball",
+     "name": "LAST GAME Kise",
      "tiers": "II"
     },
     {
-     "name": "Jason Silver Basketball",
+     "name": "Jason Silver",
      "tiers": "II"
     },
     {
@@ -773,7 +773,7 @@
      "tiers": "II"
     },
     {
-     "name": "LAST GAME Aomine Basketball",
+     "name": "LAST GAME Aomine",
      "tiers": "II"
     },
     {
@@ -807,7 +807,7 @@
    },
    "collections": [
     {
-     "name": "LAST GAME Kise Basketball",
+     "name": "LAST GAME Kise",
      "tiers": "II"
     }
    ],
@@ -844,7 +844,7 @@
      "tiers": "II"
     },
     {
-     "name": "Pumpkin Carnival (Basketball)",
+     "name": "Pumpkin Carnival",
      "tiers": "II"
     },
     {
@@ -906,7 +906,7 @@
    },
    "collections": [
     {
-     "name": "Perfect Kise Collection Basketball",
+     "name": "Perfect Kise Collection",
      "tiers": "III"
     }
    ],
@@ -935,7 +935,7 @@
    },
    "collections": [
     {
-     "name": "LG Kagami Basketball",
+     "name": "LG Kagami",
      "tiers": "II"
     },
     {
@@ -1050,7 +1050,7 @@
      "tiers": "II, III"
     },
     {
-     "name": "Jason Silver Basketball",
+     "name": "Jason Silver",
      "tiers": "II, III"
     }
    ],
@@ -1081,7 +1081,7 @@
    },
    "collections": [
     {
-     "name": "Jason Silver Basketball",
+     "name": "Jason Silver",
      "tiers": "II"
     },
     {
@@ -1118,7 +1118,7 @@
    },
    "collections": [
     {
-     "name": "Kise Collection Basketball",
+     "name": "Kise Collection",
      "tiers": "II"
     }
    ],
