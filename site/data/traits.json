@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-02",
+ "updated": "2026-11-06",
  "collections": [
   "Autumn Moon",
   "Campus Rookie",
@@ -11,6 +11,7 @@
   "LAST GAME Aomine Peerless",
   "LAST GAME Kise",
   "LAST GAME Kise Peerless",
+  "LAST GAME Midorima Peerless",
   "LAST GAME Murasakibara",
   "LG Kagami",
   "Midorima Collection",
@@ -73,6 +74,10 @@
     {
      "name": "Campus Rookie",
      "tiers": "II"
+    },
+    {
+     "name": "Nash",
+     "tiers": "II"
     }
    ],
    "effectSource": "Tier III"
@@ -117,6 +122,10 @@
     },
     {
      "name": "Kise Collection",
+     "tiers": "III"
+    },
+    {
+     "name": "LAST GAME Aomine Peerless",
      "tiers": "III"
     }
    ],
@@ -171,11 +180,15 @@
     },
     {
      "name": "Campus Rookie",
-     "tiers": "III"
+     "tiers": "II, III"
     },
     {
      "name": "ZONE Aomine Collection",
      "tiers": "III"
+    },
+    {
+     "name": "LAST GAME Midorima Peerless",
+     "tiers": "II"
     }
    ],
    "effectSource": "Tier III"
@@ -256,7 +269,7 @@
     },
     {
      "name": "LAST GAME Aomine Peerless",
-     "tiers": "III"
+     "tiers": "II, III"
     },
     {
      "name": "Perfect Kise Collection",
@@ -397,6 +410,37 @@
     {
      "name": "Kise Collection",
      "tiers": "III"
+    }
+   ],
+   "effectSource": "Tier III"
+  },
+  {
+   "id": "assist-master",
+   "name": "Assist Master",
+   "category": "Offense",
+   "tags": [
+    "3PT",
+    "Mid-Range",
+    "Control"
+   ],
+   "effect": "Increases Safe Pass Distance by +1.5. Also increases the teammate's Open Accuracy by 3% after passing to a teammate in an open spot.",
+   "trainingCamp": "",
+   "tiers": {
+    "II": {
+     "value": "+1.5 Safe Pass Distance; +2.5% teammate open accuracy",
+     "icon": "images/icons/assist-master-ii.webp",
+     "seenOn": "LAST GAME Midorima Peerless"
+    },
+    "III": {
+     "value": "+1.5 Safe Pass Distance; +3% teammate open accuracy",
+     "icon": "images/icons/assist-master-iii.webp",
+     "seenOn": "LAST GAME Midorima Peerless"
+    }
+   },
+   "collections": [
+    {
+     "name": "LAST GAME Midorima Peerless",
+     "tiers": "II, III"
     }
    ],
    "effectSource": "Tier III"
@@ -617,6 +661,10 @@
     },
     {
      "name": "Pumpkin Carnival",
+     "tiers": "II"
+    },
+    {
+     "name": "Campus Rookie",
      "tiers": "II"
     }
    ],
