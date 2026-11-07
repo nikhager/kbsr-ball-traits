@@ -14,6 +14,7 @@
   "LAST GAME Midorima",
   "LAST GAME Midorima Peerless",
   "LAST GAME Murasakibara",
+  "LAST GAME Murasakibara Peerless",
   "LG Kagami",
   "Midorima Collection",
   "Nash",
@@ -1015,7 +1016,7 @@
     "II": {
      "value": "+1.5 (+1.5 after a miss)",
      "icon": "images/icons/rising-strong-ii.webp",
-     "seenOn": "LG Kagami, ZONE Mura, LG Mura, Purple Paint 427"
+     "seenOn": "LG Kagami, ZONE Mura, LG Mura Peerless, Purple Paint 427"
     },
     "III": {
      "value": "+2 (+2 after a miss)",
@@ -1029,10 +1030,6 @@
      "tiers": "II"
     },
     {
-     "name": "LAST GAME Murasakibara",
-     "tiers": "II"
-    },
-    {
      "name": "Autumn Moon",
      "tiers": "III"
     },
@@ -1043,6 +1040,10 @@
     {
      "name": "Purple Paint",
      "tiers": "II, III"
+    },
+    {
+     "name": "LAST GAME Murasakibara Peerless",
+     "tiers": "II"
     }
    ],
    "effectSource": "Tier III"
@@ -1093,18 +1094,22 @@
     "II": {
      "value": "+1.5 per stack (2x)",
      "icon": "images/icons/contest-dominator-ii.webp",
-     "seenOn": "LG Mura 358"
+     "seenOn": "LG Mura Peerless 358, LG Mura 367"
     },
     "III": {
      "value": "+2 per stack (2x)",
      "icon": "images/icons/contest-dominator-iii.webp",
-     "seenOn": "LG Mura 408"
+     "seenOn": "LG Mura 381, LG Mura 408"
     }
    },
    "collections": [
     {
      "name": "LAST GAME Murasakibara",
      "tiers": "II, III"
+    },
+    {
+     "name": "LAST GAME Murasakibara Peerless",
+     "tiers": "II"
     }
    ],
    "effectSource": "Tier III"
