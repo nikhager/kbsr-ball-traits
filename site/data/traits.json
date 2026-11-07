@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06",
+ "updated": "2026-11-07",
  "collections": [
   "Autumn Moon",
   "Campus Rookie",
@@ -333,7 +333,7 @@
    "tags": [
     "3PT"
    ],
-   "effect": "3-Pointer Accuracy +0.7%, this bonus doubles when taking Long Shots. Each successful Long Shot boosts shot resistance by 1%. This effect can stack up to 5 times.",
+   "effect": "3-Pointer Accuracy +1%, this bonus doubles when taking Long Shots. Each successful Long Shot boosts shot resistance by 1%. This effect can stack up to 5 times.",
    "trainingCamp": "Long-range shot resistance boost doubled.",
    "tiers": {
     "II": {
@@ -342,9 +342,9 @@
      "seenOn": "LAST GAME Midorima"
     },
     "III": {
-     "value": "",
-     "icon": null,
-     "seenOn": ""
+     "value": "+1% 3PT (x2 on Long Shots); +1% shot resistance per made Long Shot (5x)",
+     "icon": "images/icons/confident-long-shot-iii.webp",
+     "seenOn": "LAST GAME Midorima"
     }
    },
    "collections": [
@@ -357,7 +357,7 @@
      "tiers": "II, III"
     }
    ],
-   "effectSource": "Tier II"
+   "effectSource": "Tier III"
   },
   {
    "id": "long-range-intimidation",
