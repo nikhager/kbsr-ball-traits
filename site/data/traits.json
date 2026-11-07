@@ -11,6 +11,7 @@
   "LAST GAME Aomine Peerless",
   "LAST GAME Kise",
   "LAST GAME Kise Peerless",
+  "LAST GAME Midorima",
   "LAST GAME Midorima Peerless",
   "LAST GAME Murasakibara",
   "LG Kagami",
@@ -303,9 +304,42 @@
     {
      "name": "Diviner Midorima Collection",
      "tiers": "II, III"
+    },
+    {
+     "name": "LAST GAME Midorima",
+     "tiers": "II"
     }
    ],
    "effectSource": "Tier III"
+  },
+  {
+   "id": "confident-long-shot",
+   "name": "Confident Long Shot",
+   "category": "Offense",
+   "tags": [
+    "3PT"
+   ],
+   "effect": "3-Pointer Accuracy +0.7%, this bonus doubles when taking Long Shots. Each successful Long Shot boosts shot resistance by 1%. This effect can stack up to 5 times.",
+   "trainingCamp": "Long-range shot resistance boost doubled.",
+   "tiers": {
+    "II": {
+     "value": "+0.7% 3PT (x2 on Long Shots); +1% shot resistance per made Long Shot (5x)",
+     "icon": "images/icons/confident-long-shot-ii.webp",
+     "seenOn": "LAST GAME Midorima"
+    },
+    "III": {
+     "value": "",
+     "icon": null,
+     "seenOn": ""
+    }
+   },
+   "collections": [
+    {
+     "name": "LAST GAME Midorima",
+     "tiers": "II"
+    }
+   ],
+   "effectSource": "Tier II"
   },
   {
    "id": "perimeter-master",
@@ -441,6 +475,10 @@
     {
      "name": "LAST GAME Midorima Peerless",
      "tiers": "II, III"
+    },
+    {
+     "name": "LAST GAME Midorima",
+     "tiers": "II"
     }
    ],
    "effectSource": "Tier III"
@@ -1004,7 +1042,7 @@
     },
     {
      "name": "Purple Paint",
-     "tiers": "II"
+     "tiers": "II, III"
     }
    ],
    "effectSource": "Tier III"
