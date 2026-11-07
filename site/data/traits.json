@@ -190,7 +190,11 @@
     },
     {
      "name": "LAST GAME Midorima Peerless",
-     "tiers": "II"
+     "tiers": "II, III"
+    },
+    {
+     "name": "LAST GAME Midorima",
+     "tiers": "II, III"
     }
    ],
    "effectSource": "Tier III"
@@ -228,6 +232,10 @@
     },
     {
      "name": "Graffiti Master",
+     "tiers": "II, III"
+    },
+    {
+     "name": "LAST GAME Midorima Peerless",
      "tiers": "II, III"
     }
    ],
@@ -276,6 +284,10 @@
     {
      "name": "Perfect Kise Collection",
      "tiers": "II"
+    },
+    {
+     "name": "LAST GAME Midorima",
+     "tiers": "II, III"
     }
    ],
    "effectSource": "Tier III"
@@ -308,7 +320,7 @@
     },
     {
      "name": "LAST GAME Midorima",
-     "tiers": "II"
+     "tiers": "II, III"
     }
    ],
    "effectSource": "Tier III"
@@ -337,10 +349,45 @@
    "collections": [
     {
      "name": "LAST GAME Midorima",
-     "tiers": "II"
+     "tiers": "II, III"
+    },
+    {
+     "name": "LAST GAME Midorima Peerless",
+     "tiers": "II, III"
     }
    ],
    "effectSource": "Tier II"
+  },
+  {
+   "id": "long-range-intimidation",
+   "name": "Long-Range Intimidation",
+   "category": "Offense",
+   "tags": [
+    "3PT",
+    "Mid-Range",
+    "Layup"
+   ],
+   "effect": "3-Pointer range falloff distance increases. Each 3-Pointer made permanently increases 2-Point and Layup accuracy. Stacks up to 3 times.",
+   "trainingCamp": "3-Pointer range falloff distance increase is doubled. After scoring a 3-Pointer, the permanent Mid-Range and Layup accuracy increase effects are doubled. Stack limit remains unchanged.",
+   "tiers": {
+    "II": {
+     "value": "",
+     "icon": null,
+     "seenOn": ""
+    },
+    "III": {
+     "value": "",
+     "icon": null,
+     "seenOn": ""
+    }
+   },
+   "collections": [
+    {
+     "name": "LAST GAME Midorima Peerless",
+     "tiers": "II, III"
+    }
+   ],
+   "effectSource": ""
   },
   {
    "id": "perimeter-master",
@@ -375,6 +422,14 @@
     {
      "name": "Midorima Collection",
      "tiers": "III"
+    },
+    {
+     "name": "LAST GAME Midorima Peerless",
+     "tiers": "II, III"
+    },
+    {
+     "name": "LAST GAME Midorima",
+     "tiers": "II, III"
     }
    ],
    "effectSource": "Tier III"
@@ -445,6 +500,10 @@
     {
      "name": "Kise Collection",
      "tiers": "III"
+    },
+    {
+     "name": "LAST GAME Midorima",
+     "tiers": "II, III"
     }
    ],
    "effectSource": "Tier III"
@@ -479,7 +538,7 @@
     },
     {
      "name": "LAST GAME Midorima",
-     "tiers": "II"
+     "tiers": "II, III"
     }
    ],
    "effectSource": "Tier III"
@@ -513,6 +572,10 @@
     {
      "name": "ZONE Atsushi Murasakibara",
      "tiers": "III"
+    },
+    {
+     "name": "LAST GAME Midorima",
+     "tiers": "II, III"
     }
    ],
    "effectSource": "Tier III"
@@ -555,6 +618,10 @@
     {
      "name": "Pumpkin Carnival",
      "tiers": "II"
+    },
+    {
+     "name": "LAST GAME Midorima",
+     "tiers": "II, III"
     }
    ],
    "effectSource": "Tier III"
@@ -621,6 +688,10 @@
    "collections": [
     {
      "name": "Pumpkin Carnival",
+     "tiers": "II, III"
+    },
+    {
+     "name": "LAST GAME Midorima Peerless",
      "tiers": "II, III"
     }
    ],
@@ -870,6 +941,10 @@
     {
      "name": "Graffiti Master",
      "tiers": "II"
+    },
+    {
+     "name": "LAST GAME Midorima Peerless",
+     "tiers": "II, III"
     }
    ],
    "effectSource": "Tier II"
@@ -941,6 +1016,10 @@
     {
      "name": "SP Akashi Collection",
      "tiers": "II"
+    },
+    {
+     "name": "LAST GAME Midorima Peerless",
+     "tiers": "II, III"
     }
    ],
    "effectSource": "Tier III"
@@ -1215,6 +1294,14 @@
     {
      "name": "Kise Collection",
      "tiers": "II"
+    },
+    {
+     "name": "LAST GAME Midorima Peerless",
+     "tiers": "II, III"
+    },
+    {
+     "name": "LAST GAME Midorima",
+     "tiers": "II, III"
     }
    ],
    "effectSource": "Tier II"
