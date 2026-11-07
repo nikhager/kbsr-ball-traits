@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-02",
+ "updated": "2026-11-06",
  "collections": [
   "Autumn Moon",
   "Campus Rookie",
@@ -11,10 +11,14 @@
   "LAST GAME Aomine Peerless",
   "LAST GAME Kise",
   "LAST GAME Kise Peerless",
+  "LAST GAME Midorima",
+  "LAST GAME Midorima Peerless",
   "LAST GAME Murasakibara",
+  "LAST GAME Murasakibara Peerless",
   "LG Kagami",
   "Midorima Collection",
   "Nash",
+  "Nash Collection",
   "Perfect Kise Collection",
   "Pumpkin Carnival",
   "Purple Paint",
@@ -73,6 +77,10 @@
     {
      "name": "Campus Rookie",
      "tiers": "II"
+    },
+    {
+     "name": "Nash Collection",
+     "tiers": "II"
     }
    ],
    "effectSource": "Tier III"
@@ -117,6 +125,10 @@
     },
     {
      "name": "Kise Collection",
+     "tiers": "III"
+    },
+    {
+     "name": "LAST GAME Aomine Peerless",
      "tiers": "III"
     }
    ],
@@ -171,11 +183,19 @@
     },
     {
      "name": "Campus Rookie",
-     "tiers": "III"
+     "tiers": "II, III"
     },
     {
      "name": "ZONE Aomine Collection",
      "tiers": "III"
+    },
+    {
+     "name": "LAST GAME Midorima Peerless",
+     "tiers": "II, III"
+    },
+    {
+     "name": "LAST GAME Midorima",
+     "tiers": "II, III"
     }
    ],
    "effectSource": "Tier III"
@@ -213,6 +233,10 @@
     },
     {
      "name": "Graffiti Master",
+     "tiers": "II, III"
+    },
+    {
+     "name": "LAST GAME Midorima Peerless",
      "tiers": "II, III"
     }
    ],
@@ -256,11 +280,15 @@
     },
     {
      "name": "LAST GAME Aomine Peerless",
-     "tiers": "III"
+     "tiers": "II, III"
     },
     {
      "name": "Perfect Kise Collection",
      "tiers": "II"
+    },
+    {
+     "name": "LAST GAME Midorima",
+     "tiers": "II, III"
     }
    ],
    "effectSource": "Tier III"
@@ -290,9 +318,77 @@
     {
      "name": "Diviner Midorima Collection",
      "tiers": "II, III"
+    },
+    {
+     "name": "LAST GAME Midorima",
+     "tiers": "II, III"
     }
    ],
    "effectSource": "Tier III"
+  },
+  {
+   "id": "confident-long-shot",
+   "name": "Confident Long Shot",
+   "category": "Offense",
+   "tags": [
+    "3PT"
+   ],
+   "effect": "3-Pointer Accuracy +0.7%, this bonus doubles when taking Long Shots. Each successful Long Shot boosts shot resistance by 1%. This effect can stack up to 5 times.",
+   "trainingCamp": "Long-range shot resistance boost doubled.",
+   "tiers": {
+    "II": {
+     "value": "+0.7% 3PT (x2 on Long Shots); +1% shot resistance per made Long Shot (5x)",
+     "icon": "images/icons/confident-long-shot-ii.webp",
+     "seenOn": "LAST GAME Midorima"
+    },
+    "III": {
+     "value": "",
+     "icon": null,
+     "seenOn": ""
+    }
+   },
+   "collections": [
+    {
+     "name": "LAST GAME Midorima",
+     "tiers": "II, III"
+    },
+    {
+     "name": "LAST GAME Midorima Peerless",
+     "tiers": "II, III"
+    }
+   ],
+   "effectSource": "Tier II"
+  },
+  {
+   "id": "long-range-intimidation",
+   "name": "Long-Range Intimidation",
+   "category": "Offense",
+   "tags": [
+    "3PT",
+    "Mid-Range",
+    "Layup"
+   ],
+   "effect": "3-Pointer range falloff distance increases. Each 3-Pointer made permanently increases 2-Point and Layup accuracy. Stacks up to 3 times.",
+   "trainingCamp": "3-Pointer range falloff distance increase is doubled. After scoring a 3-Pointer, the permanent Mid-Range and Layup accuracy increase effects are doubled. Stack limit remains unchanged.",
+   "tiers": {
+    "II": {
+     "value": "",
+     "icon": null,
+     "seenOn": ""
+    },
+    "III": {
+     "value": "",
+     "icon": null,
+     "seenOn": ""
+    }
+   },
+   "collections": [
+    {
+     "name": "LAST GAME Midorima Peerless",
+     "tiers": "II, III"
+    }
+   ],
+   "effectSource": ""
   },
   {
    "id": "perimeter-master",
@@ -327,6 +423,14 @@
     {
      "name": "Midorima Collection",
      "tiers": "III"
+    },
+    {
+     "name": "LAST GAME Midorima Peerless",
+     "tiers": "II, III"
+    },
+    {
+     "name": "LAST GAME Midorima",
+     "tiers": "II, III"
     }
    ],
    "effectSource": "Tier III"
@@ -397,6 +501,45 @@
     {
      "name": "Kise Collection",
      "tiers": "III"
+    },
+    {
+     "name": "LAST GAME Midorima",
+     "tiers": "II, III"
+    }
+   ],
+   "effectSource": "Tier III"
+  },
+  {
+   "id": "assist-master",
+   "name": "Assist Master",
+   "category": "Offense",
+   "tags": [
+    "3PT",
+    "Mid-Range",
+    "Control"
+   ],
+   "effect": "Increases Safe Pass Distance by +1.5. Also increases the teammate's Open Accuracy by 3% after passing to a teammate in an open spot.",
+   "trainingCamp": "",
+   "tiers": {
+    "II": {
+     "value": "+1.5 Safe Pass Distance; +2.5% teammate open accuracy",
+     "icon": "images/icons/assist-master-ii.webp",
+     "seenOn": "LAST GAME Midorima Peerless"
+    },
+    "III": {
+     "value": "+1.5 Safe Pass Distance; +3% teammate open accuracy",
+     "icon": "images/icons/assist-master-iii.webp",
+     "seenOn": "LAST GAME Midorima Peerless"
+    }
+   },
+   "collections": [
+    {
+     "name": "LAST GAME Midorima Peerless",
+     "tiers": "II, III"
+    },
+    {
+     "name": "LAST GAME Midorima",
+     "tiers": "II, III"
     }
    ],
    "effectSource": "Tier III"
@@ -430,6 +573,10 @@
     {
      "name": "ZONE Atsushi Murasakibara",
      "tiers": "III"
+    },
+    {
+     "name": "LAST GAME Midorima",
+     "tiers": "II, III"
     }
    ],
    "effectSource": "Tier III"
@@ -472,6 +619,10 @@
     {
      "name": "Pumpkin Carnival",
      "tiers": "II"
+    },
+    {
+     "name": "LAST GAME Midorima",
+     "tiers": "II, III"
     }
    ],
    "effectSource": "Tier III"
@@ -538,6 +689,10 @@
    "collections": [
     {
      "name": "Pumpkin Carnival",
+     "tiers": "II, III"
+    },
+    {
+     "name": "LAST GAME Midorima Peerless",
      "tiers": "II, III"
     }
    ],
@@ -617,6 +772,10 @@
     },
     {
      "name": "Pumpkin Carnival",
+     "tiers": "II"
+    },
+    {
+     "name": "Campus Rookie",
      "tiers": "II"
     }
    ],
@@ -783,6 +942,10 @@
     {
      "name": "Graffiti Master",
      "tiers": "II"
+    },
+    {
+     "name": "LAST GAME Midorima Peerless",
+     "tiers": "II, III"
     }
    ],
    "effectSource": "Tier II"
@@ -854,6 +1017,10 @@
     {
      "name": "SP Akashi Collection",
      "tiers": "II"
+    },
+    {
+     "name": "LAST GAME Midorima Peerless",
+     "tiers": "II, III"
     }
    ],
    "effectSource": "Tier III"
@@ -929,7 +1096,7 @@
     "II": {
      "value": "+1.5 (+1.5 after a miss)",
      "icon": "images/icons/rising-strong-ii.webp",
-     "seenOn": "LG Kagami, ZONE Mura, LG Mura, Purple Paint 427"
+     "seenOn": "LG Kagami, ZONE Mura, LG Mura Peerless, Purple Paint 427"
     },
     "III": {
      "value": "+2 (+2 after a miss)",
@@ -943,10 +1110,6 @@
      "tiers": "II"
     },
     {
-     "name": "LAST GAME Murasakibara",
-     "tiers": "II"
-    },
-    {
      "name": "Autumn Moon",
      "tiers": "III"
     },
@@ -956,6 +1119,10 @@
     },
     {
      "name": "Purple Paint",
+     "tiers": "II, III"
+    },
+    {
+     "name": "LAST GAME Murasakibara Peerless",
      "tiers": "II"
     }
    ],
@@ -1007,18 +1174,22 @@
     "II": {
      "value": "+1.5 per stack (2x)",
      "icon": "images/icons/contest-dominator-ii.webp",
-     "seenOn": "LG Mura 358"
+     "seenOn": "LG Mura Peerless 358, LG Mura 367"
     },
     "III": {
      "value": "+2 per stack (2x)",
      "icon": "images/icons/contest-dominator-iii.webp",
-     "seenOn": "LG Mura 408"
+     "seenOn": "LG Mura 381, LG Mura 408"
     }
    },
    "collections": [
     {
      "name": "LAST GAME Murasakibara",
      "tiers": "II, III"
+    },
+    {
+     "name": "LAST GAME Murasakibara Peerless",
+     "tiers": "II"
     }
    ],
    "effectSource": "Tier III"
@@ -1124,6 +1295,14 @@
     {
      "name": "Kise Collection",
      "tiers": "II"
+    },
+    {
+     "name": "LAST GAME Midorima Peerless",
+     "tiers": "II, III"
+    },
+    {
+     "name": "LAST GAME Midorima",
+     "tiers": "II, III"
     }
    ],
    "effectSource": "Tier II"
