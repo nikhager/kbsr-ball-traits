@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07",
+ "updated": "2026-11-08",
  "collections": [
   "Autumn Moon",
   "Campus Rookie",
@@ -962,7 +962,7 @@
     "Block",
     "Speed"
    ],
-   "effect": "Increases Off-Ball Movement by +0.1 while on defense. Increases Block by +0.15 when the ball-handler is not your assigned matchup.",
+   "effect": "Increases Off-Ball Movement by +0.1 while on defense. Increases Block by +0.2 when the ball-handler is not your assigned matchup.",
    "trainingCamp": "",
    "tiers": {
     "II": {
@@ -971,18 +971,22 @@
      "seenOn": "LG Kise 361"
     },
     "III": {
-     "value": "",
-     "icon": null,
-     "seenOn": ""
+     "value": "Off-ball +0.1; Block +0.2",
+     "icon": "images/icons/swift-zone-defense-iii.webp",
+     "seenOn": "LAST GAME Murasakibara 393"
     }
    },
    "collections": [
     {
      "name": "LAST GAME Kise",
      "tiers": "II"
+    },
+    {
+     "name": "LAST GAME Murasakibara",
+     "tiers": "III"
     }
    ],
-   "effectSource": "Tier II"
+   "effectSource": "Tier III"
   },
   {
    "id": "close-guarding",
@@ -1100,7 +1104,7 @@
     "II": {
      "value": "+1.5 (+1.5 after a miss)",
      "icon": "images/icons/rising-strong-ii.webp",
-     "seenOn": "LG Kagami, ZONE Mura, LG Mura Peerless, Purple Paint 427"
+     "seenOn": "LG Kagami, ZONE Mura, LG Mura Peerless, Purple Paint 427, LAST GAME Murasakibara 393"
     },
     "III": {
      "value": "+2 (+2 after a miss)",
@@ -1127,6 +1131,10 @@
     },
     {
      "name": "LAST GAME Murasakibara Peerless",
+     "tiers": "II"
+    },
+    {
+     "name": "LAST GAME Murasakibara",
      "tiers": "II"
     }
    ],
