@@ -403,7 +403,7 @@
     "II": {
      "value": "+2.5% (+1.5% after a pass)",
      "icon": "images/icons/perimeter-master-ii.webp",
-     "seenOn": "Diviner Midorima 255"
+     "seenOn": "Diviner Midorima 255, Wave Rider 258"
     },
     "III": {
      "value": "+3% (+2% after a pass)",
@@ -431,6 +431,10 @@
     {
      "name": "LAST GAME Midorima",
      "tiers": "II, III"
+    },
+    {
+     "name": "Wave Rider",
+     "tiers": "II"
     }
    ],
    "effectSource": "Tier III"
