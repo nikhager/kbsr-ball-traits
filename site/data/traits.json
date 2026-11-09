@@ -1,5 +1,5 @@
 {
-    "updated": "2026-11-08",
+    "updated": "2026-11-09",
     "collections": [
         "Autumn Moon",
         "Campus Rookie",
@@ -973,7 +973,7 @@
                 "III": {
                     "value": "Off-ball +0.1; Block +0.2",
                     "icon": "images/icons/swift-zone-defense-iii.webp",
-                    "seenOn": "LAST GAME Murasakibara 393"
+                    "seenOn": "LAST GAME Murasakibara Peerless 393"
                 }
             },
             "collections": [
@@ -982,7 +982,7 @@
                     "tiers": "II"
                 },
                 {
-                    "name": "LAST GAME Murasakibara",
+                    "name": "LAST GAME Murasakibara Peerless",
                     "tiers": "III"
                 }
             ],
@@ -1104,7 +1104,7 @@
                 "II": {
                     "value": "+1.5 (+1.5 after a miss)",
                     "icon": "images/icons/rising-strong-ii.webp",
-                    "seenOn": "LG Kagami, ZONE Mura, LG Mura Peerless, Purple Paint 427, LAST GAME Murasakibara 393"
+                    "seenOn": "LG Kagami, ZONE Mura, LG Mura Peerless, Purple Paint 427"
                 },
                 "III": {
                     "value": "+2 (+2 after a miss)",
@@ -1131,10 +1131,6 @@
                 },
                 {
                     "name": "LAST GAME Murasakibara Peerless",
-                    "tiers": "II"
-                },
-                {
-                    "name": "LAST GAME Murasakibara",
                     "tiers": "II"
                 }
             ],
