@@ -15,11 +15,3 @@ trim_trailing_whitespace = false
 
 [Makefile]
 indent_style = tab
-
-# Temporary: the existing site files and validate.yml are still 2-space.
-# Remove these blocks when they're converted to 4 spaces in a `style:` PR.
-[site/**.{html,css,js,json}]
-indent_size = 2
-
-[.github/workflows/validate.yml]
-indent_size = 2

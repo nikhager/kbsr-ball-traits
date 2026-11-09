@@ -21,18 +21,18 @@ Everything the page loads lives in `site/`; paths inside the page and in `traits
 ## Trait entry shape
 ```json
 {
-  "id": "rising-strong",              // lowercase, hyphenated trait name
-  "name": "Rising Strong",
-  "category": "Rebounding",           // Offense, Handling, Defense, Hybrid, Rebounding, Energy
-  "tags": ["Rebound"],                // filter chips, see list below
-  "effect": "Exact in-game tooltip text, using tier III numbers where seen",
-  "effectSource": "Tier III",         // tier the text came from, or "" if it's a summary of an unseen trait
-  "trainingCamp": "",                 // Training Camp bonus text, or ""
-  "tiers": {
-    "II":  { "value": "+1.5 (+1.5 after a miss)", "icon": "images/icons/rising-strong-ii.webp", "seenOn": "LG Kagami, ZONE Mura" },
-    "III": { "value": "+2 (+2 after a miss)",     "icon": "images/icons/rising-strong-iii.webp", "seenOn": "Autumn Moon" }
-  },
-  "collections": [{ "name": "Autumn Moon", "tiers": "III" }]
+    "id": "rising-strong",              // lowercase, hyphenated trait name
+    "name": "Rising Strong",
+    "category": "Rebounding",           // Offense, Handling, Defense, Hybrid, Rebounding, Energy
+    "tags": ["Rebound"],                // filter chips, see list below
+    "effect": "Exact in-game tooltip text, using tier III numbers where seen",
+    "effectSource": "Tier III",         // tier the text came from, or "" if it's a summary of an unseen trait
+    "trainingCamp": "",                 // Training Camp bonus text, or ""
+    "tiers": {
+        "II":  { "value": "+1.5 (+1.5 after a miss)", "icon": "images/icons/rising-strong-ii.webp", "seenOn": "LG Kagami, ZONE Mura" },
+        "III": { "value": "+2 (+2 after a miss)",     "icon": "images/icons/rising-strong-iii.webp", "seenOn": "Autumn Moon" }
+    },
+    "collections": [{ "name": "Autumn Moon", "tiers": "III" }]
 }
 ```
 - Use `""` for an unknown value and `null` for a missing icon. The page shows "Not seen yet" or "Numbers not logged".
@@ -57,7 +57,7 @@ Everything the page loads lives in `site/`; paths inside the page and in `traits
 - PR titles use Conventional Commits, since the title becomes the commit on `main`; `.github/workflows/pr-title.yml` checks it. Data updates are `feat(data): …` (e.g. `feat(data): log Clutch Player II values`), corrections `fix(data): …`, page changes `feat(site): …` / `fix(site): …`, docs `docs: …`, tooling `chore: …`. Fill in `.github/pull_request_template.md`.
 - Branch names: `type/short-description` (e.g. `feat/clutch-player-ii`), lowercase. They also name the Cloudflare preview URL, so keep them short.
 - Dependabot opens weekly PRs to update the GitHub Actions versions; merge them when checks pass.
-- Formatting: indent with 4 spaces, never 2 and never tab characters (the Tab key inserts 4 spaces; see `.editorconfig`), in every file type. The existing site files (`site/**` HTML, CSS, JS, JSON) and `validate.yml` are still 2-space; `.editorconfig` keeps them at 2 until they're converted in their own `style:` PR, so don't reformat them as part of another change.
+- Formatting: indent with 4 spaces, never 2 and never tab characters (the Tab key inserts 4 spaces; see `.editorconfig`), in every file type. When a script writes `traits.json`, use `json.dumps(data, indent=4, ensure_ascii=False)` plus a trailing newline so the file keeps its format.
 - Every PR: run `python3 scripts/validate_traits.py` before pushing, and don't merge while the "Validate data" check is red.
 - Every PR: check `updated` at the top of `site/data/traits.json` (shown as "Last updated" in the footer) and set it to the date the PR is pushed/merged (owner's time zone, America/Los_Angeles).
 

@@ -1,22 +1,22 @@
 name: Validate data
 
 on:
-  pull_request:
-    paths:
-      - "site/data/**"
-      - "site/images/icons/**"
-      - "scripts/validate_traits.py"
-      - ".github/workflows/validate.yml"
-  push:
-    branches: [main]
+    pull_request:
+        paths:
+            - "site/data/**"
+            - "site/images/icons/**"
+            - "scripts/validate_traits.py"
+            - ".github/workflows/validate.yml"
+    push:
+        branches: [main]
 
 permissions:
-  contents: read
+    contents: read
 
 jobs:
-  traits:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Check traits.json
-        run: python3 scripts/validate_traits.py
+    traits:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - name: Check traits.json
+              run: python3 scripts/validate_traits.py
