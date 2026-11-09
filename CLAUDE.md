@@ -54,6 +54,10 @@ Everything the page loads lives in `site/`; paths inside the page and in `traits
 ## Workflow
 - Make changes on a branch and open a pull request into `main`. `main` is protected on GitHub: a pull request is required (no approvals needed), the rule applies to admins too, and force-pushes and branch deletion are blocked, so direct pushes to `main` are rejected. Cloudflare builds a preview of every branch at `<branch>.kbsr-ball-traits.pages.dev` and links it on the PR.
 - PRs are squash-merged on GitHub, and merged branches are deleted automatically.
+- PR titles use Conventional Commits, since the title becomes the commit on `main`; `.github/workflows/pr-title.yml` checks it. Data updates are `feat(data): …` (e.g. `feat(data): log Clutch Player II values`), corrections `fix(data): …`, page changes `feat(site): …` / `fix(site): …`, docs `docs: …`, tooling `chore: …`. Fill in `.github/pull_request_template.md`.
+- Branch names: `type/short-description` (e.g. `feat/clutch-player-ii`), lowercase. They also name the Cloudflare preview URL, so keep them short.
+- Dependabot opens weekly PRs to update the GitHub Actions versions; merge them when checks pass.
+- Formatting: indent with 4 spaces, never 2 and never tab characters (the Tab key inserts 4 spaces; see `.editorconfig`), in every file type. The existing site files (`site/**` HTML, CSS, JS, JSON) and `validate.yml` are still 2-space; `.editorconfig` keeps them at 2 until they're converted in their own `style:` PR, so don't reformat them as part of another change.
 - Every PR: run `python3 scripts/validate_traits.py` before pushing, and don't merge while the "Validate data" check is red.
 - Every PR: check `updated` at the top of `site/data/traits.json` (shown as "Last updated" in the footer) and set it to the date the PR is pushed/merged (owner's time zone, America/Los_Angeles).
 
