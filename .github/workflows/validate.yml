@@ -17,6 +17,6 @@ jobs:
     traits:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v4
+            - uses: actions/checkout@v7
             - name: Check traits.json
               run: python3 scripts/validate_traits.py
