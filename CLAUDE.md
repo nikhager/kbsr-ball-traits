@@ -61,6 +61,20 @@ Everything the page loads lives in `site/`; paths inside the page and in `traits
 - Every PR: run `python3 scripts/validate_traits.py` before pushing, and don't merge while the "Validate data" check is red.
 - Every PR: check `updated` at the top of `site/data/traits.json` (shown as "Last updated" in the footer) and set it to the date the PR is pushed/merged (owner's time zone, America/Los_Angeles).
 
+## PRs, review and autonomy
+
+Based on Google's engineering practices. Full rules and rationale: `claude/pr-guidelines.md` in Nik's Code project.
+
+- **Small PRs.** One self-contained change per PR: ~100 changed lines ideal, ~400 max (lockfiles and generated files don't count). Tests go in the same PR as the code. Refactors and formatting get their own PR. Split bigger work into a series that each work on their own (e.g. tooling → core → feature → docs, or one feature slice per PR) and say "n of m" in the description.
+- **Descriptions.** Title in Conventional Commits; body says what changed, why, how it was tested, and anything left out on purpose. Fill in `.github/pull_request_template.md`.
+- **Review loop.** For behavior changes, use the `test-writer` subagent (a bug fix starts with a failing test). Before merging any code change: lint, format and tests pass, CI is green, and the `code-reviewer` subagent has reviewed the diff in fresh context. Fix blocking findings and re-run it until `LGTM`.
+- **Autonomy: `standard`.** Who may squash-merge once CI is green and `code-reviewer` says LGTM:
+    - `high`: Claude merges anything except the always-Nik list.
+    - `standard`: Claude merges docs, formatting, tests-only, non-major dependency updates and small bug fixes (≤ ~50 lines, with a test), plus data-only PRs (`feat(data)` / `fix(data)` touching only `site/data/traits.json` and `site/images/icons/`) once "Validate data" is green and the preview build looks right. Features, larger fixes, refactors and the always-Nik list wait for Nik.
+    - `review-all`: Claude opens PRs and gets them green; Nik merges every PR.
+- **Always Nik, at every level:** auth, secrets or permissions; deploy, CI or infrastructure config; data migrations or deletion; new dependencies or major version bumps; making anything public; licenses; changes to this section or `.claude/agents/`; anything `code-reviewer` blocked that Claude disagrees with. If unsure, it waits for Nik. If Nik explicitly says to merge a specific PR, Claude merges it.
+- **When Claude merges,** it notes `Merged by Claude: autonomy standard, code-reviewer LGTM` on the PR and lists every PR it merged in its end-of-session summary.
+
 ## Analytics
 - Cloudflare Web Analytics is also on (its beacon is allowed in the CSP).
 - GoatCounter (site code `kbsrlab`, dashboard kbsrlab.goatcounter.com) counts page views and filter events via one script tag just before `</body>` in `site/index.html`. The script is self-hosted as `site/js/vendor/count.js` (GoatCounter v2.7.0, ISC license) so tracker blockers that target gc.zgo.at don't stop it; counts still go to kbsrlab.goatcounter.com. Keep it when editing the page. The claude.ai artifact copy of the page mirrors this repo's folder layout (`css/`, `js/app.js`, `data/`, `images/icons/`) but leaves the GoatCounter tag out (outside scripts are blocked there).
