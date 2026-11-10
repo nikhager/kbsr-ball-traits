@@ -74,6 +74,7 @@ Based on Google's engineering practices. Full rules and rationale: `claude/pr-gu
     - `review-all`: Claude opens PRs and gets them green; Nik merges every PR.
 - **Always Nik, at every level:** auth, secrets or permissions; deploy, CI or infrastructure config; data migrations or deletion; new dependencies or major version bumps; making anything public; licenses; changes to this section or `.claude/agents/`; anything `code-reviewer` blocked that Claude disagrees with. If unsure, it waits for Nik. If Nik explicitly says to merge a specific PR, Claude merges it.
 - **When Claude merges,** it notes `Merged by Claude: autonomy standard, code-reviewer LGTM` on the PR and lists every PR it merged in its end-of-session summary.
+- **When a PR waits for Nik,** Claude assigns it to `nikhager` and adds the `needs-nik-review` label (creating the label if the repo lacks it), so it shows under github.com/pulls → Assigned and in `label:needs-nik-review`. GitHub can't request a review from the PR's own author, and these PRs are opened under Nik's account, so assignment is the signal. PRs Claude may merge itself get neither.
 
 ## Analytics
 - Cloudflare Web Analytics is also on (its beacon is allowed in the CSP).
