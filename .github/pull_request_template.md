@@ -11,7 +11,7 @@
 ## Review
 
 - **Risk:** low / medium / high <!-- high = anything on the always-Nik list in CLAUDE.md -->
-- **Needs Nik's review:** yes / no <!-- per the repo's autonomy level in CLAUDE.md -->
+- **Kind:** Ship / Show / Ask <!-- Ask = waits for Nik; see "PRs, review and autonomy" in CLAUDE.md -->
 - **code-reviewer:** LGTM / LGTM with nits / changes requested
 - **Series:** <!-- e.g. "2 of 3, depends on #12", or delete -->
 
