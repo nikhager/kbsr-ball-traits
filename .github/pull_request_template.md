@@ -8,6 +8,13 @@
 
 <!-- Cloudflare preview link: https://<branch>.kbsr-ball-traits.pages.dev -->
 
+## Review
+
+- **Risk:** low / medium / high <!-- high = anything on the always-Nik list in CLAUDE.md -->
+- **Needs Nik's review:** yes / no <!-- per the repo's autonomy level in CLAUDE.md -->
+- **code-reviewer:** LGTM / LGTM with nits / changes requested
+- **Series:** <!-- e.g. "2 of 3, depends on #12", or delete -->
+
 ## Checklist
 
 - [ ] `python3 scripts/validate_traits.py` passes
