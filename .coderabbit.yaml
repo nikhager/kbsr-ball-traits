@@ -45,12 +45,13 @@ reviews:
               any new host is actually needed by the page.
         - path: "site/js/**"
           instructions: >-
-              Plain browser JS, no build step. Cards are built as HTML strings and
-              set with innerHTML, so every traits.json value placed into HTML must
-              go through esc(); flag any unescaped interpolation. Use textContent
-              for plain text nodes. Any new outside script, font, image or API must
-              also be added to the CSP in site/_headers. Don't edit
-              site/js/vendor/.
+              Plain browser JS, no build step. Build elements with the el() helper
+              and set text with textContent. Never pass strings to innerHTML,
+              outerHTML, insertAdjacentHTML, document.write, eval, new Function, a
+              string setTimeout, or a script element's src/text: the CSP enforces
+              Trusted Types, so these throw in supporting browsers and break the
+              page. Any new outside script, font, image or API must also be added
+              to the CSP in site/_headers. Don't edit site/js/vendor/.
 
     # PR titles are already checked by .github/workflows/pr-title.yml, and
     # descriptions follow our own template.
