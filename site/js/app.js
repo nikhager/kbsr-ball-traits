@@ -12,7 +12,18 @@ function track(name, tries = 0) {
     if (gc && typeof gc.count === 'function') gc.count({ path: name, title: name, event: true });
     else if (tries < 10) setTimeout(() => track(name, tries + 1), 500);
 }
-const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+// Builds an element from parts instead of parsing an HTML string. Strings in
+// `children` become text nodes and `props` become attributes, so trait data
+// (some of it from public form submissions) can never turn into markup.
+function el(tag, props = {}, ...children) {
+    const e = document.createElement(tag);
+    for (const [k, v] of Object.entries(props)) {
+        if (k === "class") e.className = v;
+        else e.setAttribute(k, v);
+    }
+    e.append(...children);
+    return e;
+}
 
 function readHash() {
     const h = decodeURIComponent(location.hash.slice(1));
@@ -25,7 +36,7 @@ function buildControls() {
     ["All", ...TAGS].forEach(t => {
         const b = document.createElement("button");
         b.className = "chip"; b.type = "button"; b.dataset.tag = t === "All" ? "" : t;
-        b.innerHTML = `${esc(t)} <span class="n"></span>`;
+        b.append(`${t} `, el("span", { class: "n" }));
         b.addEventListener("click", () => {
             state.tag = b.dataset.tag;
             const slug = state.tag.toLowerCase().replace(/[^a-z0-9]+/g,'-');
@@ -50,24 +61,36 @@ function card(t) {
     const anyIcon = Object.values(t.tiers).some(v => v.icon);
     const vars = ["II","III"].map(tier => {
         const v = t.tiers[tier];
-        const img = v.icon ? `<img src="${esc(v.icon)}" alt="${esc(t.name)} tier ${tier} icon" width="64" height="64" loading="lazy">` : `<div class="ph" role="img" aria-label="Tier ${tier} not seen yet"></div>`;
-        const val = v.value ? `<div class="val">${esc(v.value)}</div>` : `<div class="none">${v.icon ? "Numbers not logged" : "Not seen yet"}</div>`;
-        return `<div class="var">${img}<span class="tier ${tier}">Tier ${tier}</span>${val}</div>`;
-    }).join("");
-    const cols = t.collections.length
-        ? t.collections.map(c => { const s = `${esc(c.name)} (${esc(c.tiers)})`; return c.name === state.col ? `<mark>${s}</mark>` : s; }).join(" · ")
-        : "None logged yet";
-    return `<article class="card${anyIcon ? "" : " missing"}" id="${esc(t.id)}">
-        <div class="top"><span class="cat">${esc(t.category)}</span><div class="tags">${cardTags(t.tags).map(x => `<span class="tag">${esc(x)}</span>`).join("")}</div></div>
-        <div class="name">${esc(t.name)}</div>
-        <div class="vars">${vars}</div>
-        <div class="body">
-        <p class="effect">${esc(t.effect)}</p>
-        <p class="src">${t.effectSource ? `In-game text, ${esc(t.effectSource)}` : "Summary. Not seen in game yet"}</p>
-        ${t.trainingCamp ? `<p class="camp">Training Camp: ${esc(t.trainingCamp)}</p>` : ""}
-        </div>
-        <p class="cols"><b>Found on:</b> ${cols}</p>
-    </article>`;
+        const img = v.icon
+            ? el("img", { src: v.icon, alt: `${t.name} tier ${tier} icon`, width: "64", height: "64", loading: "lazy" })
+            : el("div", { class: "ph", role: "img", "aria-label": `Tier ${tier} not seen yet` });
+        const val = v.value
+            ? el("div", { class: "val" }, v.value)
+            : el("div", { class: "none" }, v.icon ? "Numbers not logged" : "Not seen yet");
+        return el("div", { class: "var" }, img, el("span", { class: `tier ${tier}` }, `Tier ${tier}`), val);
+    });
+    const cols = el("p", { class: "cols" }, el("b", {}, "Found on:"), " ");
+    if (t.collections.length) {
+        t.collections.forEach((c, i) => {
+            if (i) cols.append(" · ");
+            const s = `${c.name} (${c.tiers})`;
+            cols.append(c.name === state.col ? el("mark", {}, s) : s);
+        });
+    } else {
+        cols.append("None logged yet");
+    }
+    const body = el("div", { class: "body" },
+        el("p", { class: "effect" }, t.effect),
+        el("p", { class: "src" }, t.effectSource ? `In-game text, ${t.effectSource}` : "Summary. Not seen in game yet"));
+    if (t.trainingCamp) body.append(el("p", { class: "camp" }, `Training Camp: ${t.trainingCamp}`));
+    return el("article", { class: anyIcon ? "card" : "card missing", id: t.id },
+        el("div", { class: "top" },
+            el("span", { class: "cat" }, t.category),
+            el("div", { class: "tags" }, ...cardTags(t.tags).map(x => el("span", { class: "tag" }, x)))),
+        el("div", { class: "name" }, t.name),
+        el("div", { class: "vars" }, ...vars),
+        body,
+        cols);
 }
 
 function render() {
@@ -90,7 +113,7 @@ function render() {
         const n = DATA.traits.filter(t => matchTag(t, state.tag) && matchCol(t, o.value) && matchQ(t)).length;
         o.textContent = `${o.value || "All collections"} (${n})`;
     });
-    $("grid").innerHTML = list.map(card).join("");
+    $("grid").replaceChildren(...list.map(card));
     $("empty").hidden = list.length > 0;
     $("count").textContent = `${list.length} of ${DATA.traits.length} traits`;
 }
