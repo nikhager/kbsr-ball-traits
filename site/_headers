@@ -1,5 +1,5 @@
 /*
-  Content-Security-Policy: default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://kbsrlab.goatcounter.com; connect-src 'self' https://kbsrlab.goatcounter.com https://cloudflareinsights.com; frame-ancestors 'none'; base-uri 'self'; form-action 'none'; object-src 'none'
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://kbsrlab.goatcounter.com; connect-src 'self' https://kbsrlab.goatcounter.com https://cloudflareinsights.com; frame-ancestors 'none'; base-uri 'self'; form-action 'none'; object-src 'none'; require-trusted-types-for 'script'
   Strict-Transport-Security: max-age=31536000; includeSubDomains
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
