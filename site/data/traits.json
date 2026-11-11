@@ -1,5 +1,5 @@
 {
-    "updated": "2026-11-09",
+    "updated": "2026-11-11",
     "collections": [
         "Autumn Moon",
         "Campus Rookie",
@@ -368,13 +368,13 @@
                 "Mid-Range",
                 "Layup"
             ],
-            "effect": "3-Pointer range falloff distance increases. Each 3-Pointer made permanently increases 2-Point and Layup accuracy. Stacks up to 3 times.",
+            "effect": "3-Pointer range falloff distance increases by 1 meters. Each 3-Pointer made permanently increases 2-Point and Layup accuracy by 1%. Stacks up to 3 times.",
             "trainingCamp": "3-Pointer range falloff distance increase is doubled. After scoring a 3-Pointer, the permanent Mid-Range and Layup accuracy increase effects are doubled. Stack limit remains unchanged.",
             "tiers": {
                 "II": {
-                    "value": "",
-                    "icon": null,
-                    "seenOn": ""
+                    "value": "+1 m falloff; +1% 2PT & layup per 3PT made (max 3 stacks)",
+                    "icon": "images/icons/long-range-intimidation-ii.webp",
+                    "seenOn": "SP Akashi 278"
                 },
                 "III": {
                     "value": "",
@@ -386,9 +386,13 @@
                 {
                     "name": "LAST GAME Midorima Peerless",
                     "tiers": "II, III"
+                },
+                {
+                    "name": "SP Akashi Collection",
+                    "tiers": "II"
                 }
             ],
-            "effectSource": ""
+            "effectSource": "Tier II"
         },
         {
             "id": "perimeter-master",
@@ -403,7 +407,7 @@
                 "II": {
                     "value": "+2.5% (+1.5% after a pass)",
                     "icon": "images/icons/perimeter-master-ii.webp",
-                    "seenOn": "Diviner Midorima 255, Wave Rider 258"
+                    "seenOn": "Diviner Midorima 255, Wave Rider 258, Midorima Collection 269"
                 },
                 "III": {
                     "value": "+3% (+2% after a pass)",
@@ -422,7 +426,7 @@
                 },
                 {
                     "name": "Midorima Collection",
-                    "tiers": "III"
+                    "tiers": "II, III"
                 },
                 {
                     "name": "LAST GAME Midorima Peerless",
@@ -627,6 +631,10 @@
                 {
                     "name": "LAST GAME Midorima",
                     "tiers": "II, III"
+                },
+                {
+                    "name": "ZONE Aomine Collection",
+                    "tiers": "II"
                 }
             ],
             "effectSource": "Tier III"
@@ -1254,7 +1262,7 @@
                 "II": {
                     "value": "+2 rebound Competition Value / +2% dunk & layup accuracy",
                     "icon": "images/icons/interior-inspire-ii.webp",
-                    "seenOn": "ZONE Mura, Jason Silver 379, ZONE Aomine 394"
+                    "seenOn": "ZONE Mura, Jason Silver 379, ZONE Aomine 394, LAST GAME Mura 287"
                 },
                 "III": {
                     "value": "",
@@ -1273,6 +1281,10 @@
                 },
                 {
                     "name": "ZONE Aomine Collection",
+                    "tiers": "II"
+                },
+                {
+                    "name": "LAST GAME Murasakibara",
                     "tiers": "II"
                 }
             ],
@@ -1311,6 +1323,35 @@
                 {
                     "name": "LAST GAME Midorima",
                     "tiers": "II, III"
+                }
+            ],
+            "effectSource": "Tier II"
+        },
+        {
+            "id": "full-firepower",
+            "name": "Full Firepower",
+            "category": "Energy",
+            "tags": [
+                "Energy"
+            ],
+            "effect": "Increases energy regen by +40% until the first Ultimate is fully charged.",
+            "trainingCamp": "",
+            "tiers": {
+                "II": {
+                    "value": "+40% energy regen until first Ultimate charged",
+                    "icon": "images/icons/full-firepower-ii.webp",
+                    "seenOn": "Diviner Midorima 423"
+                },
+                "III": {
+                    "value": "",
+                    "icon": null,
+                    "seenOn": ""
+                }
+            },
+            "collections": [
+                {
+                    "name": "Diviner Midorima Collection",
+                    "tiers": "II"
                 }
             ],
             "effectSource": "Tier II"
