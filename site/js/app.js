@@ -15,6 +15,8 @@ function track(name, tries = 0) {
 // Builds an element from parts instead of parsing an HTML string. Strings in
 // `children` become text nodes and `props` become attributes, so trait data
 // (some of it from public form submissions) can never turn into markup.
+// Props are plain string attributes (plus `class`); don't pass event handlers
+// or objects. Children are nodes or strings.
 function el(tag, props = {}, ...children) {
     const e = document.createElement(tag);
     for (const [k, v] of Object.entries(props)) {
@@ -69,8 +71,8 @@ function card(t) {
             : el("div", { class: "none" }, v.icon ? "Numbers not logged" : "Not seen yet");
         return el("div", { class: "var" }, img, el("span", { class: `tier ${tier}` }, `Tier ${tier}`), val);
     });
-    // Keep runs of plain text in one text node (split only around the <mark>),
-    // so the browser lays the line out exactly as it did before.
+    // Keep runs of plain text in one text node (split only around the <mark>).
+    // Splitting it into many nodes shifted the line by a few pixels in Chrome.
     const parts = [" "];
     if (t.collections.length) {
         t.collections.forEach((c, i) => {
