@@ -36,7 +36,8 @@ reviews:
               the CLAUDE.md content rules the validator can't check: filter tags
               match the effect text (every shot type a trait boosts is tagged),
               effect text reads as verbatim game text with any editorial fill-in in
-              [square brackets], and `updated` is set to the PR's date.
+              [square brackets], and `updated` is set to the push/merge date in
+              America/Los_Angeles time (not UTC).
         - path: "site/_headers"
           instructions: >-
               Security headers for the live site. Flag anything that weakens the
@@ -44,9 +45,12 @@ reviews:
               any new host is actually needed by the page.
         - path: "site/js/**"
           instructions: >-
-              Plain browser JS, no build step. Text from traits.json must be set with
-              textContent, never innerHTML. Any new outside script, font, image or API
-              must also be added to the CSP in site/_headers.
+              Plain browser JS, no build step. Cards are built as HTML strings and
+              set with innerHTML, so every traits.json value placed into HTML must
+              go through esc(); flag any unescaped interpolation. Use textContent
+              for plain text nodes. Any new outside script, font, image or API must
+              also be added to the CSP in site/_headers. Don't edit
+              site/js/vendor/.
 
     # PR titles are already checked by .github/workflows/pr-title.yml, and
     # descriptions follow our own template.
