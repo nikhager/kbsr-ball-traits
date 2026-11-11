@@ -69,16 +69,24 @@ function card(t) {
             : el("div", { class: "none" }, v.icon ? "Numbers not logged" : "Not seen yet");
         return el("div", { class: "var" }, img, el("span", { class: `tier ${tier}` }, `Tier ${tier}`), val);
     });
-    const cols = el("p", { class: "cols" }, el("b", {}, "Found on:"), " ");
+    // Keep runs of plain text in one text node (split only around the <mark>),
+    // so the browser lays the line out exactly as it did before.
+    const parts = [" "];
     if (t.collections.length) {
         t.collections.forEach((c, i) => {
-            if (i) cols.append(" · ");
+            if (i) parts.push(" · ");
             const s = `${c.name} (${c.tiers})`;
-            cols.append(c.name === state.col ? el("mark", {}, s) : s);
+            parts.push(c.name === state.col ? el("mark", {}, s) : s);
         });
     } else {
-        cols.append("None logged yet");
+        parts.push("None logged yet");
     }
+    const runs = parts.reduce((out, p) => {
+        if (typeof p === "string" && typeof out[out.length - 1] === "string") out[out.length - 1] += p;
+        else out.push(p);
+        return out;
+    }, []);
+    const cols = el("p", { class: "cols" }, el("b", {}, "Found on:"), ...runs);
     const body = el("div", { class: "body" },
         el("p", { class: "effect" }, t.effect),
         el("p", { class: "src" }, t.effectSource ? `In-game text, ${t.effectSource}` : "Summary. Not seen in game yet"));
