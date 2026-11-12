@@ -4,7 +4,7 @@ Static fan reference for ball traits in Kuroko's Basketball: Street Rivals (glob
 
 ## Files
 Everything the page loads lives in `site/`; paths inside the page and in `traits.json` are relative to `site/`. Repo-only material (this file, `README.md`, `LICENSE`, `docs/`) stays at the root and is never published.
-- `site/index.html`: page markup only. Links `css/styles.css` and loads `js/app.js`.
+- `site/index.html`: page markup only. Links `css/styles.css` and loads `js/app.js`, each with a `?v=YYYY-MM-DD` version tag so browsers fetch new code instead of a cached copy. Whenever a PR changes `styles.css` or `app.js`, set the matching tag to that day's date (America/Los_Angeles); a stale cached `app.js` with new `traits.json` shows wrong text (e.g. "(undefined)").
 - `site/css/styles.css`: all styles, including the light/dark theme tokens.
 - `site/js/app.js`: fetches `data/traits.json` and renders the filterable cards.
 - Card layout: each card has five sections (tag row, name, tier icons, a `.body` block with effect/source/Training Camp, and the "Found on" line). `css/styles.css` uses CSS subgrid (`grid-row:span 5`) so those sections line up across a grid row. If you add or remove a top-level card section in `card()`, update the span to match.
