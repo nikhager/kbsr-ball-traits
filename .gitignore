@@ -10,3 +10,6 @@ Thumbs.db
 .env.*
 *.local
 scratch/
+
+# Python bytecode
+__pycache__/
