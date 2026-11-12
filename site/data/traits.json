@@ -1,6 +1,7 @@
 {
-    "updated": "2026-11-11",
+    "updated": "2026-11-12",
     "collections": [
+        "Akashi Collection",
         "Autumn Moon",
         "Campus Rookie",
         "Diviner Midorima Collection",
@@ -81,6 +82,10 @@
                 {
                     "name": "Nash Collection",
                     "tiers": "II"
+                },
+                {
+                    "name": "Akashi Collection",
+                    "tiers": "II, III"
                 }
             ],
             "effectSource": "Tier III"
@@ -130,6 +135,10 @@
                 {
                     "name": "LAST GAME Aomine Peerless",
                     "tiers": "III"
+                },
+                {
+                    "name": "Akashi Collection",
+                    "tiers": "II, III"
                 }
             ],
             "effectSource": "Tier III"
@@ -195,6 +204,10 @@
                 },
                 {
                     "name": "LAST GAME Midorima",
+                    "tiers": "II, III"
+                },
+                {
+                    "name": "Akashi Collection",
                     "tiers": "II, III"
                 }
             ],
@@ -635,6 +648,10 @@
                 {
                     "name": "ZONE Aomine Collection",
                     "tiers": "II"
+                },
+                {
+                    "name": "Akashi Collection",
+                    "tiers": "II, III"
                 }
             ],
             "effectSource": "Tier III"
@@ -748,6 +765,10 @@
                 {
                     "name": "Wave Rider",
                     "tiers": "II"
+                },
+                {
+                    "name": "Akashi Collection",
+                    "tiers": "II, III"
                 }
             ],
             "effectSource": "Tier III"
@@ -789,6 +810,10 @@
                 {
                     "name": "Campus Rookie",
                     "tiers": "II"
+                },
+                {
+                    "name": "Akashi Collection",
+                    "tiers": "II, III"
                 }
             ],
             "effectSource": "Tier III"
@@ -909,6 +934,10 @@
                 {
                     "name": "ZONE Atsushi Murasakibara",
                     "tiers": "II"
+                },
+                {
+                    "name": "Akashi Collection",
+                    "tiers": "II, III"
                 }
             ],
             "effectSource": "Tier III"
@@ -1036,6 +1065,10 @@
                 },
                 {
                     "name": "LAST GAME Midorima Peerless",
+                    "tiers": "II, III"
+                },
+                {
+                    "name": "Akashi Collection",
                     "tiers": "II, III"
                 }
             ],
