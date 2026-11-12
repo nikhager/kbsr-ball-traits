@@ -1,15 +1,9 @@
-name: Validate data
+name: Checks
 
+# Runs on every PR (no path filters) because "checks" is a required status
+# check on main: a required check that a PR skips would block it forever.
 on:
     pull_request:
-        paths:
-            - "site/data/**"
-            - "site/images/icons/**"
-            - "site/index.html"
-            - "site/js/**"
-            - "site/css/**"
-            - "scripts/**"
-            - ".github/workflows/validate.yml"
     push:
         branches: [main]
 
@@ -17,7 +11,7 @@ permissions:
     contents: read
 
 jobs:
-    traits:
+    checks:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v7
@@ -29,3 +23,6 @@ jobs:
             - name: Test the scripts
               if: ${{ !cancelled() }}
               run: python3 -m unittest discover -s scripts -v
+            - name: Test the page code
+              if: ${{ !cancelled() }}
+              run: node --test tests/*.test.mjs

@@ -31,8 +31,12 @@ site/                 everything the page loads (the only folder Cloudflare publ
   js/vendor/          third-party scripts (GoatCounter)
   data/traits.json    all trait data: effects, tier values, collections
   images/icons/       trait icons, one per tier (<trait>-ii.webp, <trait>-iii.webp)
+scripts/              data checker and asset version tool, with their tests (not published)
+tests/                page code tests, Node's built-in runner (not published)
 docs/design/          design references and decision records (not published)
 ```
+
+Every PR runs the "Checks" workflow: it validates the trait data, confirms the `?v=` version tags match their files, and runs all tests. It must pass before a PR can merge. Run the same checks locally with `python3 scripts/validate_traits.py`, `python3 scripts/version_assets.py --check`, `python3 -m unittest discover -s scripts` and `node --test tests/*.test.mjs`.
 
 Effect text is copied from in-game tooltips on the global server. Where the game's translation is unclear, any clarification is in [square brackets] so it's distinguishable from the game's own wording.
 

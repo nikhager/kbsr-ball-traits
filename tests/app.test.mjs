@@ -1,0 +1,118 @@
+// Tests for site/js/app.js. Node's built-in runner, no dependencies.
+// Run from the repo root: node --test tests/
+//
+// app.js is a plain browser script, so each test loads it into a sandbox with
+// a tiny fake DOM (just enough for el() and card()) and a fetch that never
+// resolves, then calls its functions directly. app.js itself is not changed.
+import { test } from "node:test";
+import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
+import vm from "node:vm";
+
+const ROOT = new URL("../", import.meta.url);
+const APP = readFileSync(new URL("site/js/app.js", ROOT), "utf8");
+const DATA = JSON.parse(readFileSync(new URL("site/data/traits.json", ROOT), "utf8"));
+
+class FakeElement {
+    constructor(tag) { this.tag = tag; this.attrs = {}; this.children = []; this.className = ""; }
+    setAttribute(k, v) { this.attrs[k] = String(v); }
+    append(...kids) { this.children.push(...kids); }
+    get textContent() {
+        return this.children.map(c => (typeof c === "string" ? c : c.textContent)).join("");
+    }
+    find(cls) {
+        if (this.className.split(" ").includes(cls)) return this;
+        for (const c of this.children) {
+            const hit = typeof c === "string" ? null : c.find(cls);
+            if (hit) return hit;
+        }
+        return null;
+    }
+}
+
+function loadApp() {
+    const sandbox = {
+        document: { createElement: tag => new FakeElement(tag), getElementById: () => null },
+        window: {},
+        location: { hash: "", pathname: "/", search: "" },
+        history: { replaceState() {} },
+        fetch: () => new Promise(() => {}),
+        setTimeout: () => 0,
+    };
+    vm.createContext(sandbox);
+    vm.runInContext(APP + "\n;globalThis.__app = { cardTags, slugify, card, TAGS, SHOTS };", sandbox);
+    return sandbox.__app;
+}
+
+const trait = (overrides = {}) => ({
+    id: "sharp-drive",
+    name: "Sharp Drive",
+    category: "Handling",
+    tags: ["Ankle Break"],
+    effect: "Increases Ankle Breaker Chance.",
+    effectSource: "Tier III",
+    trainingCamp: "",
+    tiers: {
+        II: { value: "+1.2%", icon: "images/icons/sharp-drive-ii.webp", seenOn: "" },
+        III: { value: "+1.5%", icon: "images/icons/sharp-drive-iii.webp", seenOn: "" },
+    },
+    collections: [{ name: "Akashi Collection" }, { name: "Nash" }],
+    ...overrides,
+});
+
+test("slugify makes lowercase hyphenated slugs", () => {
+    const { slugify } = loadApp();
+    assert.equal(slugify("Ankle Break"), "ankle-break");
+    assert.equal(slugify("LAST GAME Kise"), "last-game-kise");
+    assert.equal(slugify("3PT"), "3pt");
+});
+
+test("cardTags collapses all five shot tags into one All shots chip", () => {
+    const { cardTags, SHOTS } = loadApp();
+    assert.deepEqual([...cardTags([...SHOTS, "Energy"])], ["All shots", "Energy"]);
+    assert.deepEqual([...cardTags(["3PT", "Steal"])], ["3PT", "Steal"]);
+});
+
+test("Found on lists collection names only", () => {
+    const { card } = loadApp();
+    const cols = card(trait()).find("cols");
+    assert.equal(cols.textContent, "Found on: Akashi Collection · Nash");
+});
+
+test("Found on says None logged yet with no collections", () => {
+    const { card } = loadApp();
+    assert.equal(card(trait({ collections: [] })).find("cols").textContent, "Found on: None logged yet");
+});
+
+test("tiers without numbers or icons show the right placeholder", () => {
+    const { card } = loadApp();
+    const t = trait({
+        tiers: {
+            II: { value: "", icon: "images/icons/sharp-drive-ii.webp", seenOn: "" },
+            III: { value: "", icon: null, seenOn: "" },
+        },
+    });
+    const text = card(t).textContent;
+    assert.match(text, /Numbers not logged/);
+    assert.match(text, /Not seen yet/);
+});
+
+test("a summary effect is labelled as not seen in game", () => {
+    const { card } = loadApp();
+    assert.match(card(trait({ effectSource: "" })).textContent, /Summary\. Not seen in game yet/);
+    assert.match(card(trait()).textContent, /In-game text, Tier III/);
+});
+
+test("every real trait renders without undefined or null text", () => {
+    // Catches the code and data drifting apart, like the "(undefined)" bug after #41.
+    const { card } = loadApp();
+    for (const t of DATA.traits) {
+        const text = card(t).textContent;
+        assert.doesNotMatch(text, /undefined|null|\[object/, `${t.id}: ${text}`);
+    }
+});
+
+test("app.js uses no HTML-string sinks blocked by Trusted Types", () => {
+    const banned = /\.innerHTML|\.outerHTML|insertAdjacentHTML|document\.write|\beval\(|new Function\(/;
+    assert.doesNotMatch(APP, banned);
+});

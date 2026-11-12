@@ -17,7 +17,7 @@
 
 ## Checklist
 
-- [ ] `python3 scripts/validate_traits.py` passes
+- [ ] Checks pass locally: `python3 scripts/validate_traits.py`, `python3 -m unittest discover -s scripts`, `node --test tests/*.test.mjs`
 - [ ] `updated` in `site/data/traits.json` set to today (America/Los_Angeles), if data changed
 - [ ] Checked the preview build; new outside resources added to the CSP in `site/_headers`
 - [ ] Ran `python3 scripts/version_assets.py` if `app.js` or `styles.css` changed (CI checks this)
