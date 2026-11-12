@@ -77,8 +77,7 @@ function card(t) {
     if (t.collections.length) {
         t.collections.forEach((c, i) => {
             if (i) parts.push(" · ");
-            const s = `${c.name} (${c.tiers})`;
-            parts.push(c.name === state.col ? el("mark", {}, s) : s);
+            parts.push(c.name === state.col ? el("mark", {}, c.name) : c.name);
         });
     } else {
         parts.push("None logged yet");

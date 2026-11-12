@@ -56,36 +56,28 @@
             },
             "collections": [
                 {
-                    "name": "Seirin Spirit",
-                    "tiers": "II, III"
+                    "name": "Seirin Spirit"
                 },
                 {
-                    "name": "LAST GAME Kise Peerless",
-                    "tiers": "II"
+                    "name": "LAST GAME Kise Peerless"
                 },
                 {
-                    "name": "Pumpkin Carnival",
-                    "tiers": "II"
+                    "name": "Pumpkin Carnival"
                 },
                 {
-                    "name": "Perfect Kise Collection",
-                    "tiers": "II, III"
+                    "name": "Perfect Kise Collection"
                 },
                 {
-                    "name": "LAST GAME Aomine",
-                    "tiers": "II, III"
+                    "name": "LAST GAME Aomine"
                 },
                 {
-                    "name": "Campus Rookie",
-                    "tiers": "II"
+                    "name": "Campus Rookie"
                 },
                 {
-                    "name": "Nash Collection",
-                    "tiers": "II"
+                    "name": "Nash Collection"
                 },
                 {
-                    "name": "Akashi Collection",
-                    "tiers": "II, III"
+                    "name": "Akashi Collection"
                 }
             ],
             "effectSource": "Tier III"
@@ -113,32 +105,25 @@
             },
             "collections": [
                 {
-                    "name": "Seirin Spirit",
-                    "tiers": "II, III"
+                    "name": "Seirin Spirit"
                 },
                 {
-                    "name": "LAST GAME Kise",
-                    "tiers": "II"
+                    "name": "LAST GAME Kise"
                 },
                 {
-                    "name": "LAST GAME Kise Peerless",
-                    "tiers": "II"
+                    "name": "LAST GAME Kise Peerless"
                 },
                 {
-                    "name": "Pumpkin Carnival",
-                    "tiers": "II"
+                    "name": "Pumpkin Carnival"
                 },
                 {
-                    "name": "Kise Collection",
-                    "tiers": "III"
+                    "name": "Kise Collection"
                 },
                 {
-                    "name": "LAST GAME Aomine Peerless",
-                    "tiers": "III"
+                    "name": "LAST GAME Aomine Peerless"
                 },
                 {
-                    "name": "Akashi Collection",
-                    "tiers": "II, III"
+                    "name": "Akashi Collection"
                 }
             ],
             "effectSource": "Tier III"
@@ -171,44 +156,34 @@
             },
             "collections": [
                 {
-                    "name": "Seirin Spirit",
-                    "tiers": "II"
+                    "name": "Seirin Spirit"
                 },
                 {
-                    "name": "LAST GAME Kise",
-                    "tiers": "II"
+                    "name": "LAST GAME Kise"
                 },
                 {
-                    "name": "LAST GAME Kise Peerless",
-                    "tiers": "III"
+                    "name": "LAST GAME Kise Peerless"
                 },
                 {
-                    "name": "Pumpkin Carnival",
-                    "tiers": "II"
+                    "name": "Pumpkin Carnival"
                 },
                 {
-                    "name": "Kise Collection",
-                    "tiers": "II, III"
+                    "name": "Kise Collection"
                 },
                 {
-                    "name": "Campus Rookie",
-                    "tiers": "II, III"
+                    "name": "Campus Rookie"
                 },
                 {
-                    "name": "ZONE Aomine Collection",
-                    "tiers": "III"
+                    "name": "ZONE Aomine Collection"
                 },
                 {
-                    "name": "LAST GAME Midorima Peerless",
-                    "tiers": "II, III"
+                    "name": "LAST GAME Midorima Peerless"
                 },
                 {
-                    "name": "LAST GAME Midorima",
-                    "tiers": "II, III"
+                    "name": "LAST GAME Midorima"
                 },
                 {
-                    "name": "Akashi Collection",
-                    "tiers": "II, III"
+                    "name": "Akashi Collection"
                 }
             ],
             "effectSource": "Tier III"
@@ -237,20 +212,16 @@
             },
             "collections": [
                 {
-                    "name": "LAST GAME Kise",
-                    "tiers": "II"
+                    "name": "LAST GAME Kise"
                 },
                 {
-                    "name": "SP Akashi Collection",
-                    "tiers": "II, III"
+                    "name": "SP Akashi Collection"
                 },
                 {
-                    "name": "Graffiti Master",
-                    "tiers": "II, III"
+                    "name": "Graffiti Master"
                 },
                 {
-                    "name": "LAST GAME Midorima Peerless",
-                    "tiers": "II, III"
+                    "name": "LAST GAME Midorima Peerless"
                 }
             ],
             "effectSource": "Tier III"
@@ -284,24 +255,19 @@
             },
             "collections": [
                 {
-                    "name": "LAST GAME Kise",
-                    "tiers": "II, III"
+                    "name": "LAST GAME Kise"
                 },
                 {
-                    "name": "LAST GAME Kise Peerless",
-                    "tiers": "III"
+                    "name": "LAST GAME Kise Peerless"
                 },
                 {
-                    "name": "LAST GAME Aomine Peerless",
-                    "tiers": "II, III"
+                    "name": "LAST GAME Aomine Peerless"
                 },
                 {
-                    "name": "Perfect Kise Collection",
-                    "tiers": "II"
+                    "name": "Perfect Kise Collection"
                 },
                 {
-                    "name": "LAST GAME Midorima",
-                    "tiers": "II, III"
+                    "name": "LAST GAME Midorima"
                 }
             ],
             "effectSource": "Tier III"
@@ -329,12 +295,10 @@
             },
             "collections": [
                 {
-                    "name": "Diviner Midorima Collection",
-                    "tiers": "II, III"
+                    "name": "Diviner Midorima Collection"
                 },
                 {
-                    "name": "LAST GAME Midorima",
-                    "tiers": "II, III"
+                    "name": "LAST GAME Midorima"
                 }
             ],
             "effectSource": "Tier III"
@@ -362,12 +326,10 @@
             },
             "collections": [
                 {
-                    "name": "LAST GAME Midorima",
-                    "tiers": "II, III"
+                    "name": "LAST GAME Midorima"
                 },
                 {
-                    "name": "LAST GAME Midorima Peerless",
-                    "tiers": "II, III"
+                    "name": "LAST GAME Midorima Peerless"
                 }
             ],
             "effectSource": "Tier III"
@@ -397,12 +359,10 @@
             },
             "collections": [
                 {
-                    "name": "LAST GAME Midorima Peerless",
-                    "tiers": "II, III"
+                    "name": "LAST GAME Midorima Peerless"
                 },
                 {
-                    "name": "SP Akashi Collection",
-                    "tiers": "II"
+                    "name": "SP Akashi Collection"
                 }
             ],
             "effectSource": "Tier II"
@@ -430,28 +390,22 @@
             },
             "collections": [
                 {
-                    "name": "Pumpkin Carnival",
-                    "tiers": "III"
+                    "name": "Pumpkin Carnival"
                 },
                 {
-                    "name": "Diviner Midorima Collection",
-                    "tiers": "II"
+                    "name": "Diviner Midorima Collection"
                 },
                 {
-                    "name": "Midorima Collection",
-                    "tiers": "II, III"
+                    "name": "Midorima Collection"
                 },
                 {
-                    "name": "LAST GAME Midorima Peerless",
-                    "tiers": "II, III"
+                    "name": "LAST GAME Midorima Peerless"
                 },
                 {
-                    "name": "LAST GAME Midorima",
-                    "tiers": "II, III"
+                    "name": "LAST GAME Midorima"
                 },
                 {
-                    "name": "Wave Rider",
-                    "tiers": "II"
+                    "name": "Wave Rider"
                 }
             ],
             "effectSource": "Tier III"
@@ -481,16 +435,13 @@
             },
             "collections": [
                 {
-                    "name": "LAST GAME Kise",
-                    "tiers": "II, III"
+                    "name": "LAST GAME Kise"
                 },
                 {
-                    "name": "Nash",
-                    "tiers": "III"
+                    "name": "Nash"
                 },
                 {
-                    "name": "Midorima Collection",
-                    "tiers": "II"
+                    "name": "Midorima Collection"
                 }
             ],
             "effectSource": "Tier III"
@@ -520,12 +471,10 @@
             },
             "collections": [
                 {
-                    "name": "Kise Collection",
-                    "tiers": "III"
+                    "name": "Kise Collection"
                 },
                 {
-                    "name": "LAST GAME Midorima",
-                    "tiers": "II, III"
+                    "name": "LAST GAME Midorima"
                 }
             ],
             "effectSource": "Tier III"
@@ -555,12 +504,10 @@
             },
             "collections": [
                 {
-                    "name": "LAST GAME Midorima Peerless",
-                    "tiers": "II, III"
+                    "name": "LAST GAME Midorima Peerless"
                 },
                 {
-                    "name": "LAST GAME Midorima",
-                    "tiers": "II, III"
+                    "name": "LAST GAME Midorima"
                 }
             ],
             "effectSource": "Tier III"
@@ -588,16 +535,13 @@
             },
             "collections": [
                 {
-                    "name": "Wave Rider",
-                    "tiers": "III"
+                    "name": "Wave Rider"
                 },
                 {
-                    "name": "ZONE Atsushi Murasakibara",
-                    "tiers": "III"
+                    "name": "ZONE Atsushi Murasakibara"
                 },
                 {
-                    "name": "LAST GAME Midorima",
-                    "tiers": "II, III"
+                    "name": "LAST GAME Midorima"
                 }
             ],
             "effectSource": "Tier III"
@@ -626,32 +570,25 @@
             },
             "collections": [
                 {
-                    "name": "Seirin Spirit",
-                    "tiers": "II, III"
+                    "name": "Seirin Spirit"
                 },
                 {
-                    "name": "LAST GAME Kise",
-                    "tiers": "II"
+                    "name": "LAST GAME Kise"
                 },
                 {
-                    "name": "LAST GAME Kise Peerless",
-                    "tiers": "II"
+                    "name": "LAST GAME Kise Peerless"
                 },
                 {
-                    "name": "Pumpkin Carnival",
-                    "tiers": "II"
+                    "name": "Pumpkin Carnival"
                 },
                 {
-                    "name": "LAST GAME Midorima",
-                    "tiers": "II, III"
+                    "name": "LAST GAME Midorima"
                 },
                 {
-                    "name": "ZONE Aomine Collection",
-                    "tiers": "II"
+                    "name": "ZONE Aomine Collection"
                 },
                 {
-                    "name": "Akashi Collection",
-                    "tiers": "II, III"
+                    "name": "Akashi Collection"
                 }
             ],
             "effectSource": "Tier III"
@@ -684,12 +621,10 @@
             },
             "collections": [
                 {
-                    "name": "LAST GAME Aomine Peerless",
-                    "tiers": "II, III"
+                    "name": "LAST GAME Aomine Peerless"
                 },
                 {
-                    "name": "LAST GAME Aomine",
-                    "tiers": "II"
+                    "name": "LAST GAME Aomine"
                 }
             ],
             "effectSource": "Tier III"
@@ -717,12 +652,10 @@
             },
             "collections": [
                 {
-                    "name": "Pumpkin Carnival",
-                    "tiers": "II, III"
+                    "name": "Pumpkin Carnival"
                 },
                 {
-                    "name": "LAST GAME Midorima Peerless",
-                    "tiers": "II, III"
+                    "name": "LAST GAME Midorima Peerless"
                 }
             ],
             "effectSource": "Tier III"
@@ -751,24 +684,19 @@
             },
             "collections": [
                 {
-                    "name": "Seirin Spirit",
-                    "tiers": "II, III"
+                    "name": "Seirin Spirit"
                 },
                 {
-                    "name": "Pumpkin Carnival",
-                    "tiers": "II"
+                    "name": "Pumpkin Carnival"
                 },
                 {
-                    "name": "Nash",
-                    "tiers": "II, III"
+                    "name": "Nash"
                 },
                 {
-                    "name": "Wave Rider",
-                    "tiers": "II"
+                    "name": "Wave Rider"
                 },
                 {
-                    "name": "Akashi Collection",
-                    "tiers": "II, III"
+                    "name": "Akashi Collection"
                 }
             ],
             "effectSource": "Tier III"
@@ -796,24 +724,19 @@
             },
             "collections": [
                 {
-                    "name": "Seirin Spirit",
-                    "tiers": "II, III"
+                    "name": "Seirin Spirit"
                 },
                 {
-                    "name": "LAST GAME Kise Peerless",
-                    "tiers": "II"
+                    "name": "LAST GAME Kise Peerless"
                 },
                 {
-                    "name": "Pumpkin Carnival",
-                    "tiers": "II"
+                    "name": "Pumpkin Carnival"
                 },
                 {
-                    "name": "Campus Rookie",
-                    "tiers": "II"
+                    "name": "Campus Rookie"
                 },
                 {
-                    "name": "Akashi Collection",
-                    "tiers": "II, III"
+                    "name": "Akashi Collection"
                 }
             ],
             "effectSource": "Tier III"
@@ -845,12 +768,10 @@
             },
             "collections": [
                 {
-                    "name": "LAST GAME Kise",
-                    "tiers": "II"
+                    "name": "LAST GAME Kise"
                 },
                 {
-                    "name": "LAST GAME Kise Peerless",
-                    "tiers": "II"
+                    "name": "LAST GAME Kise Peerless"
                 }
             ],
             "effectSource": ""
@@ -879,20 +800,16 @@
             },
             "collections": [
                 {
-                    "name": "LAST GAME Kise",
-                    "tiers": "II"
+                    "name": "LAST GAME Kise"
                 },
                 {
-                    "name": "LG Kagami",
-                    "tiers": "III"
+                    "name": "LG Kagami"
                 },
                 {
-                    "name": "LAST GAME Murasakibara",
-                    "tiers": "II"
+                    "name": "LAST GAME Murasakibara"
                 },
                 {
-                    "name": "Jason Silver",
-                    "tiers": "II, III"
+                    "name": "Jason Silver"
                 }
             ],
             "effectSource": "Tier III"
@@ -920,24 +837,19 @@
             },
             "collections": [
                 {
-                    "name": "Seirin Spirit",
-                    "tiers": "II, III"
+                    "name": "Seirin Spirit"
                 },
                 {
-                    "name": "LAST GAME Kise Peerless",
-                    "tiers": "II"
+                    "name": "LAST GAME Kise Peerless"
                 },
                 {
-                    "name": "Pumpkin Carnival",
-                    "tiers": "II"
+                    "name": "Pumpkin Carnival"
                 },
                 {
-                    "name": "ZONE Atsushi Murasakibara",
-                    "tiers": "II"
+                    "name": "ZONE Atsushi Murasakibara"
                 },
                 {
-                    "name": "Akashi Collection",
-                    "tiers": "II, III"
+                    "name": "Akashi Collection"
                 }
             ],
             "effectSource": "Tier III"
@@ -965,28 +877,22 @@
             },
             "collections": [
                 {
-                    "name": "LAST GAME Kise",
-                    "tiers": "II"
+                    "name": "LAST GAME Kise"
                 },
                 {
-                    "name": "Jason Silver",
-                    "tiers": "II"
+                    "name": "Jason Silver"
                 },
                 {
-                    "name": "ZONE Atsushi Murasakibara",
-                    "tiers": "II"
+                    "name": "ZONE Atsushi Murasakibara"
                 },
                 {
-                    "name": "LAST GAME Aomine",
-                    "tiers": "II"
+                    "name": "LAST GAME Aomine"
                 },
                 {
-                    "name": "Graffiti Master",
-                    "tiers": "II"
+                    "name": "Graffiti Master"
                 },
                 {
-                    "name": "LAST GAME Midorima Peerless",
-                    "tiers": "II, III"
+                    "name": "LAST GAME Midorima Peerless"
                 }
             ],
             "effectSource": "Tier II"
@@ -1015,12 +921,10 @@
             },
             "collections": [
                 {
-                    "name": "LAST GAME Kise",
-                    "tiers": "II"
+                    "name": "LAST GAME Kise"
                 },
                 {
-                    "name": "LAST GAME Murasakibara Peerless",
-                    "tiers": "III"
+                    "name": "LAST GAME Murasakibara Peerless"
                 }
             ],
             "effectSource": "Tier III"
@@ -1048,28 +952,22 @@
             },
             "collections": [
                 {
-                    "name": "Seirin Spirit",
-                    "tiers": "II, III"
+                    "name": "Seirin Spirit"
                 },
                 {
-                    "name": "LAST GAME Kise Peerless",
-                    "tiers": "II"
+                    "name": "LAST GAME Kise Peerless"
                 },
                 {
-                    "name": "Pumpkin Carnival",
-                    "tiers": "II"
+                    "name": "Pumpkin Carnival"
                 },
                 {
-                    "name": "SP Akashi Collection",
-                    "tiers": "II"
+                    "name": "SP Akashi Collection"
                 },
                 {
-                    "name": "LAST GAME Midorima Peerless",
-                    "tiers": "II, III"
+                    "name": "LAST GAME Midorima Peerless"
                 },
                 {
-                    "name": "Akashi Collection",
-                    "tiers": "II, III"
+                    "name": "Akashi Collection"
                 }
             ],
             "effectSource": "Tier III"
@@ -1097,8 +995,7 @@
             },
             "collections": [
                 {
-                    "name": "LAST GAME Kise Peerless",
-                    "tiers": "II"
+                    "name": "LAST GAME Kise Peerless"
                 }
             ],
             "effectSource": ""
@@ -1126,8 +1023,7 @@
             },
             "collections": [
                 {
-                    "name": "Perfect Kise Collection",
-                    "tiers": "III"
+                    "name": "Perfect Kise Collection"
                 }
             ],
             "effectSource": "Tier III"
@@ -1155,24 +1051,19 @@
             },
             "collections": [
                 {
-                    "name": "LG Kagami",
-                    "tiers": "II"
+                    "name": "LG Kagami"
                 },
                 {
-                    "name": "Autumn Moon",
-                    "tiers": "III"
+                    "name": "Autumn Moon"
                 },
                 {
-                    "name": "ZONE Atsushi Murasakibara",
-                    "tiers": "II, III"
+                    "name": "ZONE Atsushi Murasakibara"
                 },
                 {
-                    "name": "Purple Paint",
-                    "tiers": "II, III"
+                    "name": "Purple Paint"
                 },
                 {
-                    "name": "LAST GAME Murasakibara Peerless",
-                    "tiers": "II"
+                    "name": "LAST GAME Murasakibara Peerless"
                 }
             ],
             "effectSource": "Tier III"
@@ -1201,12 +1092,10 @@
             },
             "collections": [
                 {
-                    "name": "Purple Paint",
-                    "tiers": "II"
+                    "name": "Purple Paint"
                 },
                 {
-                    "name": "Autumn Moon",
-                    "tiers": "II, III"
+                    "name": "Autumn Moon"
                 }
             ]
         },
@@ -1233,12 +1122,10 @@
             },
             "collections": [
                 {
-                    "name": "LAST GAME Murasakibara",
-                    "tiers": "II, III"
+                    "name": "LAST GAME Murasakibara"
                 },
                 {
-                    "name": "LAST GAME Murasakibara Peerless",
-                    "tiers": "II"
+                    "name": "LAST GAME Murasakibara Peerless"
                 }
             ],
             "effectSource": "Tier III"
@@ -1270,12 +1157,10 @@
             },
             "collections": [
                 {
-                    "name": "LAST GAME Murasakibara",
-                    "tiers": "II, III"
+                    "name": "LAST GAME Murasakibara"
                 },
                 {
-                    "name": "Jason Silver",
-                    "tiers": "II, III"
+                    "name": "Jason Silver"
                 }
             ],
             "effectSource": "Tier III"
@@ -1305,20 +1190,16 @@
             },
             "collections": [
                 {
-                    "name": "Jason Silver",
-                    "tiers": "II"
+                    "name": "Jason Silver"
                 },
                 {
-                    "name": "ZONE Atsushi Murasakibara",
-                    "tiers": "II"
+                    "name": "ZONE Atsushi Murasakibara"
                 },
                 {
-                    "name": "ZONE Aomine Collection",
-                    "tiers": "II"
+                    "name": "ZONE Aomine Collection"
                 },
                 {
-                    "name": "LAST GAME Murasakibara",
-                    "tiers": "II"
+                    "name": "LAST GAME Murasakibara"
                 }
             ],
             "effectSource": "Tier II"
@@ -1346,16 +1227,13 @@
             },
             "collections": [
                 {
-                    "name": "Kise Collection",
-                    "tiers": "II"
+                    "name": "Kise Collection"
                 },
                 {
-                    "name": "LAST GAME Midorima Peerless",
-                    "tiers": "II, III"
+                    "name": "LAST GAME Midorima Peerless"
                 },
                 {
-                    "name": "LAST GAME Midorima",
-                    "tiers": "II, III"
+                    "name": "LAST GAME Midorima"
                 }
             ],
             "effectSource": "Tier II"
@@ -1383,8 +1261,7 @@
             },
             "collections": [
                 {
-                    "name": "Diviner Midorima Collection",
-                    "tiers": "II"
+                    "name": "Diviner Midorima Collection"
                 }
             ],
             "effectSource": "Tier II"
