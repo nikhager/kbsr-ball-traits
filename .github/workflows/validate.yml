@@ -6,6 +6,7 @@ on:
             - "site/data/**"
             - "site/images/icons/**"
             - "scripts/validate_traits.py"
+            - "scripts/test_validate_traits.py"
             - ".github/workflows/validate.yml"
     push:
         branches: [main]
@@ -20,3 +21,5 @@ jobs:
             - uses: actions/checkout@v7
             - name: Check traits.json
               run: python3 scripts/validate_traits.py
+            - name: Test the validator
+              run: python3 -m unittest discover -s scripts -v
