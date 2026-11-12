@@ -24,6 +24,8 @@ jobs:
             - name: Check traits.json
               run: python3 scripts/validate_traits.py
             - name: Check asset version tags
+              if: ${{ !cancelled() }}
               run: python3 scripts/version_assets.py --check
             - name: Test the scripts
+              if: ${{ !cancelled() }}
               run: python3 -m unittest discover -s scripts -v

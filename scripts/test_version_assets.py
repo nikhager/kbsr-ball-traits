@@ -103,6 +103,21 @@ class VersionAssetsTests(unittest.TestCase):
         self.assertEqual(code, 1, out)
         self.assertIn("expected exactly one reference to js/app.js", out)
 
+    def test_unknown_argument_rejected(self):
+        html = page("css/styles.css?v=old", "js/app.js?v=old")
+        s = self.site(html)
+        code, out = s.run("--chek")
+        self.assertEqual(code, 2, out)
+        self.assertIn("unknown argument", out)
+        self.assertEqual(s.index.read_text(encoding="utf-8"), html)
+
+    def test_rewrite_keeps_crlf_line_endings(self):
+        s = self.site("")
+        s.index.write_bytes(page("css/styles.css?v=old", "js/app.js?v=old").replace("\n", "\r\n").encode())
+        s.run()
+        self.assertEqual(s.index.read_bytes(),
+                         page(f"css/styles.css?v={h(CSS)}", f"js/app.js?v={h(JS)}").replace("\n", "\r\n").encode())
+
     def test_real_site_tags_match(self):
         # Read-only check on the real site. Fails if someone changed app.js or
         # styles.css without running the script; that's deliberate.

@@ -25,8 +25,14 @@ def fingerprint(path):
 
 
 def main(argv):
+    unknown = [a for a in argv if a != "--check"]
+    if unknown:
+        print(f"error: unknown argument(s) {unknown}; usage: version_assets.py [--check]")
+        return 2
     check = "--check" in argv
-    html = INDEX.read_text(encoding="utf-8")
+    # newline="" keeps the file's line endings exactly as they are.
+    with open(INDEX, encoding="utf-8", newline="") as f:
+        html = f.read()
     new_html, problems = html, []
     for asset in ASSETS:
         want = fingerprint(SITE / asset)
@@ -54,7 +60,8 @@ def main(argv):
         print("OK: asset version tags match")
         return 0
     if new_html != html:
-        INDEX.write_text(new_html, encoding="utf-8")
+        with open(INDEX, "w", encoding="utf-8", newline="") as f:
+            f.write(new_html)
         for p in problems:
             print(f"updated: {p}")
     else:
