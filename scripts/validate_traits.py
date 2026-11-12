@@ -96,9 +96,8 @@ def main():
         for c in t["collections"]:
             if c.get("name") not in cols:
                 err(f"{label}: collection {c.get('name')!r} is not in the collections list")
-            tiers = [x.strip() for x in str(c.get("tiers", "")).split(",")]
-            if not all(x in TIERS for x in tiers):
-                err(f"{label}: collection {c.get('name')!r} has bad tiers {c.get('tiers')!r}")
+            if set(c) != {"name"}:
+                err(f"{label}: collection {c.get('name')!r} should only have a name (any trait can roll II or III on a gold ball)")
             used_cols.add(c.get("name"))
 
     for c in sorted(set(cols) - used_cols):
