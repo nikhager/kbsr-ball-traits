@@ -90,10 +90,19 @@ def main():
                 err(f"{label} {tier}: icon file {icon} does not exist")
             used_icons.add(icon)
 
-        names = [c.get("name") for c in t["collections"]]
+        entries = []
+        if not isinstance(t["collections"], list):
+            err(f"{label}: collections must be a list")
+        else:
+            for c in t["collections"]:
+                if isinstance(c, dict) and isinstance(c.get("name"), str):
+                    entries.append(c)
+                else:
+                    err(f"{label}: collection entry {c!r} must be an object with a string name")
+        names = [c.get("name") for c in entries]
         for n in {n for n in names if names.count(n) > 1}:
             err(f"{label}: collection {n!r} listed twice")
-        for c in t["collections"]:
+        for c in entries:
             if c.get("name") not in cols:
                 err(f"{label}: collection {c.get('name')!r} is not in the collections list")
             if set(c) != {"name"}:
