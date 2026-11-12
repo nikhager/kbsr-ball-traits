@@ -1,5 +1,5 @@
 // Tests for site/js/app.js. Node's built-in runner, no dependencies.
-// Run from the repo root: node --test tests/
+// Run from the repo root: node --test tests/*.test.mjs
 //
 // app.js is a plain browser script, so each test loads it into a sandbox with
 // a tiny fake DOM (just enough for el() and card()) and a fetch that never
@@ -19,6 +19,11 @@ class FakeElement {
     append(...kids) { this.children.push(...kids); }
     get textContent() {
         return this.children.map(c => (typeof c === "string" ? c : c.textContent)).join("");
+    }
+    // Every attribute value in this element and its children.
+    allAttrs() {
+        const own = Object.values(this.attrs);
+        return own.concat(...this.children.filter(c => typeof c !== "string").map(c => c.allAttrs()));
     }
     find(cls) {
         if (this.className.split(" ").includes(cls)) return this;
@@ -40,7 +45,7 @@ function loadApp() {
         setTimeout: () => 0,
     };
     vm.createContext(sandbox);
-    vm.runInContext(APP + "\n;globalThis.__app = { cardTags, slugify, card, TAGS, SHOTS };", sandbox);
+    vm.runInContext(APP + "\n;globalThis.__app = { cardTags, slugify, card, state, TAGS, SHOTS };", sandbox);
     return sandbox.__app;
 }
 
@@ -79,6 +84,16 @@ test("Found on lists collection names only", () => {
     assert.equal(cols.textContent, "Found on: Akashi Collection · Nash");
 });
 
+test("Found on highlights the selected collection", () => {
+    const app = loadApp();
+    app.state.col = "Nash";
+    const cols = app.card(trait()).find("cols");
+    const marks = cols.children.filter(c => typeof c !== "string" && c.tag === "mark");
+    assert.equal(marks.length, 1);
+    assert.equal(marks[0].textContent, "Nash");
+    assert.equal(cols.textContent, "Found on: Akashi Collection · Nash");
+});
+
 test("Found on says None logged yet with no collections", () => {
     const { card } = loadApp();
     assert.equal(card(trait({ collections: [] })).find("cols").textContent, "Found on: None logged yet");
@@ -107,12 +122,14 @@ test("every real trait renders without undefined or null text", () => {
     // Catches the code and data drifting apart, like the "(undefined)" bug after #41.
     const { card } = loadApp();
     for (const t of DATA.traits) {
-        const text = card(t).textContent;
-        assert.doesNotMatch(text, /undefined|null|\[object/, `${t.id}: ${text}`);
+        const c = card(t);
+        const bad = /\bundefined\b|\bnull\b|\[object /;
+        assert.doesNotMatch(c.textContent, bad, `${t.id} text: ${c.textContent}`);
+        for (const v of c.allAttrs()) assert.doesNotMatch(v, bad, `${t.id} attribute: ${v}`);
     }
 });
 
 test("app.js uses no HTML-string sinks blocked by Trusted Types", () => {
-    const banned = /\.innerHTML|\.outerHTML|insertAdjacentHTML|document\.write|\beval\(|new Function\(/;
+    const banned = /\.innerHTML|\.outerHTML|insertAdjacentHTML|document\.write|\beval\(|new Function\(|setTimeout\(\s*["'`]|srcdoc|createContextualFragment|DOMParser/;
     assert.doesNotMatch(APP, banned);
 });
