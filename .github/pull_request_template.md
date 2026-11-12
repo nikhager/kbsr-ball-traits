@@ -20,6 +20,7 @@
 - [ ] `python3 scripts/validate_traits.py` passes
 - [ ] `updated` in `site/data/traits.json` set to today (America/Los_Angeles), if data changed
 - [ ] Checked the preview build; new outside resources added to the CSP in `site/_headers`
+- [ ] Bumped the `?v=` tag in `site/index.html` if `app.js` or `styles.css` changed
 - [ ] New icons are 96px WebP crops (icon crops only, no full screenshots)
 - [ ] No secrets, personal emails, or Google Sheet/Doc IDs (the repo and its history are public)
 - [ ] "KBSR Ball Build Planner" sheet (Traits tab) rebuilt from `traits.json`, if collections changed

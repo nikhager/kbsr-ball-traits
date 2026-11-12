@@ -4,7 +4,7 @@ Static fan reference for ball traits in Kuroko's Basketball: Street Rivals (glob
 
 ## Files
 Everything the page loads lives in `site/`; paths inside the page and in `traits.json` are relative to `site/`. Repo-only material (this file, `README.md`, `LICENSE`, `docs/`) stays at the root and is never published.
-- `site/index.html`: page markup only. Links `css/styles.css` and loads `js/app.js`.
+- `site/index.html`: page markup only. Links `css/styles.css` and loads `js/app.js`, each with a `?v=YYYY-MM-DD` version tag so browsers fetch new code instead of a cached copy. Whenever a PR changes `styles.css` or `app.js`, set the matching tag to that day's date (America/Los_Angeles), adding a letter if the tag already has today's date (`2026-11-12b`); a stale cached `app.js` with new `traits.json` shows wrong text (e.g. "(undefined)").
 - `site/css/styles.css`: all styles, including the light/dark theme tokens.
 - `site/js/app.js`: fetches `data/traits.json` and renders the filterable cards.
 - Card layout: each card has five sections (tag row, name, tier icons, a `.body` block with effect/source/Training Camp, and the "Found on" line). `css/styles.css` uses CSS subgrid (`grid-row:span 5`) so those sections line up across a grid row. If you add or remove a top-level card section in `card()`, update the span to match.
@@ -81,7 +81,7 @@ Based on Google's engineering practices. Full rules and rationale: `claude/pr-gu
 
 ## Analytics
 - Cloudflare Web Analytics is also on (its beacon is allowed in the CSP).
-- GoatCounter (site code `kbsrlab`, dashboard kbsrlab.goatcounter.com) counts page views and filter events via one script tag just before `</body>` in `site/index.html`. The script is self-hosted as `site/js/vendor/count.js` (GoatCounter v2.7.0, ISC license) so tracker blockers that target gc.zgo.at don't stop it; counts still go to kbsrlab.goatcounter.com. Keep it when editing the page. The claude.ai artifact copy of the page mirrors this repo's folder layout (`css/`, `js/app.js`, `data/`, `images/icons/`) but leaves the GoatCounter tag out (outside scripts are blocked there).
+- GoatCounter (site code `kbsrlab`, dashboard kbsrlab.goatcounter.com) counts page views and filter events via one script tag just before `</body>` in `site/index.html`. The script is self-hosted as `site/js/vendor/count.js` (GoatCounter v2.7.0, ISC license) so tracker blockers that target gc.zgo.at don't stop it; counts still go to kbsrlab.goatcounter.com. Keep it when editing the page. The claude.ai artifact copy of the page mirrors this repo's folder layout (`css/`, `js/app.js`, `data/`, `images/icons/`) but leaves the GoatCounter tag out (outside scripts are blocked there) and keeps plain `css/styles.css` / `js/app.js` links without the `?v=` tags; when syncing it, republish `data/`, `js/app.js` and `css/styles.css`, not the repo's `index.html`.
 
 ## Constraints
 - The repo is public, and so is its full history: never commit secrets, personal emails, Google Sheet/Doc IDs, or full screenshots (they show the player ID). Icon crops only.

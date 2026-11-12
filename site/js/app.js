@@ -127,7 +127,7 @@ function render() {
     $("count").textContent = `${list.length} of ${DATA.traits.length} traits`;
 }
 
-fetch("data/traits.json").then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).then(d => {
+fetch("data/traits.json", { cache: "no-cache" }).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).then(d => {
     DATA = d;
     $("updated").textContent = `Last updated ${d.updated}.`;
     readHash(); buildControls(); render();
