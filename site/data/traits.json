@@ -27,7 +27,8 @@
         "SP Akashi Collection",
         "Wave Rider",
         "ZONE Aomine Collection",
-        "ZONE Atsushi Murasakibara"
+        "ZONE Atsushi Murasakibara",
+        "ZONE Kagami Collection"
     ],
     "traits": [
         {
@@ -46,7 +47,7 @@
                 "II": {
                     "value": "+0.8% per 35 Energy (5x)",
                     "icon": "images/icons/forward-awakening-ii.webp",
-                    "seenOn": "Seirin Spirit 268"
+                    "seenOn": "Seirin Spirit 268, ZONE Kagami 282"
                 },
                 "III": {
                     "value": "+1% per 35 Energy (5x)",
@@ -78,6 +79,9 @@
                 },
                 {
                     "name": "Akashi Collection"
+                },
+                {
+                    "name": "ZONE Kagami Collection"
                 }
             ],
             "effectSource": "Tier III"
@@ -565,7 +569,7 @@
                 "III": {
                     "value": "+1.5%; +0.5% per stack",
                     "icon": "images/icons/sharp-drive-iii.webp",
-                    "seenOn": "Seirin Spirit 384"
+                    "seenOn": "Seirin Spirit 384, Seirin Spirit 283"
                 }
             },
             "collections": [
