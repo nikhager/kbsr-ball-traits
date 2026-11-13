@@ -20,6 +20,10 @@ class FakeElement {
     get textContent() {
         return this.children.map(c => (typeof c === "string" ? c : c.textContent)).join("");
     }
+    // Every text node in this element and its children, one string each.
+    texts() {
+        return this.children.flatMap(c => (typeof c === "string" ? [c] : c.texts()));
+    }
     // Every attribute value in this element and its children.
     allAttrs() {
         const own = Object.values(this.attrs);
@@ -78,6 +82,13 @@ test("cardTags collapses all five shot tags into one All shots chip", () => {
     assert.deepEqual([...cardTags(["3PT", "Steal"])], ["3PT", "Steal"]);
 });
 
+test("a card shows the trait name and its tag chips", () => {
+    const { card, SHOTS } = loadApp();
+    assert.equal(card(trait()).find("name").textContent, "Sharp Drive");
+    const chips = card(trait({ tags: [...SHOTS, "Energy"] })).find("tags").children.map(c => c.textContent);
+    assert.deepEqual(chips, ["All shots", "Energy"]);
+});
+
 test("Found on lists collection names only", () => {
     const { card } = loadApp();
     const cols = card(trait()).find("cols");
@@ -123,8 +134,10 @@ test("every real trait renders without undefined or null text", () => {
     const { card } = loadApp();
     for (const t of DATA.traits) {
         const c = card(t);
+        // Check each text node on its own: joined text like "Tier IIundefined"
+        // has no word boundary before "undefined".
         const bad = /\bundefined\b|\bnull\b|\[object /;
-        assert.doesNotMatch(c.textContent, bad, `${t.id} text: ${c.textContent}`);
+        for (const s of c.texts()) assert.doesNotMatch(s, bad, `${t.id} text: ${s}`);
         for (const v of c.allAttrs()) assert.doesNotMatch(v, bad, `${t.id} attribute: ${v}`);
     }
 });

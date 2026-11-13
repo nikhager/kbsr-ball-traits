@@ -36,7 +36,7 @@ tests/                page code tests, Node's built-in runner (not published)
 docs/design/          design references and decision records (not published)
 ```
 
-Every PR runs the "Checks" workflow: it validates the trait data, confirms the `?v=` version tags match their files, and runs all tests. It must pass before a PR can merge. Run the same checks locally with `python3 scripts/validate_traits.py`, `python3 scripts/version_assets.py --check`, `python3 -m unittest discover -s scripts` and `node --test tests/*.test.mjs`.
+Every PR runs the "Checks" workflow: it validates the trait data, confirms the `?v=` version tags match their files, and runs all tests. Don't merge a PR while it's red (once it's a required check in branch protection, GitHub blocks the merge). Run the same checks locally with `python3 scripts/validate_traits.py`, `python3 scripts/version_assets.py --check`, `python3 -m unittest discover -s scripts` and `node --test tests/*.test.mjs`.
 
 Effect text is copied from in-game tooltips on the global server. Where the game's translation is unclear, any clarification is in [square brackets] so it's distinguishable from the game's own wording.
 
