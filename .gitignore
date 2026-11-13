@@ -13,3 +13,7 @@ scratch/
 
 # Python bytecode
 __pycache__/
+
+# Secrets (security schema §7)
+.dev.vars
+!.env.example
