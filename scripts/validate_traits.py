@@ -21,6 +21,8 @@ TIERS = ("II", "III")
 TRAIT_KEYS = {"id", "name", "category", "tags", "effect", "effectSource",
               "trainingCamp", "tiers", "collections"}
 TIER_KEYS = {"value", "icon", "seenOn"}
+# Optional keys: "aliases" on a trait, "pickup" on a collection entry.
+COLLECTION_KEYS = {"name", "pickup"}
 
 errors, warnings = [], []
 
@@ -72,6 +74,14 @@ def main():
         bad_tags = set(t["tags"]) - TAGS
         if bad_tags:
             err(f"{label}: unknown tags {sorted(bad_tags)}")
+        aliases = t.get("aliases", [])
+        if not isinstance(aliases, list) or not all(isinstance(a, str) and a.strip() for a in aliases):
+            err(f"{label}: aliases must be a list of non-empty strings")
+        else:
+            for a in {a for a in aliases if aliases.count(a) > 1}:
+                err(f"{label}: alias {a!r} listed twice")
+            if t["name"] in aliases:
+                err(f"{label}: alias {t['name']!r} repeats the trait name")
 
         for tier, v in t["tiers"].items():
             if tier not in TIERS:
@@ -105,8 +115,10 @@ def main():
         for c in entries:
             if c.get("name") not in cols:
                 err(f"{label}: collection {c.get('name')!r} is not in the collections list")
-            if set(c) != {"name"}:
-                err(f"{label}: collection {c.get('name')!r} should only have a name (any trait can roll II or III on a gold ball)")
+            if set(c) - COLLECTION_KEYS:
+                err(f"{label}: collection {c.get('name')!r} should only have a name and pickup (any trait can roll II or III on a gold ball)")
+            if "pickup" in c and c["pickup"] is not True:
+                err(f"{label}: collection {c.get('name')!r} pickup must be true, or left out")
             used_cols.add(c.get("name"))
 
     for c in sorted(set(cols) - used_cols):

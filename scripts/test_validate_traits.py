@@ -132,6 +132,33 @@ class ValidatorTests(unittest.TestCase):
         self.assertFails(bad(lambda d: d["traits"][0]["collections"][0].update(tiers="II")),
                          "should only have a name")
 
+    def test_pickup_and_aliases_pass(self):
+        def f(d):
+            d["traits"][0]["collections"][0]["pickup"] = True
+            d["traits"][0]["aliases"] = ["Quick Drive"]
+        code, out = run(bad(f))
+        self.assertEqual(code, 0, out)
+
+    def test_pickup_must_be_true(self):
+        self.assertFails(bad(lambda d: d["traits"][0]["collections"][0].update(pickup=False)),
+                         "pickup must be true, or left out")
+
+    def test_aliases_not_a_list(self):
+        self.assertFails(bad(lambda d: d["traits"][0].update(aliases="Quick Drive")),
+                         "aliases must be a list of non-empty strings")
+
+    def test_empty_alias(self):
+        self.assertFails(bad(lambda d: d["traits"][0].update(aliases=[" "])),
+                         "aliases must be a list of non-empty strings")
+
+    def test_alias_listed_twice(self):
+        self.assertFails(bad(lambda d: d["traits"][0].update(aliases=["Quick Drive", "Quick Drive"])),
+                         "alias 'Quick Drive' listed twice")
+
+    def test_alias_repeats_name(self):
+        self.assertFails(bad(lambda d: d["traits"][0].update(aliases=["Sharp Drive"])),
+                         "repeats the trait name")
+
     def test_bare_string_collection(self):
         self.assertFails(bad(lambda d: d["traits"][0]["collections"].append("Nash")),
                          "must be an object with a string name")
