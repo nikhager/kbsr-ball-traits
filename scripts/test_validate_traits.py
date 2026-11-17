@@ -130,7 +130,7 @@ class ValidatorTests(unittest.TestCase):
 
     def test_collection_tiers_rejected(self):
         self.assertFails(bad(lambda d: d["traits"][0]["collections"][0].update(tiers="II")),
-                         "should only have a name")
+                         "unknown key(s) ['tiers']; it should only have a name")
 
     def test_pickup_and_aliases_pass(self):
         def f(d):
@@ -140,24 +140,32 @@ class ValidatorTests(unittest.TestCase):
         self.assertEqual(code, 0, out)
 
     def test_pickup_must_be_true(self):
-        self.assertFails(bad(lambda d: d["traits"][0]["collections"][0].update(pickup=False)),
-                         "pickup must be true, or left out")
+        for value in (False, 1, "true", None):
+            with self.subTest(pickup=value):
+                self.assertFails(bad(lambda d: d["traits"][0]["collections"][0].update(pickup=value)),
+                                 "pickup must be true, or left out")
 
-    def test_aliases_not_a_list(self):
-        self.assertFails(bad(lambda d: d["traits"][0].update(aliases="Quick Drive")),
-                         "aliases must be a list of non-empty strings")
-
-    def test_empty_alias(self):
-        self.assertFails(bad(lambda d: d["traits"][0].update(aliases=[" "])),
-                         "aliases must be a list of non-empty strings")
+    def test_bad_aliases(self):
+        for value in ("Quick Drive", [], [" "], [None], None):
+            with self.subTest(aliases=value):
+                self.assertFails(bad(lambda d: d["traits"][0].update(aliases=value)),
+                                 "aliases must be a non-empty list of non-empty strings")
 
     def test_alias_listed_twice(self):
-        self.assertFails(bad(lambda d: d["traits"][0].update(aliases=["Quick Drive", "Quick Drive"])),
-                         "alias 'Quick Drive' listed twice")
+        self.assertFails(bad(lambda d: d["traits"][0].update(aliases=["Quick Drive", " quick  drive"])),
+                         "'quick drive' is used more than once (sharp-drive, sharp-drive)")
 
     def test_alias_repeats_name(self):
-        self.assertFails(bad(lambda d: d["traits"][0].update(aliases=["Sharp Drive"])),
-                         "repeats the trait name")
+        self.assertFails(bad(lambda d: d["traits"][0].update(aliases=["sharp drive"])),
+                         "'sharp drive' is used more than once")
+
+    def test_alias_matches_another_trait(self):
+        def f(d):
+            other = copy.deepcopy(d["traits"][0])
+            other.update(id="quick-drive", name="Quick Drive")
+            d["traits"].append(other)
+            d["traits"][0]["aliases"] = ["Quick Drive"]
+        self.assertFails(bad(f), "'quick drive' is used more than once (sharp-drive, quick-drive)")
 
     def test_bare_string_collection(self):
         self.assertFails(bad(lambda d: d["traits"][0]["collections"].append("Nash")),
