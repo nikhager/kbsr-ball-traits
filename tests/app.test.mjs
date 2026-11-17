@@ -49,7 +49,7 @@ function loadApp() {
         setTimeout: () => 0,
     };
     vm.createContext(sandbox);
-    vm.runInContext(APP + "\n;globalThis.__app = { cardTags, slugify, card, state, TAGS, SHOTS };", sandbox);
+    vm.runInContext(APP + "\n;globalThis.__app = { cardTags, slugify, card, state, TAGS, SHOTS, matchesQuery };", sandbox);
     return sandbox.__app;
 }
 
@@ -109,7 +109,28 @@ test("Found on stars a box's pickup collection", () => {
     const { card } = loadApp();
     const cols = card(trait({ collections: [{ name: "Akashi Collection", pickup: true }, { name: "Nash" }] })).find("cols");
     assert.equal(cols.textContent, "Found on: Akashi Collection ★ · Nash");
-    assert.equal(cols.find("pick").attrs.title, "Pickup trait for this box");
+    assert.deepEqual(cols.texts(), ["Found on:", " Akashi Collection ", "★", " · Nash"]);
+    const pick = cols.find("pick");
+    assert.equal(pick.attrs.title, "Pickup trait for this box");
+    assert.equal(pick.attrs["aria-label"], "pickup trait");
+});
+
+test("a highlighted collection can also be a pickup", () => {
+    const app = loadApp();
+    app.state.col = "Akashi Collection";
+    const cols = app.card(trait({ collections: [{ name: "Akashi Collection", pickup: true }, { name: "Nash" }] })).find("cols");
+    assert.deepEqual(cols.texts(), ["Found on:", " ", "Akashi Collection", " ", "★", " · Nash"]);
+    assert.equal(cols.children.filter(c => typeof c !== "string" && c.tag === "mark").length, 1);
+});
+
+test("search matches the name, an alias or the effect", () => {
+    const { matchesQuery } = loadApp();
+    const t = trait({ name: "Clutch Player", aliases: ["Mr. Clutch"], effect: "Increases 3-Pointer Accuracy." });
+    assert.equal(matchesQuery(t, "mr. clutch"), true);
+    assert.equal(matchesQuery(t, "3-pointer"), true);
+    assert.equal(matchesQuery(t, "rebound"), false);
+    assert.equal(matchesQuery(trait(), "sharp"), true);
+    assert.equal(matchesQuery(trait(), ""), true);
 });
 
 test("only pickup: true gets a star", () => {
