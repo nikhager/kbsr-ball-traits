@@ -20,6 +20,7 @@ Everything the page loads lives in `site/`; paths inside the page and in `traits
 - `scripts/version_assets.py` (+ `scripts/test_version_assets.py`): rewrites the `?v=` tags in `site/index.html` from the files' hashes; `--check` only reports and exits 1 if a tag is stale (used in CI). Standard library only.
 - `tests/app.test.mjs`: tests for `site/js/app.js` with Node's built-in runner (no dependencies). It loads `app.js` into a sandbox with a tiny fake DOM, so `app.js` needs no test hooks. It covers `slugify`, `cardTags`, the card text ("Found on", placeholders), renders every real trait to catch code/data drift (the "(undefined)" bug), and checks for HTML-string sinks. Run `node --test tests/*.test.mjs` from the repo root. When `app.js` changes behavior, add or update a test here in the same PR.
 - `docs/design/`: design references and decision records, one folder per topic (`README.md` + `sources/` + numbered `explorations/`). Not loaded by the page. Never put personal screenshots in it.
+- `docs/design/stack/README.md`: why the site is plain HTML/CSS/JS with no build step, the alternatives, and the plan if it grows into a wiki (Astro + Starlight, migrated in stages). Read it before proposing a framework, build step or new dependency, and update it when the stack changes.
 - `site/images/icons/<trait-id>-ii.webp`, `images/icons/<trait-id>-iii.webp`: tier icons, 96px square crops of the in-game trait badge, centered on the badge circle and saved as WebP at quality 90.
 
 ## Trait entry shape
