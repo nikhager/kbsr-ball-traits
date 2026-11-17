@@ -127,7 +127,8 @@
                     "name": "LAST GAME Aomine Peerless"
                 },
                 {
-                    "name": "Akashi Collection"
+                    "name": "Akashi Collection",
+                    "pickup": true
                 }
             ],
             "effectSource": "Tier III"
@@ -166,7 +167,8 @@
                     "name": "LAST GAME Kise"
                 },
                 {
-                    "name": "LAST GAME Kise Peerless"
+                    "name": "LAST GAME Kise Peerless",
+                    "pickup": true
                 },
                 {
                     "name": "Pumpkin Carnival"
@@ -259,10 +261,12 @@
             },
             "collections": [
                 {
-                    "name": "LAST GAME Kise"
+                    "name": "LAST GAME Kise",
+                    "pickup": true
                 },
                 {
-                    "name": "LAST GAME Kise Peerless"
+                    "name": "LAST GAME Kise Peerless",
+                    "pickup": true
                 },
                 {
                     "name": "LAST GAME Aomine Peerless"
@@ -279,6 +283,9 @@
         {
             "id": "clutch-player",
             "name": "Clutch Player",
+            "aliases": [
+                "Mr. Clutch"
+            ],
             "category": "Offense",
             "tags": [
                 "3PT"
@@ -302,7 +309,8 @@
                     "name": "Diviner Midorima Collection"
                 },
                 {
-                    "name": "LAST GAME Midorima"
+                    "name": "LAST GAME Midorima",
+                    "pickup": true
                 }
             ],
             "effectSource": "Tier III"
@@ -310,6 +318,9 @@
         {
             "id": "confident-long-shot",
             "name": "Confident Long Shot",
+            "aliases": [
+                "Long-Range Confidence"
+            ],
             "category": "Offense",
             "tags": [
                 "3PT"
@@ -330,10 +341,12 @@
             },
             "collections": [
                 {
-                    "name": "LAST GAME Midorima"
+                    "name": "LAST GAME Midorima",
+                    "pickup": true
                 },
                 {
-                    "name": "LAST GAME Midorima Peerless"
+                    "name": "LAST GAME Midorima Peerless",
+                    "pickup": true
                 }
             ],
             "effectSource": "Tier III"
@@ -341,6 +354,9 @@
         {
             "id": "long-range-intimidation",
             "name": "Long-Range Intimidation",
+            "aliases": [
+                "Long-Range Weapon"
+            ],
             "category": "Offense",
             "tags": [
                 "3PT",
@@ -394,7 +410,8 @@
             },
             "collections": [
                 {
-                    "name": "Pumpkin Carnival"
+                    "name": "Pumpkin Carnival",
+                    "pickup": true
                 },
                 {
                     "name": "Diviner Midorima Collection"
@@ -439,7 +456,8 @@
             },
             "collections": [
                 {
-                    "name": "LAST GAME Kise"
+                    "name": "LAST GAME Kise",
+                    "pickup": true
                 },
                 {
                     "name": "Nash"
@@ -508,7 +526,8 @@
             },
             "collections": [
                 {
-                    "name": "LAST GAME Midorima Peerless"
+                    "name": "LAST GAME Midorima Peerless",
+                    "pickup": true
                 },
                 {
                     "name": "LAST GAME Midorima"
@@ -592,7 +611,8 @@
                     "name": "ZONE Aomine Collection"
                 },
                 {
-                    "name": "Akashi Collection"
+                    "name": "Akashi Collection",
+                    "pickup": true
                 }
             ],
             "effectSource": "Tier III"
@@ -656,7 +676,8 @@
             },
             "collections": [
                 {
-                    "name": "Pumpkin Carnival"
+                    "name": "Pumpkin Carnival",
+                    "pickup": true
                 },
                 {
                     "name": "LAST GAME Midorima Peerless"
@@ -1075,6 +1096,9 @@
         {
             "id": "position-advantage",
             "name": "Position Advantage",
+            "aliases": [
+                "Body Position"
+            ],
             "category": "Rebounding",
             "tags": [
                 "Rebound"
