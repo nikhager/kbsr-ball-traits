@@ -77,7 +77,7 @@ def main():
     names_of = defaultdict(list)  # normalized trait name or alias -> trait labels using it
     for i, t in enumerate(data.get("traits", [])):
         if not isinstance(t, dict):
-            err(f"trait #{i + 1} must be an object, got {t!r}")
+            err(f"trait #{i + 1} must be an object, got {type(t).__name__}")
             continue
         label = t["id"] if isinstance(t.get("id"), str) and t["id"] else f"trait #{i + 1}"
         missing = TRAIT_KEYS - t.keys()
@@ -86,16 +86,18 @@ def main():
             continue
         if not isinstance(t["id"], str) or not re.fullmatch(r"[a-z0-9]+(-[a-z0-9]+)*", t["id"]):
             err(f"{label}: id must be lowercase and hyphenated")
-        if t["id"] in seen_ids:
+        elif t["id"] in seen_ids:
             err(f"{label}: duplicate id")
-        seen_ids.add(t["id"])
-        if t["category"] not in CATEGORIES:
+        else:
+            seen_ids.add(t["id"])
+        if not isinstance(t["category"], str) or t["category"] not in CATEGORIES:
             err(f"{label}: unknown category {t['category']!r}")
         if not isinstance(t["tags"], list) or not all(isinstance(x, str) for x in t["tags"]):
             err(f"{label}: tags must be a list of tag names")
-        bad_tags = set(x for x in t["tags"] if isinstance(x, str)) - TAGS if isinstance(t["tags"], list) else set()
-        if bad_tags:
-            err(f"{label}: unknown tags {sorted(bad_tags)}")
+        else:
+            bad_tags = set(t["tags"]) - TAGS
+            if bad_tags:
+                err(f"{label}: unknown tags {sorted(bad_tags)}")
         # Names and aliases share one namespace (case- and space-insensitive),
         # so an alias search can't match two traits.
         names_of[norm(t["name"])].append(label)
@@ -108,9 +110,11 @@ def main():
                 for a in aliases:
                     names_of[norm(a)].append(label)
 
-        tiers = t["tiers"] if isinstance(t["tiers"], dict) else {}
-        if not isinstance(t["tiers"], dict):
+        if isinstance(t["tiers"], dict):
+            tiers = t["tiers"]
+        else:
             err(f"{label}: tiers must be an object")
+            tiers = {}
         for tier, v in tiers.items():
             if tier not in TIERS:
                 err(f"{label}: unknown tier {tier!r}")
@@ -123,6 +127,9 @@ def main():
                 continue
             icon = v["icon"]
             if icon is None:
+                continue
+            if not isinstance(icon, str):
+                err(f"{label} {tier}: icon must be a string or null")
                 continue
             expected = f"images/icons/{t['id']}-{tier.lower()}.webp"
             if icon != expected:
