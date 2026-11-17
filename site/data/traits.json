@@ -1,5 +1,5 @@
 {
-    "updated": "2026-11-12",
+    "updated": "2026-11-17",
     "collections": [
         "Akashi Collection",
         "Autumn Moon",
@@ -1215,7 +1215,7 @@
             "tags": [
                 "Energy"
             ],
-            "effect": "Grants 1 extra energy per score. Grants additional 3 energy if you score first in the match.",
+            "effect": "Grants 1 extra energy per score. Grants additional 5 energy if you score first in the match.",
             "trainingCamp": "",
             "tiers": {
                 "II": {
@@ -1224,9 +1224,9 @@
                     "seenOn": "Kise Collection 360"
                 },
                 "III": {
-                    "value": "",
-                    "icon": null,
-                    "seenOn": ""
+                    "value": "+1 energy per score; +5 if first",
+                    "icon": "images/icons/first-victor-iii.webp",
+                    "seenOn": "Kise Collection 289"
                 }
             },
             "collections": [
@@ -1240,7 +1240,7 @@
                     "name": "LAST GAME Midorima"
                 }
             ],
-            "effectSource": "Tier II"
+            "effectSource": "Tier III"
         },
         {
             "id": "full-firepower",
