@@ -42,6 +42,17 @@ def main():
     except json.JSONDecodeError as e:
         print(f"FAIL: traits.json is not valid JSON: {e}")
         return 1
+    # Wrong shapes would otherwise crash the checks below with a traceback.
+    if not isinstance(data, dict):
+        print("FAIL: traits.json must be an object with updated, collections and traits")
+        return 1
+    if not isinstance(data.get("collections", []), list) \
+            or not all(isinstance(c, str) for c in data.get("collections", [])):
+        print("FAIL: collections must be a list of names")
+        return 1
+    if not isinstance(data.get("traits", []), list):
+        print("FAIL: traits must be a list")
+        return 1
 
     # Last updated date
     updated = data.get("updated", "")
@@ -65,24 +76,35 @@ def main():
     seen_ids, used_cols, used_icons = set(), set(), set()
     names_of = defaultdict(list)  # normalized trait name or alias -> trait labels using it
     for i, t in enumerate(data.get("traits", [])):
-        label = t.get("id") or f"trait #{i + 1}"
+        if not isinstance(t, dict):
+            got = "null" if t is None else type(t).__name__
+            err(f"trait #{i + 1} must be an object, got {got}")
+            continue
+        label = t["id"] if isinstance(t.get("id"), str) and t["id"] else f"trait #{i + 1}"
         missing = TRAIT_KEYS - t.keys()
         if missing:
             err(f"{label}: missing keys {sorted(missing)}")
             continue
-        if not re.fullmatch(r"[a-z0-9]+(-[a-z0-9]+)*", t["id"]):
+        if not isinstance(t["id"], str) or not re.fullmatch(r"[a-z0-9]+(-[a-z0-9]+)*", t["id"]):
             err(f"{label}: id must be lowercase and hyphenated")
-        if t["id"] in seen_ids:
+        elif t["id"] in seen_ids:
             err(f"{label}: duplicate id")
-        seen_ids.add(t["id"])
-        if t["category"] not in CATEGORIES:
+        else:
+            seen_ids.add(t["id"])
+        if not isinstance(t["category"], str) or t["category"] not in CATEGORIES:
             err(f"{label}: unknown category {t['category']!r}")
-        bad_tags = set(t["tags"]) - TAGS
-        if bad_tags:
-            err(f"{label}: unknown tags {sorted(bad_tags)}")
+        if not isinstance(t["tags"], list) or not all(isinstance(x, str) for x in t["tags"]):
+            err(f"{label}: tags must be a list of tag names")
+        else:
+            bad_tags = set(t["tags"]) - TAGS
+            if bad_tags:
+                err(f"{label}: unknown tags {sorted(bad_tags)}")
         # Names and aliases share one namespace (case- and space-insensitive),
         # so an alias search can't match two traits.
-        names_of[norm(t["name"])].append(label)
+        if not isinstance(t["name"], str) or not t["name"].strip():
+            err(f"{label}: name must be a non-empty string")
+        else:
+            names_of[norm(t["name"])].append(label)
         if "aliases" in t:
             aliases = t["aliases"]
             if not isinstance(aliases, list) or not aliases \
@@ -92,15 +114,26 @@ def main():
                 for a in aliases:
                     names_of[norm(a)].append(label)
 
-        for tier, v in t["tiers"].items():
+        if isinstance(t["tiers"], dict):
+            tiers = t["tiers"]
+        else:
+            err(f"{label}: tiers must be an object")
+            tiers = {}
+        for tier, v in tiers.items():
             if tier not in TIERS:
                 err(f"{label}: unknown tier {tier!r}")
+                continue
+            if not isinstance(v, dict):
+                err(f"{label} {tier}: must be an object")
                 continue
             if TIER_KEYS - v.keys():
                 err(f"{label} {tier}: missing keys {sorted(TIER_KEYS - v.keys())}")
                 continue
             icon = v["icon"]
             if icon is None:
+                continue
+            if not isinstance(icon, str):
+                err(f"{label} {tier}: icon must be a string or null")
                 continue
             expected = f"images/icons/{t['id']}-{tier.lower()}.webp"
             if icon != expected:
