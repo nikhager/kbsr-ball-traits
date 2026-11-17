@@ -56,6 +56,8 @@ main{padding-block:16px 40px}
 .cols{font-size:.8rem;color:var(--muted);line-height:1.45;margin:0;border-top:1px solid var(--line);padding-top:8px}
 .cols b{color:var(--fg);font-weight:600}
 .cols mark{background:var(--accent-bg);color:var(--fg);border-radius:4px;padding:0 3px}
+.cols .pick{color:var(--t3);cursor:help}
+.aka{display:block;font-family:var(--body);font-weight:500;font-size:.75rem;color:var(--muted);margin-top:2px}
 .empty{color:var(--muted);padding:24px 0}
 footer{color:var(--muted);font-size:.8rem;line-height:1.5;padding-block:0 32px}
 footer a{color:var(--accent)}

@@ -105,6 +105,27 @@ test("Found on highlights the selected collection", () => {
     assert.equal(cols.textContent, "Found on: Akashi Collection · Nash");
 });
 
+test("Found on stars a box's pickup collection", () => {
+    const { card } = loadApp();
+    const cols = card(trait({ collections: [{ name: "Akashi Collection", pickup: true }, { name: "Nash" }] })).find("cols");
+    assert.equal(cols.textContent, "Found on: Akashi Collection ★ · Nash");
+    assert.equal(cols.find("pick").attrs.title, "Pickup trait for this box");
+});
+
+test("only pickup: true gets a star", () => {
+    const { card } = loadApp();
+    const cols = card(trait({ collections: [{ name: "Nash", pickup: "yes" }] })).find("cols");
+    assert.equal(cols.textContent, "Found on: Nash");
+});
+
+test("a card lists aliases under the name, and none when absent", () => {
+    const { card } = loadApp();
+    const name = card(trait({ aliases: ["Quick Drive", "Fast Break"] })).find("name");
+    assert.equal(name.find("aka").textContent, "Also called Quick Drive, Fast Break");
+    assert.equal(card(trait()).find("name").find("aka"), null);
+    assert.equal(card(trait({ aliases: [] })).find("name").textContent, "Sharp Drive");
+});
+
 test("Found on says None logged yet with no collections", () => {
     const { card } = loadApp();
     assert.equal(card(trait({ collections: [] })).find("cols").textContent, "Found on: None logged yet");

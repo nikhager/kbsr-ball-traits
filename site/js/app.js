@@ -59,7 +59,11 @@ function buildControls() {
     window.addEventListener("hashchange", () => { readHash(); render(); });
 }
 
+// Other names the game uses for a trait (translation variants). Optional in the data.
+const aliasesOf = t => Array.isArray(t.aliases) ? t.aliases : [];
+
 function card(t) {
+    const aliases = aliasesOf(t);
     const anyIcon = Object.values(t.tiers).some(v => v.icon);
     const vars = ["II","III"].map(tier => {
         const v = t.tiers[tier];
@@ -78,6 +82,8 @@ function card(t) {
         t.collections.forEach((c, i) => {
             if (i) parts.push(" · ");
             parts.push(c.name === state.col ? el("mark", {}, c.name) : c.name);
+            // A box's pickup trait (gold-lettered in its shop listing) gets a gold star.
+            if (c.pickup === true) parts.push(" ", el("span", { class: "pick", title: "Pickup trait for this box" }, "★"));
         });
     } else {
         parts.push("None logged yet");
@@ -96,7 +102,7 @@ function card(t) {
         el("div", { class: "top" },
             el("span", { class: "cat" }, t.category),
             el("div", { class: "tags" }, ...cardTags(t.tags).map(x => el("span", { class: "tag" }, x)))),
-        el("div", { class: "name" }, t.name),
+        el("div", { class: "name" }, t.name, ...(aliases.length ? [el("span", { class: "aka" }, `Also called ${aliases.join(", ")}`)] : [])),
         el("div", { class: "vars" }, ...vars),
         body,
         cols);
@@ -110,7 +116,7 @@ function render() {
     });
     const matchTag = (t, tag) => !tag || t.tags.includes(tag);
     const matchCol = (t, col) => !col || t.collections.some(c => c.name === col);
-    const matchQ = t => !state.q || (t.name + " " + t.effect).toLowerCase().includes(state.q);
+    const matchQ = t => !state.q || [t.name, ...aliasesOf(t), t.effect].join(" ").toLowerCase().includes(state.q);
     const list = DATA.traits.filter(t => matchTag(t, state.tag) && matchCol(t, state.col) && matchQ(t));
     // Counts show how many traits each option would give, with the other filters kept as they are.
     document.querySelectorAll("#tags .chip").forEach(b => {
