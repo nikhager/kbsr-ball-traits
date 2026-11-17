@@ -192,6 +192,8 @@ class ValidatorTests(unittest.TestCase):
             (bad(lambda d: d["traits"][0].update(id=5)), "trait #1: id must be lowercase and hyphenated"),
             (bad(lambda d: d["traits"][0].update(id=["x"])), "trait #1: id must be lowercase and hyphenated"),
             (bad(lambda d: d["traits"][0].update(category=[])), "unknown category []"),
+            (bad(lambda d: d["traits"][0].update(name=["x"])), "name must be a non-empty string"),
+            (bad(lambda d: d["traits"].append(None)), "trait #2 must be an object, got null"),
             (bad(lambda d: d["traits"][0]["tiers"]["II"].update(icon=5)), "II: icon must be a string or null"),
             (bad(lambda d: d["traits"][0].update(tags="3PT")), "tags must be a list of tag names"),
             (bad(lambda d: d["traits"][0].update(tiers=[])), "tiers must be an object"),

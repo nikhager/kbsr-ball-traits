@@ -77,7 +77,8 @@ def main():
     names_of = defaultdict(list)  # normalized trait name or alias -> trait labels using it
     for i, t in enumerate(data.get("traits", [])):
         if not isinstance(t, dict):
-            err(f"trait #{i + 1} must be an object, got {type(t).__name__}")
+            got = "null" if t is None else type(t).__name__
+            err(f"trait #{i + 1} must be an object, got {got}")
             continue
         label = t["id"] if isinstance(t.get("id"), str) and t["id"] else f"trait #{i + 1}"
         missing = TRAIT_KEYS - t.keys()
@@ -100,7 +101,10 @@ def main():
                 err(f"{label}: unknown tags {sorted(bad_tags)}")
         # Names and aliases share one namespace (case- and space-insensitive),
         # so an alias search can't match two traits.
-        names_of[norm(t["name"])].append(label)
+        if not isinstance(t["name"], str) or not t["name"].strip():
+            err(f"{label}: name must be a non-empty string")
+        else:
+            names_of[norm(t["name"])].append(label)
         if "aliases" in t:
             aliases = t["aliases"]
             if not isinstance(aliases, list) or not aliases \
