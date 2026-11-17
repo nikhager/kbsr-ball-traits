@@ -153,7 +153,7 @@ class ValidatorTests(unittest.TestCase):
 
     def test_alias_listed_twice(self):
         self.assertFails(bad(lambda d: d["traits"][0].update(aliases=["Quick Drive", " quick  drive"])),
-                         "'quick drive' is used more than once (sharp-drive, sharp-drive)")
+                         "'quick drive' is used more than once (sharp-drive)")
 
     def test_alias_repeats_name(self):
         self.assertFails(bad(lambda d: d["traits"][0].update(aliases=["sharp drive"])),

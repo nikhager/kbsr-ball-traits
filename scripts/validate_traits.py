@@ -134,7 +134,8 @@ def main():
 
     for n, labels in sorted(names_of.items()):
         if len(labels) > 1:
-            err(f"name or alias {n!r} is used more than once ({', '.join(labels)})")
+            where = ", ".join(dict.fromkeys(labels))  # each trait once, in file order
+            err(f"name or alias {n!r} is used more than once ({where})")
 
     for c in sorted(set(cols) - used_cols):
         warnings.append(f"collection {c!r} isn't used by any trait")
