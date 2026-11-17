@@ -19,7 +19,7 @@ The game has no public wiki, and trait details only show up in in-game tooltips.
 Most traits are logged. Collection lists and some tier values are still partial and fill in as boxes cycle back into the shop. Missing values show on the page as "Not seen yet" or "Numbers not logged" rather than guesses.
 
 ## How it works
-A static site with no build step and no dependencies, served by Cloudflare Pages from `main`. Changes go through a pull request; every branch gets a preview build, and merging to `main` deploys. Only the `site/` folder is published. The page fetches the trait data and renders the filterable cards with plain JavaScript.
+A static site with no build step and no dependencies, served by Cloudflare Pages from `main`. Changes go through a pull request; every branch gets a preview build, and merging to `main` deploys. Only the `site/` folder is published. The page fetches the trait data and renders the filterable cards with plain JavaScript. Why this stack, and when to move to a framework (Astro, if the site grows into a wiki), is in [`docs/design/stack/`](docs/design/stack/README.md).
 
 ```
 site/                 everything the page loads (the only folder Cloudflare publishes)
