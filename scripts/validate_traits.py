@@ -7,6 +7,7 @@ Exits 1 and lists every problem if any check fails. No dependencies.
 import json
 import re
 import sys
+from collections import defaultdict
 from datetime import date
 from pathlib import Path
 
@@ -21,8 +22,14 @@ TIERS = ("II", "III")
 TRAIT_KEYS = {"id", "name", "category", "tags", "effect", "effectSource",
               "trainingCamp", "tiers", "collections"}
 TIER_KEYS = {"value", "icon", "seenOn"}
+# Optional keys: "aliases" on a trait, "pickup" on a collection entry.
+COLLECTION_KEYS = {"name", "pickup"}
 
 errors, warnings = [], []
+
+
+def norm(s):
+    return " ".join(s.split()).casefold() if isinstance(s, str) else repr(s)
 
 
 def err(msg):
@@ -56,6 +63,7 @@ def main():
 
     # Traits
     seen_ids, used_cols, used_icons = set(), set(), set()
+    names_of = defaultdict(list)  # normalized trait name or alias -> trait labels using it
     for i, t in enumerate(data.get("traits", [])):
         label = t.get("id") or f"trait #{i + 1}"
         missing = TRAIT_KEYS - t.keys()
@@ -72,6 +80,17 @@ def main():
         bad_tags = set(t["tags"]) - TAGS
         if bad_tags:
             err(f"{label}: unknown tags {sorted(bad_tags)}")
+        # Names and aliases share one namespace (case- and space-insensitive),
+        # so an alias search can't match two traits.
+        names_of[norm(t["name"])].append(label)
+        if "aliases" in t:
+            aliases = t["aliases"]
+            if not isinstance(aliases, list) or not aliases \
+                    or not all(isinstance(a, str) and a.strip() for a in aliases):
+                err(f"{label}: aliases must be a non-empty list of non-empty strings (leave the key out if none)")
+            else:
+                for a in aliases:
+                    names_of[norm(a)].append(label)
 
         for tier, v in t["tiers"].items():
             if tier not in TIERS:
@@ -105,9 +124,18 @@ def main():
         for c in entries:
             if c.get("name") not in cols:
                 err(f"{label}: collection {c.get('name')!r} is not in the collections list")
-            if set(c) != {"name"}:
-                err(f"{label}: collection {c.get('name')!r} should only have a name (any trait can roll II or III on a gold ball)")
+            extra = set(c) - COLLECTION_KEYS
+            if extra:
+                err(f"{label}: collection {c.get('name')!r} has unknown key(s) {sorted(extra)}; it should only have a name"
+                    " and optional pickup (any trait can roll II or III on a gold ball)")
+            if "pickup" in c and c["pickup"] is not True:
+                err(f"{label}: collection {c.get('name')!r} pickup must be true, or left out")
             used_cols.add(c.get("name"))
+
+    for n, labels in sorted(names_of.items()):
+        if len(labels) > 1:
+            where = ", ".join(dict.fromkeys(labels))  # each trait once, in file order
+            err(f"name or alias {n!r} is used more than once ({where})")
 
     for c in sorted(set(cols) - used_cols):
         warnings.append(f"collection {c!r} isn't used by any trait")
