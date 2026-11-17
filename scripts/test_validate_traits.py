@@ -182,6 +182,22 @@ class ValidatorTests(unittest.TestCase):
         self.assertFails(bad(lambda d: d.update(collections=["Akashi Collection", "Nash", "Nash"])),
                          "duplicate collections: ['Nash']")
 
+    def test_wrong_shapes_fail_cleanly(self):
+        # Each of these used to crash the validator with a traceback.
+        cases = [
+            ("[]", "must be an object with updated, collections and traits"),
+            (bad(lambda d: d.update(traits={"x": 1})), "traits must be a list"),
+            (bad(lambda d: d.update(collections=[1])), "collections must be a list of names"),
+            (bad(lambda d: d["traits"].append("oops")), "trait #2 must be an object, got 'oops'"),
+            (bad(lambda d: d["traits"][0].update(id=5)), "trait #1: id must be lowercase and hyphenated"),
+            (bad(lambda d: d["traits"][0].update(tags="3PT")), "tags must be a list of tag names"),
+            (bad(lambda d: d["traits"][0].update(tiers=[])), "tiers must be an object"),
+            (bad(lambda d: d["traits"][0]["tiers"].update(III="none")), "III: must be an object"),
+        ]
+        for data, message in cases:
+            with self.subTest(message=message):
+                self.assertFails(data, message)
+
     def test_duplicate_id(self):
         self.assertFails(bad(lambda d: d["traits"].append(copy.deepcopy(d["traits"][0]))), "duplicate id")
 

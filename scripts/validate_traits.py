@@ -42,6 +42,17 @@ def main():
     except json.JSONDecodeError as e:
         print(f"FAIL: traits.json is not valid JSON: {e}")
         return 1
+    # Wrong shapes would otherwise crash the checks below with a traceback.
+    if not isinstance(data, dict):
+        print("FAIL: traits.json must be an object with updated, collections and traits")
+        return 1
+    if not isinstance(data.get("collections", []), list) \
+            or not all(isinstance(c, str) for c in data.get("collections", [])):
+        print("FAIL: collections must be a list of names")
+        return 1
+    if not isinstance(data.get("traits", []), list):
+        print("FAIL: traits must be a list")
+        return 1
 
     # Last updated date
     updated = data.get("updated", "")
@@ -65,19 +76,24 @@ def main():
     seen_ids, used_cols, used_icons = set(), set(), set()
     names_of = defaultdict(list)  # normalized trait name or alias -> trait labels using it
     for i, t in enumerate(data.get("traits", [])):
-        label = t.get("id") or f"trait #{i + 1}"
+        if not isinstance(t, dict):
+            err(f"trait #{i + 1} must be an object, got {t!r}")
+            continue
+        label = t["id"] if isinstance(t.get("id"), str) and t["id"] else f"trait #{i + 1}"
         missing = TRAIT_KEYS - t.keys()
         if missing:
             err(f"{label}: missing keys {sorted(missing)}")
             continue
-        if not re.fullmatch(r"[a-z0-9]+(-[a-z0-9]+)*", t["id"]):
+        if not isinstance(t["id"], str) or not re.fullmatch(r"[a-z0-9]+(-[a-z0-9]+)*", t["id"]):
             err(f"{label}: id must be lowercase and hyphenated")
         if t["id"] in seen_ids:
             err(f"{label}: duplicate id")
         seen_ids.add(t["id"])
         if t["category"] not in CATEGORIES:
             err(f"{label}: unknown category {t['category']!r}")
-        bad_tags = set(t["tags"]) - TAGS
+        if not isinstance(t["tags"], list) or not all(isinstance(x, str) for x in t["tags"]):
+            err(f"{label}: tags must be a list of tag names")
+        bad_tags = set(x for x in t["tags"] if isinstance(x, str)) - TAGS if isinstance(t["tags"], list) else set()
         if bad_tags:
             err(f"{label}: unknown tags {sorted(bad_tags)}")
         # Names and aliases share one namespace (case- and space-insensitive),
@@ -92,9 +108,15 @@ def main():
                 for a in aliases:
                     names_of[norm(a)].append(label)
 
-        for tier, v in t["tiers"].items():
+        tiers = t["tiers"] if isinstance(t["tiers"], dict) else {}
+        if not isinstance(t["tiers"], dict):
+            err(f"{label}: tiers must be an object")
+        for tier, v in tiers.items():
             if tier not in TIERS:
                 err(f"{label}: unknown tier {tier!r}")
+                continue
+            if not isinstance(v, dict):
+                err(f"{label} {tier}: must be an object")
                 continue
             if TIER_KEYS - v.keys():
                 err(f"{label} {tier}: missing keys {sorted(TIER_KEYS - v.keys())}")
