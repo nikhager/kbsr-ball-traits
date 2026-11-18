@@ -64,7 +64,7 @@ Everything the page loads lives in `site/`; paths inside the page and in `traits
 - PRs are squash-merged on GitHub, and merged branches are deleted automatically.
 - PR titles use Conventional Commits, since the title becomes the commit on `main`; `.github/workflows/pr-title.yml` checks it. Data updates are `feat(data): …` (e.g. `feat(data): log Clutch Player II values`), corrections `fix(data): …`, page changes `feat(site): …` / `fix(site): …`, docs `docs: …`, tooling `chore: …`. Fill in `.github/pull_request_template.md`.
 - Branch names: `type/short-description` (e.g. `feat/clutch-player-ii`), lowercase. They also name the Cloudflare preview URL, so keep them short.
-- Dependabot opens weekly PRs to update the GitHub Actions versions; merge them when checks pass.
+- Dependabot opens weekly PRs to update the GitHub Actions versions. They're Ask: they're assigned to Nik and labelled `needs-nik-review`, and Nik merges them.
 - Formatting: indent with 4 spaces, never 2 and never tab characters (the Tab key inserts 4 spaces; see `.editorconfig`), in every file type. When a script writes `traits.json`, use `json.dumps(data, indent=4, ensure_ascii=False)` plus a trailing newline so the file keeps its format.
 - Every PR: run `python3 scripts/validate_traits.py` before pushing, and don't merge while the "Checks" check is red (GitHub blocks it anyway).
 - Every PR: check `updated` at the top of `site/data/traits.json` (shown as "Last updated" in the footer) and set it to the date the PR is pushed/merged (owner's time zone, America/Los_Angeles).

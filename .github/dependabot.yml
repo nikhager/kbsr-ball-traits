@@ -1,5 +1,12 @@
 # Weekly dependency update PRs. Uncomment a block once that manifest exists,
 # and set `directory` if the code lives in a subfolder (e.g. /api or /web).
+#
+# Every PR is assigned to Nik and labelled `needs-nik-review`, so it shows up
+# under github.com/pulls -> Assigned; the weekly PR digest (nikhager/workflows)
+# lists all open Dependabot PRs. Matches CLAUDE.md (Dependabot PRs are Ask):
+# Actions bumps are CI config, and Nik merges all dependency PRs himself.
+# Setting `labels` replaces Dependabot's defaults, so `dependencies` is listed
+# too. Labels that don't exist are skipped; both already exist in this repo.
 version: 2
 updates:
     - package-ecosystem: github-actions
@@ -8,6 +15,8 @@ updates:
           interval: weekly
       commit-message:
           prefix: chore
+      assignees: [nikhager]
+      labels: [dependencies, needs-nik-review]
 
     # Python (pyproject.toml / requirements.txt)
     # - package-ecosystem: pip
@@ -16,6 +25,8 @@ updates:
     #       interval: weekly
     #   commit-message:
     #       prefix: chore
+    #   assignees: [nikhager]
+    #   labels: [dependencies, needs-nik-review]
 
     # JavaScript (package.json)
     # - package-ecosystem: npm
@@ -24,3 +35,5 @@ updates:
     #       interval: weekly
     #   commit-message:
     #       prefix: chore
+    #   assignees: [nikhager]
+    #   labels: [dependencies, needs-nik-review]
