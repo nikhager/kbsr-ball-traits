@@ -168,9 +168,19 @@ test("tiers without numbers or icons show the right placeholder", () => {
             III: { value: "", icon: null, seenOn: "" },
         },
     });
-    const text = card(t).textContent;
-    assert.match(text, /Numbers not logged/);
-    assert.match(text, /Not seen yet/);
+    // III (no icon) is on the left, II (icon, no numbers) on the right.
+    const vars = card(t).find("vars").children;
+    assert.deepEqual(vars.map(v => v.find("none").textContent), ["Not seen yet", "Numbers not logged"]);
+});
+
+test("tier III shows first (left), then tier II", () => {
+    // III is the tier people compare, so it sits on the reading line under the name.
+    const { card } = loadApp();
+    const vars = card(trait()).find("vars").children;
+    assert.deepEqual(vars.map(v => v.find("tier").textContent), ["Tier III", "Tier II"]);
+    assert.deepEqual(vars.map(v => v.find("val").textContent), ["+1.5%", "+1.2%"]);
+    assert.deepEqual(vars.map(v => v.children[0].attrs.src),
+        ["images/icons/sharp-drive-iii.webp", "images/icons/sharp-drive-ii.webp"]);
 });
 
 test("a summary effect is labelled as not seen in game", () => {
