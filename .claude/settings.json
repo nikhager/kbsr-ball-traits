@@ -35,6 +35,7 @@
             "Bash(supabase db reset*)"
         ],
         "ask": [
+            "Bash(git push *)",
             "Edit(/.github/**)",
             "Write(/.github/**)",
             "Bash(git push)",
