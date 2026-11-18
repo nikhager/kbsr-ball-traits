@@ -67,6 +67,7 @@ const matchesQuery = (t, q) => !q || [t.name, ...aliasesOf(t), t.effect].join(" 
 function card(t) {
     const aliases = aliasesOf(t);
     const anyIcon = Object.values(t.tiers).some(v => v.icon);
+    // III first (left): it's the tier players compare, so it sits on the reading line.
     const vars = ["III","II"].map(tier => {
         const v = t.tiers[tier];
         const img = v.icon
