@@ -67,7 +67,7 @@ const matchesQuery = (t, q) => !q || [t.name, ...aliasesOf(t), t.effect].join(" 
 function card(t) {
     const aliases = aliasesOf(t);
     const anyIcon = Object.values(t.tiers).some(v => v.icon);
-    const vars = ["II","III"].map(tier => {
+    const vars = ["III","II"].map(tier => {
         const v = t.tiers[tier];
         const img = v.icon
             ? el("img", { src: v.icon, alt: `${t.name} tier ${tier} icon`, width: "64", height: "64", loading: "lazy" })

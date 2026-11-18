@@ -173,6 +173,14 @@ test("tiers without numbers or icons show the right placeholder", () => {
     assert.match(text, /Not seen yet/);
 });
 
+test("tier III shows first (left), then tier II", () => {
+    // III is the tier people compare, so it sits on the reading line under the name.
+    const { card } = loadApp();
+    const vars = card(trait()).find("vars").children;
+    assert.deepEqual(vars.map(v => v.find("tier").textContent), ["Tier III", "Tier II"]);
+    assert.deepEqual(vars.map(v => v.find("val").textContent), ["+1.5%", "+1.2%"]);
+});
+
 test("a summary effect is labelled as not seen in game", () => {
     const { card } = loadApp();
     assert.match(card(trait({ effectSource: "" })).textContent, /Summary\. Not seen in game yet/);
