@@ -105,22 +105,30 @@ test("Found on highlights the selected collection", () => {
     assert.equal(cols.textContent, "Found on: Akashi Collection · Nash");
 });
 
-test("Found on stars a box's pickup collection", () => {
+test("Found on lists pickup collections first, in bold", () => {
     const { card } = loadApp();
-    const cols = card(trait({ collections: [{ name: "Akashi Collection", pickup: true }, { name: "Nash" }] })).find("cols");
-    assert.equal(cols.textContent, "Found on: Akashi Collection ★ · Nash");
-    assert.deepEqual(cols.texts(), ["Found on:", " Akashi Collection ", "★", " · Nash"]);
+    const cols = card(trait({ collections: [{ name: "Akashi Collection" }, { name: "Nash", pickup: true }, { name: "Seirin Spirit" }] })).find("cols");
+    assert.equal(cols.textContent, "Found on: Nash (pickup) · Akashi Collection · Seirin Spirit");
+    assert.deepEqual(cols.texts(), ["Found on:", " ", "Nash", " (pickup)", " · Akashi Collection · Seirin Spirit"]);
+    assert.ok(!cols.textContent.includes("★"));
     const pick = cols.find("pick");
+    assert.equal(pick.tag, "strong");
     assert.equal(pick.attrs.title, "Pickup trait for this box");
-    assert.equal(pick.attrs["aria-label"], "pickup trait");
+});
+
+test("several pickups keep their data order ahead of the rest", () => {
+    const { card } = loadApp();
+    const cols = card(trait({ collections: [{ name: "A" }, { name: "B", pickup: true }, { name: "C" }, { name: "D", pickup: true }] })).find("cols");
+    assert.equal(cols.textContent, "Found on: B (pickup) · D (pickup) · A · C");
 });
 
 test("a highlighted collection can also be a pickup", () => {
     const app = loadApp();
     app.state.col = "Akashi Collection";
     const cols = app.card(trait({ collections: [{ name: "Akashi Collection", pickup: true }, { name: "Nash" }] })).find("cols");
-    assert.deepEqual(cols.texts(), ["Found on:", " ", "Akashi Collection", " ", "★", " · Nash"]);
-    assert.equal(cols.children.filter(c => typeof c !== "string" && c.tag === "mark").length, 1);
+    assert.equal(cols.textContent, "Found on: Akashi Collection (pickup) · Nash");
+    const pick = cols.find("pick");
+    assert.equal(pick.children.filter(c => typeof c !== "string" && c.tag === "mark").length, 1);
 });
 
 test("search matches the name, an alias or the effect", () => {

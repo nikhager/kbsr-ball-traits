@@ -77,15 +77,19 @@ function card(t) {
             : el("div", { class: "none" }, v.icon ? "Numbers not logged" : "Not seen yet");
         return el("div", { class: "var" }, img, el("span", { class: `tier ${tier}` }, `Tier ${tier}`), val);
     });
-    // Keep runs of plain text in one text node (split only around the <mark> and pickup ★).
+    // Keep runs of plain text in one text node (split only around the <mark> and pickup names).
     // Splitting it into many nodes shifted the line by a few pixels in Chrome.
     const parts = [" "];
     if (t.collections.length) {
-        t.collections.forEach((c, i) => {
+        // Collections whose box has this as a pickup trait (gold-lettered in its shop listing)
+        // come first, in bold gold; the rest keep their data order.
+        const ordered = [...t.collections.filter(c => c.pickup === true), ...t.collections.filter(c => c.pickup !== true)];
+        ordered.forEach((c, i) => {
             if (i) parts.push(" · ");
-            parts.push(c.name === state.col ? el("mark", {}, c.name) : c.name);
-            // A box's pickup trait (gold-lettered in its shop listing) gets a gold star.
-            if (c.pickup === true) parts.push(" ", el("span", { class: "pick", role: "img", "aria-label": "pickup trait", title: "Pickup trait for this box" }, "★"));
+            const name = c.name === state.col ? el("mark", {}, c.name) : c.name;
+            parts.push(c.pickup === true
+                ? el("strong", { class: "pick", title: "Pickup trait for this box" }, name, el("span", { class: "sr-only" }, " (pickup)"))
+                : name);
         });
     } else {
         parts.push("None logged yet");
