@@ -63,7 +63,7 @@ function buildControls() {
 const aliasesOf = t => Array.isArray(t.aliases) ? t.aliases : [];
 // Search box match: trait name, other names, or effect text. `q` is already lowercased.
 const matchesQuery = (t, q) => !q || [t.name, ...aliasesOf(t), t.effect].join(" ").toLowerCase().includes(q);
-// With a collection picked, that box's pickup traits (its most likely rolls) come first.
+// With a collection picked, that box's pickup traits (gold in its shop list) come first.
 // Otherwise, and within each group, traits keep their data order.
 const isPickupIn = (t, col) => t.collections.some(c => c.name === col && c.pickup === true);
 const pickupsFirst = (list, col) => !col ? list
