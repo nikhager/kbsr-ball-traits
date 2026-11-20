@@ -49,7 +49,7 @@ function loadApp() {
         setTimeout: () => 0,
     };
     vm.createContext(sandbox);
-    vm.runInContext(APP + "\n;globalThis.__app = { cardTags, slugify, card, state, TAGS, SHOTS, matchesQuery };", sandbox);
+    vm.runInContext(APP + "\n;globalThis.__app = { cardTags, slugify, card, state, TAGS, SHOTS, matchesQuery, pickupsFirst };", sandbox);
     return sandbox.__app;
 }
 
@@ -114,6 +114,20 @@ test("Found on lists pickup collections first, in bold", () => {
     const pick = cols.find("pick");
     assert.equal(pick.tag, "strong");
     assert.equal(pick.attrs.title, "Pickup trait for this box");
+});
+
+test("pickupsFirst puts the selected collection's pickups first, keeping data order", () => {
+    const { pickupsFirst } = loadApp();
+    const t = (id, collections) => ({ id, collections });
+    const list = [
+        t("a", [{ name: "Nash" }]),
+        t("b", [{ name: "Nash", pickup: true }]),
+        t("c", [{ name: "Akashi Collection", pickup: true }, { name: "Nash" }]),
+        t("d", [{ name: "Nash", pickup: true }]),
+    ];
+    assert.deepEqual([...pickupsFirst(list, "Nash").map(x => x.id)], ["b", "d", "a", "c"]);
+    assert.deepEqual([...pickupsFirst(list, "").map(x => x.id)], ["a", "b", "c", "d"]);
+    assert.deepEqual([...pickupsFirst(list, "Seirin Spirit").map(x => x.id)], ["a", "b", "c", "d"]);
 });
 
 test("several pickups keep their data order ahead of the rest", () => {
