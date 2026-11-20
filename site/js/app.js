@@ -63,6 +63,11 @@ function buildControls() {
 const aliasesOf = t => Array.isArray(t.aliases) ? t.aliases : [];
 // Search box match: trait name, other names, or effect text. `q` is already lowercased.
 const matchesQuery = (t, q) => !q || [t.name, ...aliasesOf(t), t.effect].join(" ").toLowerCase().includes(q);
+// With a collection picked, that box's pickup traits (its most likely rolls) come first.
+// Otherwise, and within each group, traits keep their data order.
+const isPickupIn = (t, col) => t.collections.some(c => c.name === col && c.pickup === true);
+const pickupsFirst = (list, col) => !col ? list
+    : [...list.filter(t => isPickupIn(t, col)), ...list.filter(t => !isPickupIn(t, col))];
 
 function card(t) {
     const aliases = aliasesOf(t);
@@ -124,7 +129,7 @@ function render() {
     const matchTag = (t, tag) => !tag || t.tags.includes(tag);
     const matchCol = (t, col) => !col || t.collections.some(c => c.name === col);
     const matchQ = t => matchesQuery(t, state.q);
-    const list = DATA.traits.filter(t => matchTag(t, state.tag) && matchCol(t, state.col) && matchQ(t));
+    const list = pickupsFirst(DATA.traits.filter(t => matchTag(t, state.tag) && matchCol(t, state.col) && matchQ(t)), state.col);
     // Counts show how many traits each option would give, with the other filters kept as they are.
     document.querySelectorAll("#tags .chip").forEach(b => {
         const n = DATA.traits.filter(t => matchTag(t, b.dataset.tag) && matchCol(t, state.col) && matchQ(t)).length;
