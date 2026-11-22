@@ -1,5 +1,5 @@
 {
-    "updated": "2026-11-19",
+    "updated": "2026-11-21",
     "collections": [
         "Akashi Collection",
         "Autumn Moon",
@@ -546,9 +546,9 @@
             "trainingCamp": "",
             "tiers": {
                 "II": {
-                    "value": "",
-                    "icon": null,
-                    "seenOn": ""
+                    "value": "+0.3 Speed for 3s",
+                    "icon": "images/icons/catch-attack-ii.webp",
+                    "seenOn": "SP Akashi Collection 278"
                 },
                 "III": {
                     "value": "+0.4 Speed for 3s",
@@ -565,6 +565,9 @@
                 },
                 {
                     "name": "LAST GAME Midorima"
+                },
+                {
+                    "name": "SP Akashi Collection"
                 }
             ],
             "effectSource": "Tier III"
