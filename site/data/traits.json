@@ -1,5 +1,5 @@
 {
-    "updated": "2026-11-21",
+    "updated": "2026-11-26",
     "collections": [
         "Akashi Collection",
         "Autumn Moon",
@@ -8,6 +8,8 @@
         "Graffiti Master",
         "Jason Silver",
         "Kise Collection",
+        "LAST GAME Akashi",
+        "LAST GAME Akashi Collection",
         "LAST GAME Aomine",
         "LAST GAME Aomine Peerless",
         "LAST GAME Kise",
@@ -129,6 +131,9 @@
                 {
                     "name": "Akashi Collection",
                     "pickup": true
+                },
+                {
+                    "name": "LAST GAME Akashi Collection"
                 }
             ],
             "effectSource": "Tier III"
@@ -190,6 +195,9 @@
                 },
                 {
                     "name": "Akashi Collection"
+                },
+                {
+                    "name": "LAST GAME Akashi Collection"
                 }
             ],
             "effectSource": "Tier III"
@@ -228,6 +236,9 @@
                 },
                 {
                     "name": "LAST GAME Midorima Peerless"
+                },
+                {
+                    "name": "LAST GAME Akashi"
                 }
             ],
             "effectSource": "Tier III"
@@ -276,6 +287,9 @@
                 },
                 {
                     "name": "LAST GAME Midorima"
+                },
+                {
+                    "name": "LAST GAME Akashi"
                 }
             ],
             "effectSource": "Tier III"
@@ -383,6 +397,10 @@
                 },
                 {
                     "name": "SP Akashi Collection"
+                },
+                {
+                    "name": "LAST GAME Akashi Collection",
+                    "pickup": true
                 }
             ],
             "effectSource": "Tier II"
@@ -427,6 +445,9 @@
                 },
                 {
                     "name": "Wave Rider"
+                },
+                {
+                    "name": "LAST GAME Akashi Collection"
                 }
             ],
             "effectSource": "Tier III"
@@ -464,6 +485,9 @@
                 },
                 {
                     "name": "Midorima Collection"
+                },
+                {
+                    "name": "LAST GAME Akashi"
                 }
             ],
             "effectSource": "Tier III"
@@ -531,6 +555,12 @@
                 },
                 {
                     "name": "LAST GAME Midorima"
+                },
+                {
+                    "name": "LAST GAME Akashi"
+                },
+                {
+                    "name": "LAST GAME Akashi Collection"
                 }
             ],
             "effectSource": "Tier III"
@@ -616,6 +646,13 @@
                 {
                     "name": "Akashi Collection",
                     "pickup": true
+                },
+                {
+                    "name": "LAST GAME Akashi",
+                    "pickup": true
+                },
+                {
+                    "name": "LAST GAME Akashi Collection"
                 }
             ],
             "effectSource": "Tier III"
@@ -684,6 +721,9 @@
                 },
                 {
                     "name": "LAST GAME Midorima Peerless"
+                },
+                {
+                    "name": "LAST GAME Akashi Collection"
                 }
             ],
             "effectSource": "Tier III"
@@ -725,6 +765,12 @@
                 },
                 {
                     "name": "Akashi Collection"
+                },
+                {
+                    "name": "LAST GAME Akashi"
+                },
+                {
+                    "name": "LAST GAME Akashi Collection"
                 }
             ],
             "effectSource": "Tier III"
@@ -765,6 +811,9 @@
                 },
                 {
                     "name": "Akashi Collection"
+                },
+                {
+                    "name": "LAST GAME Akashi"
                 }
             ],
             "effectSource": "Tier III"
@@ -800,6 +849,10 @@
                 },
                 {
                     "name": "LAST GAME Kise Peerless"
+                },
+                {
+                    "name": "LAST GAME Akashi Collection",
+                    "pickup": true
                 }
             ],
             "effectSource": ""
@@ -921,6 +974,9 @@
                 },
                 {
                     "name": "LAST GAME Midorima Peerless"
+                },
+                {
+                    "name": "LAST GAME Akashi Collection"
                 }
             ],
             "effectSource": "Tier II"
@@ -1024,6 +1080,9 @@
             "collections": [
                 {
                     "name": "LAST GAME Kise Peerless"
+                },
+                {
+                    "name": "LAST GAME Akashi"
                 }
             ],
             "effectSource": ""
@@ -1265,6 +1324,9 @@
                 },
                 {
                     "name": "LAST GAME Midorima"
+                },
+                {
+                    "name": "LAST GAME Akashi"
                 }
             ],
             "effectSource": "Tier III"
@@ -1293,6 +1355,10 @@
             "collections": [
                 {
                     "name": "Diviner Midorima Collection"
+                },
+                {
+                    "name": "LAST GAME Akashi",
+                    "pickup": true
                 }
             ],
             "effectSource": "Tier II"
