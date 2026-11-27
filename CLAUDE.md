@@ -49,6 +49,7 @@ Everything the page loads lives in `site/`; paths inside the page and in `traits
 - Effect text is copied verbatim from the game. The game has translation errors: put any editorial fill-in or correction in [square brackets] so it's clearly not the game's text, e.g. "reduces [Charge Rate] by 3%".
 
 ## Logging new traits from screenshots
+The owner's "00 KBSR SOP" Google Doc (KBSR folder root in Drive) is the full procedure for every upload type: shop boxes, gold balls, auction listings, skill traits and builds, player data, and screenshot filing. Read it before logging; the steps below are the repo part.
 1. Read the trait name, tier and numbers from the tooltip.
 2. On a ball with two traits, the icon that was tapped shows dimmer. That tells you which icon goes with the open tooltip. Crop the saved icon from an undimmed screenshot when one exists (the owner tries to upload one per ball), and replace a dimmed icon in `site/images/icons/` whenever an undimmed copy turns up.
 3. A trait keeps the same symbol at every tier; only the ring color changes (purple II, gold III). Paint Powerhouse has a backboard rectangle behind the arm; Absolute Core doesn't.
