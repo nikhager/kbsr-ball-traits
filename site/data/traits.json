@@ -829,18 +829,18 @@
                 "Layup",
                 "Steal"
             ],
-            "effect": "Increases Layup, Close Shot, Mid-Range and 3PT Accuracy for a while after a successful Steal.",
+            "effect": "Increases Layup, Close Shot, Mid-Range, and 3-Pointer accuracy by +5% for 6s after a successful Steal.",
             "trainingCamp": "",
             "tiers": {
                 "II": {
-                    "value": "",
-                    "icon": null,
-                    "seenOn": ""
+                    "value": "+4% Layup/Close/Mid/3PT accuracy for 6s after a Steal",
+                    "icon": "images/icons/offense-defense-switch-ii.webp",
+                    "seenOn": "LAST GAME Akashi Collection 259"
                 },
                 "III": {
-                    "value": "",
-                    "icon": null,
-                    "seenOn": ""
+                    "value": "+5% Layup/Close/Mid/3PT accuracy for 6s after a Steal",
+                    "icon": "images/icons/offense-defense-switch-iii.webp",
+                    "seenOn": "LAST GAME Akashi Collection 396"
                 }
             },
             "collections": [
@@ -855,7 +855,7 @@
                     "pickup": true
                 }
             ],
-            "effectSource": ""
+            "effectSource": "Tier III"
         },
         {
             "id": "paint-powerhouse",
