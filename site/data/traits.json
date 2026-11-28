@@ -1,5 +1,5 @@
 {
-    "updated": "2026-11-26",
+    "updated": "2026-11-28",
     "collections": [
         "Akashi Collection",
         "Autumn Moon",
@@ -377,7 +377,7 @@
                 "Mid-Range",
                 "Layup"
             ],
-            "effect": "3-Pointer range falloff distance increases by 1 meters. Each 3-Pointer made permanently increases 2-Point and Layup accuracy by 1%. Stacks up to 3 times.",
+            "effect": "3-Pointer range falloff distance increases by 1 meters. Each 3-Pointer made permanently increases 2-Point and Layup accuracy by 1.5%. Stacks up to 3 times.",
             "trainingCamp": "3-Pointer range falloff distance increase is doubled. After scoring a 3-Pointer, the permanent Mid-Range and Layup accuracy increase effects are doubled. Stack limit remains unchanged.",
             "tiers": {
                 "II": {
@@ -386,9 +386,9 @@
                     "seenOn": "SP Akashi 278"
                 },
                 "III": {
-                    "value": "",
-                    "icon": null,
-                    "seenOn": ""
+                    "value": "+1 m falloff; +1.5% 2PT & layup per 3PT made (max 3 stacks)",
+                    "icon": "images/icons/long-range-intimidation-iii.webp",
+                    "seenOn": "LAST GAME Akashi Collection"
                 }
             },
             "collections": [
@@ -403,7 +403,7 @@
                     "pickup": true
                 }
             ],
-            "effectSource": "Tier II"
+            "effectSource": "Tier III"
         },
         {
             "id": "perimeter-master",
